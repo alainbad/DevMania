@@ -26,7 +26,7 @@ The portfolio is progressively enhanced: existing HTML, project imagery, links a
 
 ### AI activation (manual setup required)
 
-Use the OpenAI Developers plugin's API-key workflow to configure the Sites secrets `OPENAI_API_KEY` and a supported `OPENAI_MODEL`. Do not paste secrets into source files or public HTML. Redeploy after configuring runtime values.
+For the Cloudflare deployment, configure the runtime secret `OPENAI_API_KEY` and runtime variable `OPENAI_MODEL` (a Responses API model available to your OpenAI project). Do not paste secrets into source files or public HTML. Redeploy after configuring runtime values.
 
 Until these are configured, the endpoint returns 503 and the builder explicitly identifies the result as a suggested project starter, preserves the visitor's idea, and supports editable WhatsApp handoff. AI-provider output is not yet verified against a live provider. The server validates input and generated output, uses a request timeout, rejects foreign origins, and limits requests to five per IP per minute per Worker isolate. This basic limiter is not a global account spending cap.
 
@@ -39,3 +39,26 @@ Native dialogs provide focus containment, Escape dismissal and trigger focus ret
 No analytics tracker was added. Event hooks use an existing `dataLayer` when present and dispatch `devmania:analytics` events otherwise. No client idea text or personal contact data is included in event metadata. No live analytics backend is configured.
 
 Optional Phase 2 additions in the supplied specification are deferred. Latest-project ranking remains unavailable until launch dates are supplied. Project counts describe registry entries (Trackora has separate app and website entries). No fabricated progress percentages are used.
+
+## Cloudflare Workers deployment
+
+The root `wrangler.toml` loads `.cloudflare/index.js`. Its custom build command runs
+`node scripts/build-cloudflare.mjs` automatically during `npx wrangler deploy`.
+Keep the Cloudflare deploy command as `npx wrangler deploy` from the repository root;
+do not use a separate assets-only deployment command.
+
+This keeps the website in `dist/`, serves assets through Cloudflare, and activates
+`/api/idea` on the server. `dist/.assetsignore` excludes server code and hosting
+metadata from public uploads. API and private-file routes run the Worker first.
+The original Sites build remains available through `npm run build`.
+
+After this version is deployed, runtime Variables and Secrets becomes available.
+Store the API key privately as a Secret named `OPENAI_API_KEY`, and set
+`OPENAI_MODEL` to a model available to your OpenAI project. Do not use build
+variables or commit a key. Until both runtime settings are present, the idea
+builder continues to offer its existing non-AI fallback.
+
+Validate with `node scripts/build-cloudflare.mjs`, `npm test`, `npm run check`,
+and `node tests/cloudflare.mjs`. These checks use mocked provider responses and
+require no real API key. Live OpenAI access must be verified after secret setup.
+The existing per-isolate rate limiter is best-effort, not a global spending cap.
