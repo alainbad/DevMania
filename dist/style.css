@@ -15,3 +15,15 @@
 .work-thumbnail[data-project="WEBSITE-assia-padel"]{background:#fff}.work-thumbnail img.padel-logo-image{object-fit:contain}
 
 .work-thumbnail[data-project="APP-parently"]{background:#171715}
+
+.work-thumbnail[data-project="WEBSITE-destinotel"]{background:#f5fafc}.work-thumbnail img.destinotel-image{object-fit:contain}
+
+.work-thumbnail img.project-screenshot{object-fit:contain}.work-thumbnail[data-project="APP-beautify"]{background:#f5e2d5}.work-thumbnail[data-project="WEBSITE-the-wedding-hub"]{background:#faf5ec}.work-thumbnail[data-project="WEBSITE-pinevilleleb"]{background:#0b1912}
+
+.work-thumbnail[data-project="WEBSITE-go-betrix"]{background:#0b0c20}.work-thumbnail[data-project="WEBSITE-the-betrix"]{background:#020704}
+
+.work-card .project-description{margin:0;padding:0 0 24px;color:#b8b8b8;font-size:14px;line-height:1.75;font-weight:400;letter-spacing:0;text-transform:none}.work-card{min-width:0}.work-card .work-card-caption{flex-wrap:wrap;gap:8px}
+
+.work-thumbnail[data-project="APP-parently"] img.app-icon-image{inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+
+.work-thumbnail[data-project="APP-parently"]{background:#000;display:flex;align-items:center;justify-content:center}.parently-icon-frame{position:relative;height:100%;aspect-ratio:254/248;flex:none}.work-thumbnail[data-project="APP-parently"] .parently-icon-frame img.app-icon-image{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;clip-path:inset(12.5% 13% 6.5% 7.5% round 21%)}

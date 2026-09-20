@@ -1,0 +1,333 @@
+[
+  {
+    "id": "app-invoice-mini",
+    "slug": "app-invoice-mini",
+    "name": "Invoice Mini",
+    "shortDescription": "Invoice Mini is a simple and efficient invoicing app built for freelancers, small businesses, and independent professionals. It makes it easy to create professional invoices, manage client and business details, calculate totals, and generate polished invoices on the go—all through a clean, straightforward interface designed to keep invoicing fast and hassle-free.",
+    "categories": [
+      "Apps"
+    ],
+    "platforms": [
+      "ios"
+    ],
+    "capabilities": [
+      "invoicing",
+      "clients",
+      "business",
+      "finance"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://apps.apple.com/app/id6788373159",
+    "image": "assets/invoice-mini.png",
+    "imageClass": "app-icon-image",
+    "imageAlt": "Invoice Mini app icon",
+    "caption": "App Store",
+    "legacyKey": "APP-invoice-mini"
+  },
+  {
+    "id": "app-trackora",
+    "slug": "app-trackora",
+    "name": "Trackora",
+    "shortDescription": "Trackora is an all-in-one shipment tracking platform designed to simplify global logistics. It allows users to track shipments across multiple carriers from a single interface, providing real-time status updates, shipment history, and centralized tracking management. Built for both individuals and businesses, Trackora makes monitoring deliveries faster, clearer, and more convenient.",
+    "categories": [
+      "Apps"
+    ],
+    "platforms": [],
+    "capabilities": [
+      "logistics",
+      "shipment tracking",
+      "carriers",
+      "delivery"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": "assets/trackora.png",
+    "imageClass": "trackora-image",
+    "imageAlt": "Trackora — Track any shipment in real time",
+    "caption": "App",
+    "legacyKey": "APP-trackora"
+  },
+  {
+    "id": "app-parently",
+    "slug": "app-parently",
+    "name": "Parently",
+    "shortDescription": "Parently is a smart parenting companion designed to help parents organize and manage their child’s everyday needs. The app brings essential parenting tools and information into one simple, user-friendly space, making it easier to track routines, stay organized, and keep up with important moments throughout a child’s growth and development.",
+    "categories": [
+      "Apps"
+    ],
+    "platforms": [],
+    "capabilities": [
+      "parenting",
+      "routines",
+      "family"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": "assets/parently.png",
+    "imageClass": "app-icon-image",
+    "imageAlt": "Parently app icon",
+    "caption": "App",
+    "legacyKey": "APP-parently"
+  },
+  {
+    "id": "app-beautify",
+    "slug": "app-beautify",
+    "name": "Beautify",
+    "shortDescription": "Beautify is a beauty and self-care platform designed to make discovering and booking beauty services simple and convenient. Users can explore salons, beauty professionals, treatments, and services in one place, helping them find the right experience and manage their beauty appointments through a modern, easy-to-use interface.",
+    "categories": [
+      "Apps"
+    ],
+    "platforms": [],
+    "capabilities": [
+      "beauty",
+      "services",
+      "booking"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": "assets/beautify.jpeg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "Beautify AI beauty assistant",
+    "caption": "App",
+    "legacyKey": "APP-beautify"
+  },
+  {
+    "id": "website-trackora",
+    "slug": "website-trackora",
+    "name": "Trackora",
+    "shortDescription": "Trackora is an all-in-one shipment tracking platform designed to simplify global logistics. It allows users to track shipments across multiple carriers from a single interface, providing real-time status updates, shipment history, and centralized tracking management. Built for both individuals and businesses, Trackora makes monitoring deliveries faster, clearer, and more convenient.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "logistics",
+      "shipment tracking",
+      "carriers",
+      "delivery"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.track-ora.com",
+    "image": "assets/trackora.png",
+    "imageClass": "trackora-image",
+    "imageAlt": "Trackora — Track any shipment in real time",
+    "caption": "track-ora.com",
+    "legacyKey": "WEBSITE-trackora"
+  },
+  {
+    "id": "website-destinotel",
+    "slug": "website-destinotel",
+    "name": "Destinotel",
+    "shortDescription": "Destinotel is a modern hotel discovery and booking platform designed to make travel planning simple and enjoyable. Users can explore destinations, discover hotels, compare accommodation options, and find the right stay through a clean and intuitive experience—bringing inspiration and hotel booking together in one seamless platform.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "travel",
+      "hotels",
+      "booking",
+      "discovery"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.destinotel.com",
+    "image": "assets/destinotel.jpeg",
+    "imageClass": "destinotel-image",
+    "imageAlt": "Destinotel featured destinations: Dubai, Paris, Bali and New York",
+    "caption": "destinotel.com",
+    "legacyKey": "WEBSITE-destinotel"
+  },
+  {
+    "id": "website-assia-wanderers-club",
+    "slug": "website-assia-wanderers-club",
+    "name": "Assia Wanderers Club",
+    "shortDescription": "Assia Wanderers Club is a dedicated digital platform created to bring the club, its players, and its community together in one place. The platform showcases the club’s identity, team information, activities, news, and updates through a modern and engaging experience, giving supporters an easy way to stay connected with everything happening at the club.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "community",
+      "club",
+      "news"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.clubassiawanderers.com",
+    "image": "assets/assia-wanderers.png",
+    "imageClass": "club-logo-image",
+    "imageAlt": "Club Assia Wanderers logo",
+    "caption": "clubassiawanderers.com",
+    "legacyKey": "WEBSITE-assia-wanderers-club"
+  },
+  {
+    "id": "website-assia-padel",
+    "slug": "website-assia-padel",
+    "name": "Assia Padel",
+    "shortDescription": "Assia Padel is a modern platform created for a local padel community, making it easy for players to discover the court, check availability, and manage their bookings. Designed with a simple and engaging experience, the platform brings players together and helps organize matches while promoting padel within the Assia community.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "sports",
+      "booking",
+      "availability",
+      "community"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.assiapadel.com",
+    "image": "assets/assia-padel.jpeg",
+    "imageClass": "padel-logo-image",
+    "imageAlt": "Assia Padel Court logo",
+    "caption": "assiapadel.com",
+    "legacyKey": "WEBSITE-assia-padel"
+  },
+  {
+    "id": "website-the-betrix",
+    "slug": "website-the-betrix",
+    "name": "The Betrix",
+    "shortDescription": "The Betrix is an online gaming and sports entertainment platform designed to bring multiple gaming experiences together in one modern interface. The platform features casino-style games, live gaming experiences, sports betting functionality, player accounts, wallet management, promotions, and an administrative management system—all built around a fast, immersive, and user-friendly experience.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "gaming",
+      "sports",
+      "accounts",
+      "wallets",
+      "administration"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.thebetrix.com",
+    "image": "assets/thebetrix.jpeg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "TheBetrix green and gold chips and dice",
+    "caption": "thebetrix.com",
+    "legacyKey": "WEBSITE-the-betrix"
+  },
+  {
+    "id": "website-go-betrix",
+    "slug": "website-go-betrix",
+    "name": "Go Betrix",
+    "shortDescription": "GoBetrix is a sports betting platform built to deliver a fast, intuitive, and engaging experience for sports fans. Users can explore upcoming and live events, browse betting markets and odds, manage their selections through a bet slip, and follow their betting activity—all within a modern, responsive interface designed for both mobile and desktop.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "sports",
+      "betting",
+      "events"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.gobetrix.com",
+    "image": "assets/gobetrix.jpeg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "GoBetrix purple chips and dice",
+    "caption": "gobetrix.com",
+    "legacyKey": "WEBSITE-go-betrix"
+  },
+  {
+    "id": "website-pinevilleleb",
+    "slug": "website-pinevilleleb",
+    "name": "PinevilleLeb",
+    "shortDescription": "Pineville is a bungalow rental and booking platform designed to make discovering and reserving the perfect getaway simple and seamless. Visitors can explore the property, browse bungalow options, view photos and amenities, check availability, and book their stay through a modern and user-friendly experience.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "travel",
+      "bungalows",
+      "booking",
+      "availability"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": "assets/pinevilleleb.jpeg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "PinevilleLeb bungalows and valley views",
+    "caption": "Website",
+    "legacyKey": "WEBSITE-pinevilleleb"
+  },
+  {
+    "id": "website-the-wedding-hub",
+    "slug": "website-the-wedding-hub",
+    "name": "The Wedding Hub",
+    "shortDescription": "Wedding Hub is an all-in-one wedding planning platform that connects couples with trusted wedding suppliers and services. Users can discover and compare venues, photographers, caterers, florists, entertainment, beauty services, and more—all in one place. Designed to simplify the entire planning journey, Wedding Hub helps couples find the right vendors and organize their dream wedding with ease.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "weddings",
+      "marketplace",
+      "vendors",
+      "booking",
+      "discovery"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": "assets/wedding-hub.jpeg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "The Wedding Hub Lebanon wedding directory",
+    "caption": "Website",
+    "legacyKey": "WEBSITE-the-wedding-hub"
+  },
+  {
+    "id": "software-procurement-ai",
+    "slug": "software-procurement-ai",
+    "name": "Procurement AI",
+    "shortDescription": "Procurement AI is an intelligent procurement platform in development, designed to help businesses simplify sourcing and purchasing. It aims to bring supplier discovery, quotation comparisons, purchase requests, and order tracking into one workspace. AI-assisted analysis will help teams evaluate offers, identify cost-saving opportunities, and make informed purchasing decisions while keeping people in control of approvals.",
+    "categories": [
+      "Softwares"
+    ],
+    "platforms": [
+      "ai"
+    ],
+    "capabilities": [
+      "ai",
+      "procurement",
+      "business",
+      "automation",
+      "suppliers"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": null,
+    "image": null,
+    "imageClass": null,
+    "imageAlt": null,
+    "caption": "Software",
+    "legacyKey": "SOFTWARE-procurement-ai"
+  }
+]

@@ -1,0 +1,12 @@
+export const normalize=s=>String(s).toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+const intents=[[/\b(e commerce|ecommerce|online shop|online store)\b/,p=>p.capabilities.includes('e-commerce'),'e-commerce platforms'],[/\b(apps?|mobile|ios|android|iphone)\b/,p=>p.categories.includes('Apps'),'mobile apps'],[/\b(logistics|shipments?|shipping|deliveries|carriers?)\b/,p=>p.capabilities.includes('logistics'),'logistics projects'],[/\b(ai|artificial intelligence|automation|procurement)\b/,p=>p.capabilities.includes('ai'),'AI projects'],[/\b(bookings?|rental|rentals|reservations?|hotels?|stays?)\b/,p=>p.capabilities.includes('booking'),'booking platforms'],[/\b(websites?|web apps?)\b/,p=>p.platforms.includes('web'),'websites'],[/\b(marketplaces?|vendors?)\b/,p=>p.capabilities.includes('marketplace'),'marketplaces']];
+export function searchProjects(query,projects){const q=normalize(query);if(!q)return{projects:[],message:'Search by project, product type, or capability.'};
+ if(/\b(newest|latest|recent)\b/.test(q)){const dated=projects.filter(p=>p.launchDate).sort((a,b)=>b.launchDate.localeCompare(a.launchDate));return{projects:dated.slice(0,3),message:dated.length?'Most recent recorded launches.':'Launch dates have not been recorded, so I can’t reliably identify the newest project.'}}
+ if(/^(all|projects|show (me )?(all|your) projects)$/.test(q))return{projects,message:'All DevMania projects.'};
+ const names=projects.filter(p=>q.includes(normalize(p.name))||q===normalize(p.slug));if(names.length)return{projects:names,message:'Matching projects from the DevMania portfolio.'};
+ const intent=intents.find(([rx])=>rx.test(q));if(intent){const ps=projects.filter(intent[1]);return{projects:ps,message:ps.length?`These projects demonstrate ${intent[2]}.`:'No close portfolio match was found.'}}
+ const words=q.split(' ').filter(w=>w.length>2&&!['show','your','have','built','with','what','need','can','you','build','for','the','and','starting','business','could','something'].includes(w));
+ const scored=projects.map(p=>({p,score:words.reduce((n,w)=>n+(normalize([p.name,...p.categories,...p.capabilities].join(' ')).split(' ').includes(w)?1:0),0)})).filter(x=>x.score).sort((a,b)=>b.score-a.score);
+ return{projects:scored.map(x=>x.p),message:scored.length?'Matching capabilities in the portfolio.':'No close portfolio match was found. Build My Idea can help outline your project.'};
+}
+export function latestProject(projects){return projects.filter(p=>p.launchDate).sort((a,b)=>b.launchDate.localeCompare(a.launchDate))[0]||null}
