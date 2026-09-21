@@ -11,7 +11,7 @@ export function mountUniverse({content:c,dialog},{el,projects,button,tag,track,r
   viewport.append(world);const status=el('p');status.setAttribute('role','status');const list=el('div',undefined,'exp-project-list');
   function apply(){const matching=projects.filter(p=>!selected||p.experience.universeTags.includes(selected));nodes.forEach(({p,b,line})=>{const match=matching.includes(p);b.classList.toggle('dimmed',!match);line.classList.toggle('dimmed',!match);b.disabled=!match});center.textContent=selected||'DEV//MANIA';status.textContent=matching.length+' connected projects';list.replaceChildren();matching.forEach(p=>{const b=button(p.name+' · '+p.categories[0],()=>{track('universe_node_selected',{projectId:p.id});onProject(p)},'exp-project-item');list.append(b)})}
   const transform=()=>world.style.transform=`translate(${x}px,${y}px) scale(${scale})`;
-  function fit(){scale=Math.min(viewport.clientWidth/1000,viewport.clientHeight/700);x=(viewport.clientWidth-1000*scale)/2;y=(viewport.clientHeight-700*scale)/2;transform()}
+  function fit(){scale=Math.max(.85,Math.min(viewport.clientWidth/1000,viewport.clientHeight/700));x=(viewport.clientWidth-1000*scale)/2;y=(viewport.clientHeight-700*scale)/2;transform()}
   function zoom(factor){const next=Math.max(.25,Math.min(2,scale*factor)),cx=viewport.clientWidth/2,cy=viewport.clientHeight/2;x=cx-(cx-x)*next/scale;y=cy-(cy-y)*next/scale;scale=next;transform()}
   controls.append(button('− Zoom out',()=>zoom(.8)),button('+ Zoom in',()=>zoom(1.25)),button('Reset',()=>{selected='';select.value='';apply();fit()}),button('Exit',()=>dialog.close()));
   select.onchange=()=>{selected=select.value;if(selected)record('category',selected);apply()};

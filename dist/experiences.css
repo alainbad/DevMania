@@ -4,3 +4,4 @@
 @media(max-width:480px){.exp-mania-grid{grid-template-columns:1fr}.exp-mania-card{min-height:100px}.exp-project-tools .exp-button{font-size:11px}.exp-demo{padding:16px}.exp-achievement{top:75px}.exp-universe-viewport{height:300px}}
 @media(max-height:500px){.exp-wide{height:100dvh;max-height:100dvh}.exp-universe-viewport{height:240px}}
 @media(prefers-reduced-motion:reduce){.exp-architecture li{animation:none}}
+.exp-demo>.exp-button,.os-modal-content>.exp-button{margin:6px 8px 6px 0}.exp-project-wrap{display:flex;flex-direction:column}.exp-project-tools{margin-top:auto;padding-top:12px}.exp-project-wrap>.work-card{flex:1}.os-dialog select{font-size:16px}

@@ -23,8 +23,9 @@ export function recordExperience(event,value) {
   try{storage?.setItem(key,JSON.stringify(s))}catch{}
   return unlocked;
 }
+let lastSurprise;
 export function pickSurprise(projects,viewed=experienceState.viewedProjects,random=Math.random) {
   const eligible=projects.filter(p=>p.featured);const pool=eligible.filter(p=>!viewed.includes(p.id));
-  const choices=pool.length?pool:eligible.filter(p=>p.id!==viewed.at(-1));
-  return (choices.length?choices:eligible)[Math.floor(random()*(choices.length||eligible.length))];
+  const choices=pool.length?pool:eligible.filter(p=>p.id!==(lastSurprise||viewed.at(-1)));
+  const choice=(choices.length?choices:eligible)[Math.floor(random()*(choices.length||eligible.length))];lastSurprise=choice?.id;return choice;
 }
