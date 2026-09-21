@@ -9,6 +9,7 @@ for (const file of ['index.js', 'projects.js', 'validation.js']) {
 }
 const publicFiles = ['index.html', 'style.css', 'app.js', 'os.css', 'os.js',
   'matcher.js', 'builder.js', 'terminal.js', 'projects.json',
+  'experience-state.js','experiences.js','experiences.css','playground.js','universe.js',
   ...fs.readdirSync('dist/assets').map(name => 'assets/' + name)];
 const allowlist = Object.fromEntries(publicFiles.map(name => ['/' + name, true]));
 fs.writeFileSync('.cloudflare/assets.js', 'export default ' + JSON.stringify(allowlist) + ';\n');
