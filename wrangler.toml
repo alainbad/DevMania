@@ -9,3 +9,6 @@ command = "node scripts/build-cloudflare.mjs"
 directory = "./dist"
 binding = "ASSETS"
 run_worker_first = ["/api/*", "/server/*", "/.openai/*"]
+
+[vars]
+OPENAI_MODEL = "gpt-4.1-mini"
