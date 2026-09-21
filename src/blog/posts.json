@@ -1,0 +1,816 @@
+[
+  {
+    "category": "Web Development",
+    "slug": "website-development-brief",
+    "title": "How to Write a Website Development Brief",
+    "description": "Define your audience, pages, content, integrations and launch criteria before asking a developer for a website quotation.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Start with a decision, not a page count",
+        "text": "A useful website brief explains what visitors should accomplish. A service business might want qualified enquiries; a club might want membership applications. Write one primary outcome and identify who needs it. “A modern website” leaves important decisions unanswered. “Help facility managers request a maintenance quotation” gives the design a clear job."
+      },
+      {
+        "heading": "Map one complete visitor journey",
+        "text": "Describe the steps from arrival to completion. For a quotation journey, list the service page, eligibility information, enquiry form and confirmation. Explain what happens internally after submission: who receives the request, where it is recorded and when the customer hears back. This reveals work that a list of screens can miss."
+      },
+      {
+        "heading": "Separate essential content from optional features",
+        "text": "Prepare your service descriptions, logo, contact information and approved project examples. Assign an owner to each missing item. Then label features as launch essentials or later improvements. A booking calendar may be essential for a court rental service, while an animated project map can wait until the core journey works."
+      },
+      {
+        "heading": "Make acceptance concrete",
+        "text": "Instead of “the form should work,” require a test enquiry to reach the designated inbox, show a useful confirmation and reject missing required fields. Include mobile use, keyboard navigation, editing access and a handover checklist. Ask the developer to state assumptions and exclusions so two quotations cover comparable work."
+      },
+      {
+        "heading": "Your next step",
+        "text": "Write a one-page brief with five headings: audience, main outcome, visitor journey, content owner and launch checks. Attach examples of design you like, explaining what you like about them. This gives your developer enough direction to discuss scope without locking the project into a premature technical solution."
+      }
+    ],
+    "sources": [
+      [
+        "Web development fundamentals",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
+    "slug": "website-vs-web-application",
+    "title": "Website or Web Application: What Does Your Business Need?",
+    "description": "Choose between a content website and a web application by examining user accounts, workflows, data and operating responsibilities.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Begin with the work people need to do",
+        "text": "A website primarily helps visitors find information and take a next step. A web application lets people perform ongoing tasks with data, such as managing orders or reserving appointments. Many products contain both. A hotel can have public destination pages and a booking application behind the same brand."
+      },
+      {
+        "heading": "Use a booking example",
+        "text": "If visitors only need opening hours and a telephone number, a content website may be enough. If they need live availability, payment status, cancellations and booking history, you need application behaviour. The additional complexity comes from rules and changing data, not simply from a more elaborate visual design."
+      },
+      {
+        "heading": "List the operational responsibilities",
+        "text": "For an application, ask who can view and change each record. Decide how conflicting updates, lost passwords, cancelled requests and service outages should work. A beautiful reservation screen does not prevent two customers booking the same slot. That rule must be enforced where the booking is saved."
+      },
+      {
+        "heading": "Choose a small first release",
+        "text": "Imagine a maintenance company receiving requests over the phone. A first release could publish service information and collect structured enquiries. A later release might add customer accounts and technician scheduling. Avoid introducing accounts before customers gain something from them; every account adds support, privacy and security work."
+      },
+      {
+        "heading": "Compare proposals fairly",
+        "text": "Ask whether each proposal includes content editing, data storage, permissions, integrations, testing and ongoing maintenance. A lower price may describe a different product. Write down one real task and have each supplier explain how a customer and an administrator would complete it. That discussion often resolves the website-versus-application question faster than debating frameworks."
+      }
+    ],
+    "sources": [
+      [
+        "Web development fundamentals",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
+    "slug": "responsive-website-checklist",
+    "title": "A Practical Responsive Website Checklist",
+    "description": "Test the journeys that matter on narrow screens, keyboards and real devices before launching a business website.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Responsive means usable, not just smaller",
+        "text": "A layout can fit a phone and still be difficult to use. Navigation may consume the entire screen, a button may be hidden by a fixed banner, or a form may require unnecessary typing. Judge responsiveness by whether someone can finish the task comfortably, not only whether the page has horizontal overflow."
+      },
+      {
+        "heading": "Test content at awkward widths",
+        "text": "Review a narrow phone, a wider phone, a tablet and a desktop. Resize between those points too. Long service names, translated labels and unusually large prices expose fragile layouts. Use real content rather than short placeholders, and check that zooming the page does not hide controls or truncate important information."
+      },
+      {
+        "heading": "Walk through the enquiry journey",
+        "text": "Open the menu, read a service, start an enquiry, correct a mistake and submit. Check whether the keyboard covers the active field. Make field labels visible even after typing. Use a clear error near the field and preserve the information already entered. A customer should not need to start again because one value was invalid."
+      },
+      {
+        "heading": "Check interaction beyond touch",
+        "text": "Navigate with a keyboard and confirm that focus is visible. Avoid features that require hovering to reveal essential content. If you use a carousel, provide understandable controls and a way to pause it. Keep phone numbers and email addresses easy to select or activate without accidentally opening another element."
+      },
+      {
+        "heading": "Record issues by business impact",
+        "text": "A blocked submission is more urgent than an imperfect decorative alignment. Keep a short log containing device, browser, steps, expected result and actual result. After fixing an issue, repeat the full journey. Use browser simulations for coverage, then check at least the devices your customers actually use before declaring the experience ready."
+      }
+    ],
+    "sources": [
+      [
+        "Accessibility on the web",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
+    "slug": "improve-website-loading-speed",
+    "title": "How to Improve Website Loading Speed Without a Redesign",
+    "description": "Find slow images, unnecessary scripts and delayed interactions with a focused performance review of your most important pages.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Measure one useful journey first",
+        "text": "Choose a page that matters: a landing page, service page or enquiry form. Record how it behaves on a realistic mobile connection. A fast homepage does not prove the booking journey is fast. Use the same page and test conditions when comparing changes so the result reflects the work rather than a different connection."
+      },
+      {
+        "heading": "Inspect the largest visible assets",
+        "text": "A large hero image is a common place to investigate. Check its downloaded size against the size at which it appears. Supply appropriately sized images and reserve their layout space. Avoid delaying the main visible image unnecessarily, while deferring images far below the initial view can reduce competing work."
+      },
+      {
+        "heading": "Question every script",
+        "text": "List analytics, chat widgets, animation libraries and third-party embeds. For each, ask who uses it and what would happen if it loaded later. A tool that adds little business value should not block the enquiry form. Remove abandoned integrations rather than adding another performance plugin to compensate for them."
+      },
+      {
+        "heading": "Protect interaction and stability",
+        "text": "Try clicking navigation and typing while the page loads. Watch for buttons moving as images appear. A page that looks ready but ignores input is frustrating. MDN treats performance as part of the user experience; in your own testing, record both loading behaviour and the time until the key task feels responsive."
+      },
+      {
+        "heading": "Verify the improvement",
+        "text": "Change one major factor at a time, then repeat the same test. Check image quality and functionality after compression or script removal. Keep a small performance budget for future additions: every large asset or widget should have a clear purpose. This prevents the next marketing update from undoing the gains."
+      }
+    ],
+    "sources": [
+      [
+        "Web performance fundamentals",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
+    "slug": "technical-seo-website-launch",
+    "title": "Technical SEO Checks Before Launching a Website",
+    "description": "Review crawlable pages, titles, canonical URLs, internal links and sitemap coverage before introducing your website to search engines.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Give each useful page a clear purpose",
+        "text": "A service page should answer a specific visitor need, with a descriptive title and a meaningful main heading. Avoid creating nearly identical pages just to target spelling variations. A page about API integration should explain the problems it solves, the decisions involved and the next step for someone who needs that service."
+      },
+      {
+        "heading": "Check what can be discovered",
+        "text": "Make important destinations available through ordinary links. Open each URL directly rather than only through the menu. Confirm that missing pages return a real not-found response. A site that displays its homepage for every unknown URL makes it harder to distinguish valid content from mistakes."
+      },
+      {
+        "heading": "Choose your preferred URLs",
+        "text": "Be consistent about the domain and URL structure. If both a www and a non-www address exist, choose the intended version and configure redirects deliberately. Add canonical tags that point to the public URL you want indexed. Do not accidentally copy preview-domain addresses into the production metadata."
+      },
+      {
+        "heading": "Create and inspect the sitemap",
+        "text": "A sitemap lists the public URLs you want search engines to discover. Include real article pages and exclude internal APIs, test pages and private tools. Google explains that a sitemap aids discovery but does not guarantee indexing. Check that every listed URL loads successfully and matches the canonical URL on the page."
+      },
+      {
+        "heading": "Review after publishing",
+        "text": "Submit the sitemap in Search Console when you have access, then monitor indexing and search queries. Measure qualified visits and enquiries alongside impressions. Publishing content creates an opportunity to earn visibility; it does not promise a particular ranking. Improve pages based on the questions visitors actually need answered."
+      }
+    ],
+    "sources": [
+      [
+        "Google sitemap guidance",
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      ],
+      [
+        "Helpful content guidance",
+        "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      ]
+    ]
+  },
+  {
+    "category": "App Development",
+    "slug": "mobile-app-mvp-scope",
+    "title": "How to Define the First Version of Your Mobile App",
+    "description": "Turn an app idea into one complete user journey, a realistic MVP scope and clear acceptance criteria.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Choose a repeatable problem",
+        "text": "A mobile app needs a reason for someone to return. “An app for our business” is too broad. “Let returning customers reorder their usual supplies” is a useful starting point. Identify the user, the trigger and the result they want. Then ask whether a mobile app offers a benefit over the existing website or process."
+      },
+      {
+        "heading": "Draw the smallest complete journey",
+        "text": "For a reorder app, the journey could be signing in, selecting a previous order, changing quantities and submitting a request. Include the confirmation and the internal processing step. Do not call the journey complete if the customer can tap Submit but staff cannot find the request or resolve a mistake."
+      },
+      {
+        "heading": "Limit the first release deliberately",
+        "text": "Separate essential functions from conveniences. Saved favourites might be valuable; a social feed probably does not help the reorder task. Prioritize features by how directly they support the core outcome and what evidence supports the need. A smaller scope should still include validation, accessibility and recovery from common errors."
+      },
+      {
+        "heading": "Describe failure states",
+        "text": "What should happen when a connection drops during submission? How does the user know whether an order was received? What if an item is discontinued? Write these behaviours into the brief. They are part of the product, not optional polish to add after the happy path is built."
+      },
+      {
+        "heading": "Decide how to learn",
+        "text": "Choose a few observations for the pilot: completed requests, abandoned steps and support questions. Interview users who stop midway. A release that reveals why people struggle can be more useful than a long feature list. Use those findings to decide whether the next investment should be another capability or a simpler existing flow."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "App Development",
+    "slug": "pwa-vs-native-app",
+    "title": "PWA or Native App: A Business Decision Guide",
+    "description": "Compare a browser-based app with an installed mobile app using device needs, distribution, offline behaviour and maintenance.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Start with the required experience",
+        "text": "A progressive web app uses web technologies and can offer an app-like experience, with capabilities depending on browser and platform support. A native app is built for a device platform. Neither label automatically makes a product better. Start by listing what users need to do and the devices on which they will do it."
+      },
+      {
+        "heading": "Test the hardest requirement early",
+        "text": "A field-service product may need camera access, reliable offline entry and background activity. A customer portal may mostly display records and accept forms. Build a small proof of concept around the most demanding requirement before committing to a platform. Browser capability should be verified on the actual target devices."
+      },
+      {
+        "heading": "Consider how users arrive",
+        "text": "A public service discovered through a link has different distribution needs from an internal app installed on company devices. Ask whether people will use it once or every day. For occasional tasks, opening a link may be preferable to an installation step. Frequent users may value a dedicated installed experience."
+      },
+      {
+        "heading": "Budget for the whole lifecycle",
+        "text": "Count design, testing, releases and support across the platforms you promise to support. Shared code can reduce duplication, but it does not eliminate platform-specific testing. Include responsibility for updates when devices or browsers change. Store distribution also introduces submission and release processes that need an owner."
+      },
+      {
+        "heading": "Write a decision note",
+        "text": "Document the required capabilities, target devices, distribution plan and known compromises. Include the proof-of-concept findings rather than relying on a generic comparison chart. Revisit the decision when the product requirements change. A responsive web first release can be a sensible step, but only if it meets the users’ actual workflow."
+      }
+    ],
+    "sources": [
+      [
+        "Progressive web apps",
+        "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+      ]
+    ]
+  },
+  {
+    "category": "App Development",
+    "slug": "offline-app-design",
+    "title": "Designing an App That Handles Poor Internet Connections",
+    "description": "Plan saved drafts, sync states, conflicts and duplicate prevention so users can recover when a mobile connection disappears.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Offline behaviour is a product decision",
+        "text": "An app does not become offline-ready simply because its screen remains visible. Decide what users can read, create and change without a connection. A technician might need yesterday’s job details and a new inspection draft, while current stock availability may require the server. Make that boundary explicit in the interface."
+      },
+      {
+        "heading": "Show the state of every change",
+        "text": "Use distinct language for a draft saved on the device, a request waiting to sync and a change accepted by the server. A generic “Saved” message can mislead someone into assuming the office already has the record. Explain what remains pending and whether closing the app will affect it."
+      },
+      {
+        "heading": "Plan conflicts before they happen",
+        "text": "Suppose a dispatcher changes a job while a technician edits it offline. Decide which fields can merge and which need review. Silently overwriting one person’s work is rarely a good default. Preserve enough information to explain the conflict and let the responsible user resolve it without retyping everything."
+      },
+      {
+        "heading": "Prevent duplicate submissions",
+        "text": "Repeated taps and reconnect attempts must not create repeated business records. Give each intended operation a stable identifier and make the server recognize a replay. Disabling the button helps the interface, but the server still needs a rule for requests retried after a timeout or interrupted response."
+      },
+      {
+        "heading": "Run a recovery rehearsal",
+        "text": "Start a task, disconnect, edit, close and reopen, then reconnect. Repeat with a conflicting update and an expired session. Record what the user sees at each step. The acceptance criterion is not “works offline”; it is that data survives the agreed scenarios and the final server state is understandable."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "App Development",
+    "slug": "mobile-app-launch-checklist",
+    "title": "A Mobile App Launch Checklist for Small Teams",
+    "description": "Prepare onboarding, permissions, support, monitoring and a staged release before making an app available to customers.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Launch is an operating handover",
+        "text": "A working build is only one part of releasing an app. Someone must answer support requests, investigate failures and publish fixes. Assign these responsibilities before inviting users. Keep a clear record of which environment is production and which accounts, services and notification settings belong to it."
+      },
+      {
+        "heading": "Test a new user from the beginning",
+        "text": "Use a fresh account and complete the main task without developer assistance. Review sign-in, forgotten passwords, empty screens and help text. Request device permissions when their purpose is clear. If a user declines permission, the app should explain the resulting limitation and offer an appropriate alternative when possible."
+      },
+      {
+        "heading": "Check business records end to end",
+        "text": "Submit a representative transaction and verify the customer view, staff view and downstream record. Check duplicate taps, invalid input and a failed network request. If money is involved, use the provider’s documented test environment and reconcile the resulting states. Do not infer success solely from an animated confirmation screen."
+      },
+      {
+        "heading": "Prepare support and recovery",
+        "text": "Provide a contact route and a way to identify the affected app version. Capture useful error information without collecting unnecessary personal content. Decide how to disable a failing feature and how to communicate an interruption. A rollback plan should account for data changes as well as the application build."
+      },
+      {
+        "heading": "Release in manageable stages",
+        "text": "Start with a pilot group whose workflows you understand. Review completion rates, failures and support feedback before broadening access. Confirm current distribution requirements with the relevant platform before submission. Store approval or installation success does not replace testing the real service that customers will depend on."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "API Integration",
+    "slug": "api-integration-business-guide",
+    "title": "What Is API Integration? A Guide for Business Owners",
+    "description": "Understand how connected systems exchange data and what to clarify before linking bookings, payments, CRM or shipment tracking.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Think in business events",
+        "text": "API integration connects systems through defined interfaces. The useful question is what event should cause what change. A booking confirmation might create a customer record; a shipment update might refresh a tracking screen. Describe that event and result before discussing tools. This keeps the integration tied to an operational need."
+      },
+      {
+        "heading": "Identify the source of truth",
+        "text": "If two systems store a customer’s address, decide which one owns it and how corrections travel. Without that agreement, each system can overwrite the other. Document the fields being exchanged, their meaning and the unique identifiers used to match records. A name alone is usually a poor record identifier."
+      },
+      {
+        "heading": "Map the complete lifecycle",
+        "text": "Creating a record is only the beginning. Include updates, cancellations, deletions where appropriate and exceptions. For a delivery workflow, ask how an unknown carrier or missing tracking number is represented. Agree how staff can correct an unsuccessful transfer without creating a duplicate or losing the original request."
+      },
+      {
+        "heading": "Ask about access and failure",
+        "text": "Confirm what the provider permits, how credentials are managed and whether a test environment exists. Plan for timeouts, unavailable services and usage limits. The website should show a truthful status rather than pretending a failed request succeeded. Define who investigates failed transfers and how they are retried safely."
+      },
+      {
+        "heading": "Request an integration specification",
+        "text": "A useful specification contains the trigger, field mapping, direction, ownership, error handling and acceptance tests. For example: “A confirmed booking creates one CRM enquiry with the booking reference; retries do not create additional enquiries.” That sentence is far more useful for estimating work than simply asking for a CRM connection."
+      }
+    ],
+    "sources": [
+      [
+        "HTTP request methods",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+      ]
+    ]
+  },
+  {
+    "category": "API Integration",
+    "slug": "api-key-security",
+    "title": "How to Keep API Keys Out of Your Website Frontend",
+    "description": "Understand where API secrets belong and how a server endpoint can protect credentials while controlling public requests.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Treat a secret as a server responsibility",
+        "text": "If a provider issues a secret API key, do not place it in browser JavaScript, public configuration or a downloadable mobile bundle. Users can inspect client software. A typical design sends the visitor’s request to your backend, which validates it and calls the provider using a server-held credential."
+      },
+      {
+        "heading": "Separate storage from permission",
+        "text": "Storing the key securely does not make an endpoint safe by itself. If anyone can submit unlimited requests, they may still consume your paid service through that endpoint. Decide who may use it, limit input size and enforce appropriate usage controls. Do not rely on hiding the URL or checking the page’s visible form."
+      },
+      {
+        "heading": "Build a narrow endpoint",
+        "text": "For an AI idea builder, accept only the fields the feature needs. Keep the model choice and provider credentials on the server. Reject malformed input before making a paid request. Return the generated result or a useful error, never the key or a raw provider response containing unnecessary operational details."
+      },
+      {
+        "heading": "Keep environments distinct",
+        "text": "Use separate credentials where practical for development and production. Record who owns each credential and how it can be replaced. Avoid writing secrets into logs, screenshots or support tickets. If a secret is exposed, replace it at the provider and update the server configuration; removing it from a page is not enough."
+      },
+      {
+        "heading": "Check the public output",
+        "text": "Review the built files and browser network responses for secret values. Test the endpoint’s failure behaviour and verify that missing configuration produces a controlled error. OpenAI’s production guidance covers secure key handling; apply the same server-side ownership principle to other providers that issue secret credentials."
+      }
+    ],
+    "sources": [
+      [
+        "OpenAI production best practices",
+        "https://developers.openai.com/api/docs/guides/production-best-practices"
+      ]
+    ]
+  },
+  {
+    "category": "API Integration",
+    "slug": "webhooks-vs-polling",
+    "title": "Webhooks vs Polling: Choosing How Systems Receive Updates",
+    "description": "Compare event notifications and scheduled checks for shipment, booking and payment integrations, including recovery and duplicate handling.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Two ways to learn that something changed",
+        "text": "Polling asks a system for its latest state at intervals. A webhook lets a provider notify an endpoint when an event occurs. The choice depends on what the provider supports, how quickly the business needs an update and how you will recover when a message is missed. Many integrations benefit from both."
+      },
+      {
+        "heading": "Use shipment tracking as an example",
+        "text": "A customer may not need a fresh carrier request every time they open a page. Your system can display the most recently confirmed status and its timestamp. Updates can arrive through notifications or scheduled checks. The important product decision is how old a status may be before you tell the user it needs refreshing."
+      },
+      {
+        "heading": "Make webhook handling defensive",
+        "text": "Follow the provider’s signature verification procedure before accepting an event. Treat delivery as potentially repeated and out of order. Record a stable event identifier, validate the payload and make processing safe to retry. A notification is evidence to handle, not permission to trust every field or perform arbitrary actions."
+      },
+      {
+        "heading": "Avoid wasteful polling",
+        "text": "Choose intervals based on business urgency and provider limits. A completed shipment does not need the same checking frequency as an active delivery. Back off after failures and show the last successful update time. Continuous aggressive retries can worsen an outage and consume resources without producing new information."
+      },
+      {
+        "heading": "Add reconciliation",
+        "text": "Schedule a way to compare your records with the provider’s authoritative state. This helps recover from interruptions and missed notifications. Test duplicate events, delayed events and unavailable endpoints before launch. Document which system owns the final status so support staff know where to investigate a disagreement."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "API Integration",
+    "slug": "reliable-api-error-handling",
+    "title": "Building API Integrations That Recover From Failures",
+    "description": "Design timeouts, retries, idempotency and useful error messages so an interrupted request does not become a lost or duplicated transaction.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "A timeout does not prove failure",
+        "text": "Your server may stop waiting even though the provider completed the operation. That distinction matters when creating an order or charging a payment. Before retrying, understand whether the original action might already exist. A robust integration tracks the intended operation rather than treating every network request as a new business event."
+      },
+      {
+        "heading": "Classify the problem",
+        "text": "Invalid input usually needs correction. Missing permission requires configuration or access changes. A temporary unavailable service may justify a delayed retry. Return enough information for the appropriate person to act, but avoid exposing credentials or internal stack traces. A single “Something went wrong” message hides these different recovery paths."
+      },
+      {
+        "heading": "Make retries deliberate",
+        "text": "Use bounded attempts and increasing delays for transient failures, respecting provider instructions. For operations that change state, use the provider’s idempotency mechanism when available. MDN distinguishes method semantics, but the actual business operation still needs careful design: never assume that retrying an arbitrary POST request is harmless."
+      },
+      {
+        "heading": "Design a support queue",
+        "text": "Record a correlation identifier, operation type, safe error code and status. Let authorized staff inspect pending or failed operations and retry through a controlled path. Avoid using customer text or entire payloads as a default log entry. Support needs enough context to diagnose the issue, not an unnecessary copy of sensitive data."
+      },
+      {
+        "heading": "Test ambiguous outcomes",
+        "text": "Simulate a slow response after the provider accepts a request. Verify that retrying produces one record and that the customer can discover the final result. Also test validation errors and provider outages. The goal is a predictable recovery story, including what the user should do next and who owns unresolved cases."
+      }
+    ],
+    "sources": [
+      [
+        "HTTP request methods",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+      ]
+    ]
+  },
+  {
+    "category": "ChatGPT",
+    "slug": "chatgpt-for-website-planning",
+    "title": "Using ChatGPT to Turn a Website Idea Into a Clear Brief",
+    "description": "Use a structured conversation to clarify audience, scope and unanswered questions before turning an idea into a development project.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Use ChatGPT to clarify the problem",
+        "text": "Begin with what your business does, who the website serves and the outcome you want. Ask for questions before solutions. An assistant can produce a convincing feature list from very little information, but a convincing list is not necessarily the right scope. Treat the conversation as a planning aid rather than a finished specification."
+      },
+      {
+        "heading": "Provide a concrete starting prompt",
+        "text": "Try: “I run a small court rental business. Customers currently book through messages. Help me outline a website that reduces double-bookings. Ask about availability, cancellations, staff access and payment handling before suggesting features. Mark assumptions clearly.” This gives the discussion a real problem and a boundary instead of asking for an impressive website in general."
+      },
+      {
+        "heading": "Separate decisions from suggestions",
+        "text": "After the questions, request three lists: confirmed requirements, proposed features and unresolved decisions. Keep them separate when sharing the brief with a developer. For example, online payment might be a suggestion while manual booking approval is a confirmed business rule. Mixing them can inflate quotations and create misunderstandings about what was agreed."
+      },
+      {
+        "heading": "Turn the brief into acceptance checks",
+        "text": "Ask for examples of successful and unsuccessful journeys. What happens when two customers select the same slot? What if a customer closes the browser after submitting? Review these scenarios yourself and add the operational details the assistant cannot know. A brief should explain how staff work as well as how visitors browse."
+      },
+      {
+        "heading": "Finish with a human scope review",
+        "text": "Remove unnecessary features and verify business facts. Use sample information rather than confidential customer records. The useful output is a document you understand and can challenge, not a long specification you feel obliged to follow. Bring that document to your developer and use it to resolve remaining assumptions."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "ChatGPT",
+    "slug": "chatgpt-vs-api-integration",
+    "title": "ChatGPT and an OpenAI API Integration: What Is the Difference?",
+    "description": "Understand the difference between using an AI assistant yourself and building an AI feature into your own website.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Distinguish the user tool from your product",
+        "text": "Using ChatGPT means working inside an assistant interface. Building an OpenAI API integration means your software sends requests to a model and handles the result inside your own workflow. A chat conversation can help you design a feature, but it does not automatically connect that feature to your website."
+      },
+      {
+        "heading": "Define the customer experience",
+        "text": "Consider an idea builder on a portfolio site. The visitor fills in a form, the server sends a bounded request, and the site presents a project outline. Your application owns that form, validation, error handling and presentation. OpenAI’s text-generation documentation describes the model request; the surrounding customer experience remains application work."
+      },
+      {
+        "heading": "Plan the service boundary",
+        "text": "Choose what input is accepted and what output the interface expects. If the response is meant to contain phases and recommended systems, validate those fields before displaying them. Keep credentials on the server and provide a fallback when the provider is unavailable. A polite message should preserve the visitor’s input so they can retry."
+      },
+      {
+        "heading": "Separate subscriptions and operating costs",
+        "text": "Do not assume access to a chat product covers the operation of your website’s API feature. Confirm billing and access in the platform used for the integration. Estimate usage from expected requests and response sizes, then monitor actual consumption. Keep pricing out of the website’s promises unless you have checked the current terms."
+      },
+      {
+        "heading": "Prototype one bounded task",
+        "text": "Start with a small feature whose result a person can review, such as drafting an enquiry brief. Test real inputs and failure cases before adding actions that change business records. This lets you learn whether the AI output is useful without making it responsible for an entire customer journey."
+      }
+    ],
+    "sources": [
+      [
+        "OpenAI text generation documentation",
+        "https://developers.openai.com/api/docs/guides/text"
+      ]
+    ]
+  },
+  {
+    "category": "ChatGPT",
+    "slug": "chatgpt-prompts-business-tasks",
+    "title": "Writing Better ChatGPT Prompts for Everyday Business Tasks",
+    "description": "Give an AI assistant context, boundaries and a clear output format for useful drafts, summaries and planning work.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Replace vague instructions with a job",
+        "text": "“Write something professional” leaves the assistant guessing about the audience and purpose. Explain who will read the result, what they need to know and what action should follow. For a supplier email, specify the missing information and the deadline you have actually agreed, rather than asking the model to invent urgency."
+      },
+      {
+        "heading": "Use a short prompt structure",
+        "text": "Provide context, task, constraints and format. For example: “Draft a follow-up to a supplier about quotation Q-104. Ask for lead time and warranty terms. Do not invent prices or promise an order. Use a courteous tone and keep it under 150 words.” The structure matters more than finding a magical phrase."
+      },
+      {
+        "heading": "Give examples carefully",
+        "text": "An approved sample can show the tone or level of detail you want. Remove private names and commercial details if they are not needed. Explain which qualities to copy: brevity, structure or terminology. Otherwise, the assistant may reproduce facts from the example that do not belong in the new situation."
+      },
+      {
+        "heading": "Ask for visible uncertainty",
+        "text": "For a comparison or summary, request a separate list of missing information. Tell the assistant to distinguish supplied facts from assumptions. If the answer depends on current information, verify it against an appropriate source. A well-written prompt improves direction but does not make every statement correct."
+      },
+      {
+        "heading": "Review against the original task",
+        "text": "Before sending the output, check names, numbers, dates and commitments. Ask whether the recipient can understand the next action. Keep prompts that repeatedly work, along with examples of mistakes to avoid. Over time, a small collection of task-specific prompts is more useful than a huge list of generic productivity tricks."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "ChatGPT",
+    "slug": "review-ai-generated-code",
+    "title": "How to Review AI-Generated Code Before Publishing It",
+    "description": "Check requirements, permissions, secrets, dependencies and failure cases before accepting code suggested by ChatGPT or another coding assistant.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Treat generated code as a proposed change",
+        "text": "A snippet that compiles may still misunderstand your business rule. Start by writing the intended behaviour in plain language. For a supplier editor, specify who may edit, which fields are optional and what must happen when saving fails. Review the code against those requirements rather than judging it by how plausible it looks."
+      },
+      {
+        "heading": "Keep the change small enough to inspect",
+        "text": "Ask for a focused modification and examine the diff. Look for unrelated rewrites, deleted checks and new dependencies. If the assistant changes several layers at once, require an explanation of why each change is necessary. Small, coherent changes are easier to verify and reverse if a problem appears."
+      },
+      {
+        "heading": "Check trust boundaries",
+        "text": "A disabled button is not a permission check. Verify that the server enforces access to the underlying records. Look for secret values in client files and excessive logging of request data. Confirm that user input is handled safely where it reaches storage, HTML or external services. Ask for evidence rather than accepting a statement that the code is secure."
+      },
+      {
+        "heading": "Test meaningful scenarios",
+        "text": "Exercise a normal request, invalid input, a user without permission and a network failure. For destructive actions, verify exactly which record is affected. Tests should prove a business expectation, not merely repeat the implementation. Review the rendered interface too; automated checks cannot tell you whether the workflow is understandable."
+      },
+      {
+        "heading": "Publish with a recovery path",
+        "text": "Commit the reviewed change and know how to restore the previous version. After deployment, repeat the important journey in the actual environment. AI assistance can shorten the drafting stage, but ownership of the result stays with the team shipping the product. Use it to support engineering judgment, not replace it."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "Claude",
+    "slug": "claude-project-requirements",
+    "title": "Using Claude to Organize Project Requirements",
+    "description": "Turn scattered notes into a requirement register while keeping assumptions, contradictions and decisions visible.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Start with a bounded collection of notes",
+        "text": "Project information often arrives through messages, meeting notes and spreadsheets. Claude can help organize supplied text, but the first task should be classification rather than invention. Explain the project purpose and ask for requirements, open questions and contradictions as separate outputs. This creates a reviewable structure without pretending the notes are complete."
+      },
+      {
+        "heading": "Ask for traceable entries",
+        "text": "Give each source note a label and request that every requirement references the note supporting it. For example, a customer portal requirement could cite “Workshop A, item 6.” The labels are your own working references, not evidence that the assistant independently verified the statement. Check each important entry against its source before approval."
+      },
+      {
+        "heading": "Use an ERP example",
+        "text": "Suppose one note says every employee can add suppliers and another says only purchasing staff can do so. Ask Claude to surface the conflict instead of choosing one silently. Record an owner for the decision. This prevents an uncertain permission rule from becoming application behaviour just because it appeared in a polished requirements table."
+      },
+      {
+        "heading": "Define the output before running the task",
+        "text": "Request columns for requirement, user role, source, priority and unresolved question. Claude’s prompting guidance emphasizes clear task instructions; in this workflow, the table also makes review easier. Keep priority provisional until the business owner confirms it. The assistant cannot know your budget or contractual commitments from a vague note."
+      },
+      {
+        "heading": "Move approved decisions into your project record",
+        "text": "After reviewing the output, keep a versioned requirement register and a short change log. Mark which decisions are confirmed and which remain open. Use the organized notes as input to design and estimation, then revisit them when the process changes. The value lies in reducing ambiguity, not merely producing a longer document."
+      }
+    ],
+    "sources": [
+      [
+        "Claude prompting overview",
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"
+      ]
+    ]
+  },
+  {
+    "category": "Claude",
+    "slug": "claude-document-review-workflow",
+    "title": "A Practical Claude Workflow for Reviewing Business Documents",
+    "description": "Review long business documents with targeted questions, source references and a human verification step.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Decide what you are reviewing for",
+        "text": "A general summary may miss the detail that matters. Before sharing a document, write the question: missing delivery terms, inconsistent product names, unresolved responsibilities or incomplete requirements. Check that you are permitted to upload the material and remove confidential information that is unnecessary for the review."
+      },
+      {
+        "heading": "Work in defined passes",
+        "text": "First request an outline. Next ask targeted questions about the sections relevant to your decision. Finally ask for inconsistencies and missing information. Keeping these passes separate makes it easier to identify where an answer came from. Avoid asking for an exhaustive review, a rewrite and a recommendation in one unstructured instruction."
+      },
+      {
+        "heading": "Require references you can inspect",
+        "text": "Ask for section headings or page references where available, plus a short explanation of each finding. Verify the reference in the original document. If a scanned file has unclear text, do not treat an apparently precise quotation as reliable without checking the image. A document workflow needs an uncertainty path as well as an answer path."
+      },
+      {
+        "heading": "Use a procurement scenario",
+        "text": "For a supplier proposal, build a review table covering scope, exclusions, delivery assumptions, warranty and outstanding questions. Do not ask the assistant to invent absent terms. A blank field marked “not found” is more useful than an unsupported interpretation. Keep commercial decisions with the person responsible for the purchase."
+      },
+      {
+        "heading": "Produce an actionable review",
+        "text": "End with a short list of questions to send back to the document owner and the sections needing human review. Preserve the original file and label revisions clearly. Claude can assist with organizing the review, while the acceptance decision should rest on verified source material and the relevant professional judgment."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "Claude",
+    "slug": "claude-for-development-planning",
+    "title": "How to Use Claude for Development Planning Without Losing Control",
+    "description": "Break a development task into assumptions, small changes and verification steps before allowing an AI assistant to alter a project.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Give the assistant the actual constraints",
+        "text": "A useful development plan begins with the existing project. Explain the framework, deployment process, affected feature and behaviour that must remain intact. Ask Claude to identify missing information before proposing a rewrite. An elegant plan for a different architecture is not progress on your current application."
+      },
+      {
+        "heading": "Request a small implementation sequence",
+        "text": "For a new customer filter, the plan might cover the query contract, interface state and empty-result handling. Ask which files are expected to change and why. Keep optional improvements separate from required work. This makes it easier to review the scope and avoids turning a straightforward change into an unnecessary migration."
+      },
+      {
+        "heading": "Define acceptance before implementation",
+        "text": "Write examples of correct behaviour, including permissions and failure states. If the filter is company-specific, confirm that users cannot retrieve another company’s records by changing a parameter. A visible selector does not establish data isolation. The plan must include the enforcement point and a way to verify it."
+      },
+      {
+        "heading": "Use a review checkpoint",
+        "text": "Have the assistant explain the completed diff in relation to the original request. Inspect unexpected files and dependencies. Run the relevant checks and exercise the workflow yourself. If a proposed fix removes validation merely to make a test pass, revisit the requirement rather than accepting the shortcut."
+      },
+      {
+        "heading": "Keep a rollback path",
+        "text": "Commit a coherent change before starting the next feature. Record environment settings without including secret values. Re-run the core journey after deployment because local success does not prove production configuration is correct. Claude is useful as a planning and implementation assistant when the work remains bounded, inspectable and tied to a clear outcome."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "Claude",
+    "slug": "evaluate-claude-business-workflow",
+    "title": "How to Evaluate Claude for a Business Workflow",
+    "description": "Compare AI output against a repeatable test set before choosing a model or adopting an automated process.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Choose the task before comparing tools",
+        "text": "“Is Claude good?” is too broad to answer usefully. Define a task such as categorizing support enquiries into six approved categories. Write what success means, including when the assistant should ask for clarification. A comparison only becomes meaningful when all candidates receive the same input and are judged against the same expectations."
+      },
+      {
+        "heading": "Build a representative test set",
+        "text": "Collect synthetic or approved examples covering normal requests, ambiguous language, missing information and irrelevant instructions. Include difficult cases that resemble your real workload. Keep a portion separate from prompt development so you can see whether improvements generalize beyond the examples used while refining the instructions."
+      },
+      {
+        "heading": "Score more than fluent writing",
+        "text": "For classification, measure whether the category is correct. For extraction, compare required fields with the source. Track unsupported claims, response time and the amount of human correction required. Anthropic’s evaluation guidance recommends defining success criteria; your own criteria should reflect the cost of mistakes in the actual process."
+      },
+      {
+        "heading": "Use an explicit rejection path",
+        "text": "Some inputs should produce “needs review.” Do not reward the model for always returning an answer. A supplier email with no currency should not silently become a USD quotation. Test whether missing information remains missing and whether contradictory content is flagged instead of resolved through guesswork."
+      },
+      {
+        "heading": "Repeat the evaluation after changes",
+        "text": "Save the prompt version and model configuration with the results. Re-run important cases after changing instructions or the provider configuration. Avoid calling a tool the universal winner based on a few impressive examples. Choose the option that meets your workflow’s requirements, and keep human review where the consequences justify it."
+      }
+    ],
+    "sources": [
+      [
+        "Claude evaluation guide",
+        "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests"
+      ]
+    ]
+  },
+  {
+    "category": "AI in General",
+    "slug": "choose-first-ai-business-use-case",
+    "title": "How to Choose Your First AI Business Use Case",
+    "description": "Select a small, measurable AI pilot by balancing repetition, available data, review effort and the consequences of mistakes.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Look for repetitive interpretation work",
+        "text": "Start with tasks where people repeatedly read, classify or draft similar information. Examples include sorting enquiries or preparing a first draft of a project brief. Avoid beginning with a process nobody understands. If the team cannot describe a good result, it will be difficult to evaluate whether the AI output is useful."
+      },
+      {
+        "heading": "Estimate the full effort",
+        "text": "Count the time spent preparing input, reviewing output and correcting mistakes. A tool that drafts in seconds may still require lengthy verification. Compare the entire assisted workflow with the current process. Record a baseline from a small sample before the pilot so you have something more concrete than enthusiasm to compare against."
+      },
+      {
+        "heading": "Prefer reviewable outcomes",
+        "text": "A suggested category or draft response is easier to supervise than an automatic payment or account closure. For a first pilot, keep the output reversible and make the human decision visible. Choose a named owner who can judge quality and stop the trial if it creates more work than it removes."
+      },
+      {
+        "heading": "Use a simple selection exercise",
+        "text": "List three candidate tasks. For each, write its frequency, current effort, data availability, review method and worst plausible mistake. Select one with clear examples and manageable consequences. This is a planning exercise, not a formula that guarantees return on investment. Team capacity and operational context still matter."
+      },
+      {
+        "heading": "Set a stopping rule",
+        "text": "Agree what improvement would justify continuing and what errors would pause the pilot. Run it with a limited audience and compare results against the baseline. If the main problem turns out to be missing information or inconsistent processes, fix that first. An AI feature should support a useful workflow rather than conceal an unresolved one."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "AI in General",
+    "slug": "automation-vs-ai-agents",
+    "title": "Automation or an AI Agent: Which Does Your Workflow Need?",
+    "description": "Distinguish predictable business rules from tasks requiring interpretation before giving software access to tools and actions.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Use fixed rules when they fit",
+        "text": "If the requirement is “email the account owner when an invoice becomes overdue,” a conventional rule may be sufficient. AI becomes more relevant when inputs are varied and require interpretation, such as understanding a free-text enquiry. Do not add a model to a deterministic calculation simply because AI is available."
+      },
+      {
+        "heading": "Separate interpretation from action",
+        "text": "A system can classify a request with AI and then apply ordinary business rules. For example, the model suggests a service category while the application decides which team is permitted to receive it. This separation makes failures easier to inspect and prevents generated text from becoming unrestricted authority over your systems."
+      },
+      {
+        "heading": "Understand the added responsibility of agents",
+        "text": "An agent can be designed to choose tools or steps toward a goal. That flexibility introduces questions about permissions, stopping conditions and unexpected actions. Specify which tools it may use, what information it may access and which operations require approval. Tool access should be narrow enough to match the business task."
+      },
+      {
+        "heading": "Design a purchasing example",
+        "text": "An assistant might gather supplier information and prepare a comparison. Sending a purchase order is a different action with financial consequences. Keep the comparison stage separate from approval and dispatch. A recommendation should not silently cross the boundary into a commitment just because the software can call another API."
+      },
+      {
+        "heading": "Choose the simplest adequate design",
+        "text": "Draw the workflow and mark each step as a fixed rule, an interpretation task or an approval. Start with rules and bounded AI assistance where possible. Introduce more autonomous behaviour only when you can explain the benefit, test the failure paths and monitor the resulting actions. Complexity needs a business reason."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "AI in General",
+    "slug": "rag-business-knowledge-assistant",
+    "title": "What Is RAG? Planning an AI Assistant for Business Knowledge",
+    "description": "Understand retrieval-augmented generation and the data, permission and evaluation work behind a useful internal knowledge assistant.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Give the assistant relevant source material",
+        "text": "Retrieval-augmented generation, often shortened to RAG, retrieves information and supplies it as context for a generated answer. In a business assistant, that material might be approved product guides or internal procedures. It is a way to connect answers with reference information, not a guarantee that every answer will be correct."
+      },
+      {
+        "heading": "Clean the knowledge collection",
+        "text": "Start with a small set of current documents. Remove duplicates, mark superseded versions and assign an owner to each policy. If the collection contains conflicting procedures, the assistant may retrieve the wrong one or combine incompatible information. Better retrieval cannot resolve an ownership decision the business has never made."
+      },
+      {
+        "heading": "Enforce permissions before retrieval",
+        "text": "A user should only retrieve material they are allowed to access. Do not fetch everything and ask the model to keep confidential sections secret. Apply access controls in the retrieval system and test them with users from different roles or companies. A natural-language instruction is not a substitute for authorization."
+      },
+      {
+        "heading": "Make answers inspectable",
+        "text": "Show references to the relevant source passages and allow the assistant to say that the supplied material is insufficient. For a product support example, test questions about discontinued items and missing specifications. The answer should not fill a gap with a plausible-sounding value. Keep a direct route to human support."
+      },
+      {
+        "heading": "Evaluate both retrieval and answers",
+        "text": "When an answer is wrong, check whether the right document was retrieved and whether the model used it correctly. Track these as different problems. Refresh the collection through a controlled process and repeat tests after updates. Begin with a narrow topic where the team can verify answers before expanding the knowledge base."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "category": "AI in General",
+    "slug": "ai-project-cost-planning",
+    "title": "How to Plan the Operating Costs of an AI Feature",
+    "description": "Build a cost model covering requests, input size, output, retries, hosting and human review without relying on a fixed model price.",
+    "date": "2026-09-21",
+    "sections": [
+      {
+        "heading": "Start with usage rather than a subscription label",
+        "text": "An AI feature’s cost depends on how people use it and which services it calls. Estimate requests per day, average input size and expected response length. Include busy periods and repeated attempts. A website with a small audience can still generate substantial usage if each visitor triggers a long, multi-step process."
+      },
+      {
+        "heading": "Build a simple cost worksheet",
+        "text": "Create rows for model calls, retrieval or storage services, hosting, monitoring and human review. Record the unit price from the provider’s current pricing page and the assumed usage beside it. Keep assumptions visible. The worksheet should be easy to update when a model, feature or usage pattern changes."
+      },
+      {
+        "heading": "Count retries and supporting work",
+        "text": "A successful result may require more than one call. Include validation failures, planned retries and background tasks in the estimate. Also count the staff time needed to check results. The relevant comparison is the cost per useful completed task, not just the price of one generated response."
+      },
+      {
+        "heading": "Add practical controls",
+        "text": "Limit input length and output size where appropriate. Decide which users may access the feature and how much usage is allowed. Monitor consumption and configure alerts, while checking whether each provider setting is an alert or an actual enforced limit. Do not assume a budget notification automatically stops charges."
+      },
+      {
+        "heading": "Review real data after a pilot",
+        "text": "Compare estimated and actual usage for a small release. Find the tasks that consume the most resources and whether their results justify the cost. Improve prompts, reduce unnecessary context or simplify the workflow before expanding access. Use current provider prices when making a commercial commitment; this guide intentionally does not quote a model tariff."
+      }
+    ],
+    "sources": []
+  }
+]

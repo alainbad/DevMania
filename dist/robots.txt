@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /server/
+Disallow: /.openai/
+Sitemap: https://www.dev-mania.com/sitemap.xml
