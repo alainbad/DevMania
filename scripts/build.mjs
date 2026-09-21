@@ -12,7 +12,7 @@ fs.writeFileSync('dist/index.html',page);fs.copyFileSync('src/projects.json','di
 for(const file of ['os.js','os.css','matcher.js','builder.js','terminal.js','experience-state.js','experiences.js','experiences.css','playground.js','universe.js'])fs.copyFileSync('src/'+file,'dist/'+file);
 console.log(`Built ${projects.length} project cards and interactive portfolio assets.`);
 // Embed an explicit public-file allowlist in the Worker; no repository source is served.
-const publicNames=['index.html','style.css','app.js','os.css','os.js','matcher.js','builder.js','terminal.js','projects.json','experience-state.js','experiences.js','experiences.css','playground.js','universe.js'];
+const publicNames=['qa-preview.html','index.html','style.css','app.js','os.css','os.js','matcher.js','builder.js','terminal.js','projects.json','experience-state.js','experiences.js','experiences.css','playground.js','universe.js'];
 const files=[...publicNames,...fs.readdirSync('dist/assets').map(n=>'assets/'+n)];const assets={};
 const types={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json',png:'image/png',jpeg:'image/jpeg',jpg:'image/jpeg',svg:'image/svg+xml'};
 for(const name of files){const ext=name.split('.').pop();const binary=['png','jpeg','jpg'].includes(ext);assets['/'+name]={type:types[ext]||'application/octet-stream',base64:binary,body:fs.readFileSync('dist/'+name,binary?'base64':'utf8')}}

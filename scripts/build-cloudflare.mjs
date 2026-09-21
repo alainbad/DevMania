@@ -7,7 +7,7 @@ fs.mkdirSync('.cloudflare', {recursive: true});
 for (const file of ['index.js', 'projects.js', 'validation.js']) {
   fs.copyFileSync('dist/server/' + file, '.cloudflare/' + file);
 }
-const publicFiles = ['index.html', 'style.css', 'app.js', 'os.css', 'os.js',
+const publicFiles = ['qa-preview.html','index.html', 'style.css', 'app.js', 'os.css', 'os.js',
   'matcher.js', 'builder.js', 'terminal.js', 'projects.json',
   'experience-state.js','experiences.js','experiences.css','playground.js','universe.js',
   ...fs.readdirSync('dist/assets').map(name => 'assets/' + name)];
