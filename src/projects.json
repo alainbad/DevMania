@@ -1459,7 +1459,7 @@
     "name": "DM-ERP",
     "shortDescription": "DM-ERP is an intelligent procurement platform in development, designed to help businesses simplify sourcing and purchasing. It aims to bring supplier discovery, quotation comparisons, purchase requests, and order tracking into one workspace. AI-assisted analysis will help teams evaluate offers, identify cost-saving opportunities, and make informed purchasing decisions while keeping people in control of approvals.",
     "categories": [
-      "Softwares"
+      "SaaS"
     ],
     "platforms": [
       "ai"
@@ -1469,7 +1469,8 @@
       "procurement",
       "business",
       "automation",
-      "suppliers"
+      "suppliers",
+      "saas"
     ],
     "status": "building",
     "featured": true,
@@ -1477,7 +1478,7 @@
     "image": null,
     "imageClass": null,
     "imageAlt": null,
-    "caption": "Software",
+    "caption": "SaaS",
     "legacyKey": "SOFTWARE-procurement-ai",
     "experience": {
       "projectId": "software-procurement-ai",
@@ -1529,7 +1530,7 @@
         ]
       },
       "universeTags": [
-        "Softwares",
+        "SaaS",
         "ai",
         "procurement",
         "business",
