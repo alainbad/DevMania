@@ -16,8 +16,8 @@ console.log(`Built ${projects.length} project cards and interactive portfolio as
 const blogFiles=buildBlog();
 const publicNames=['index.html','style.css','app.js','os.css','os.js','matcher.js','builder.js','terminal.js','projects.json','experience-state.js','experiences.js','experiences.css','playground.js','universe.js'];
 const files=[...publicNames,...blogFiles,...fs.readdirSync('dist/assets').map(n=>'assets/'+n)];const assets={};
-const types={xml:'application/xml; charset=utf-8',txt:'text/plain; charset=utf-8',html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json',png:'image/png',jpeg:'image/jpeg',jpg:'image/jpeg',svg:'image/svg+xml'};
-for(const name of files){const ext=name.split('.').pop();const binary=['png','jpeg','jpg'].includes(ext);assets['/'+name]={type:types[ext]||'application/octet-stream',base64:binary,body:fs.readFileSync('dist/'+name,binary?'base64':'utf8')}}
+const types={xml:'application/xml; charset=utf-8',txt:'text/plain; charset=utf-8',html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json',png:'image/png',jpeg:'image/jpeg',jpg:'image/jpeg',svg:'image/svg+xml',webp:'image/webp'};
+for(const name of files){const ext=name.split('.').pop();const binary=['png','jpeg','jpg','webp'].includes(ext);assets['/'+name]={type:types[ext]||'application/octet-stream',base64:binary,body:fs.readFileSync('dist/'+name,binary?'base64':'utf8')}}
 fs.mkdirSync('dist/server',{recursive:true});fs.writeFileSync('dist/server/assets.js','export default '+JSON.stringify(assets)+';');fs.writeFileSync('dist/server/projects.js','export default '+JSON.stringify(projects)+';');fs.copyFileSync('server/worker.js','dist/server/index.js');
 const validator=fs.readFileSync('src/builder.js','utf8').match(/export function validConcept[\s\S]*?\nexport function mountBuilder/)[0].replace(/\nexport function mountBuilder$/,'');fs.writeFileSync('dist/server/validation.js',validator);
 fs.mkdirSync('dist/.openai',{recursive:true});fs.copyFileSync('.openai/hosting.json','dist/.openai/hosting.json');

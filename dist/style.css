@@ -27,3 +27,5 @@
 .work-thumbnail[data-project="APP-parently"] img.app-icon-image{inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 
 .work-thumbnail[data-project="APP-parently"]{background:#000;display:flex;align-items:center;justify-content:center}.parently-icon-frame{position:relative;height:100%;aspect-ratio:254/248;flex:none}.work-thumbnail[data-project="APP-parently"] .parently-icon-frame img.app-icon-image{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;clip-path:inset(12.5% 13% 6.5% 7.5% round 21%)}
+
+.service-list h3 a:hover,.service-list h3 a:focus-visible,.service-list p a{color:#ff6508}.service-list p a{text-decoration:underline;text-underline-offset:4px}

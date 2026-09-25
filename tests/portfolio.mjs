@@ -7,7 +7,7 @@ import worker,{ideaEndpoint} from '../dist/server/index.js';
 const ps=JSON.parse(fs.readFileSync('src/projects.json'));let checks=0;const test=(name,fn)=>{fn();checks++;console.log('PASS '+name)};
 test('Mobile search finds all four app entries',()=>assert.equal(searchProjects('Show me your mobile apps',ps).projects.length,4));
 test('Logistics search matches both Trackora entries',()=>assert.deepEqual(searchProjects('Show me logistics projects',ps).projects.map(p=>p.name),['Trackora','Trackora']));
-test('AI search only returns represented AI capability',()=>assert.deepEqual(searchProjects('What have you built with AI?',ps).projects.map(p=>p.name),['Procurement AI']));
+test('AI search only returns represented AI capability',()=>assert.deepEqual(searchProjects('What have you built with AI?',ps).projects.map(p=>p.name),['DM-ERP']));
 test('Booking search returns genuinely matching capabilities',()=>{const r=searchProjects('Show me booking platforms',ps).projects;assert(r.some(p=>p.name==='PinevilleLeb'));assert(r.some(p=>p.name==='Assia Padel'));assert(!r.some(p=>p.name==='Trackora'))});
 test('Newest does not invent launch dates',()=>{assert.equal(latestProject(ps),null);assert.equal(searchProjects('Show me newest projects',ps).projects.length,0)});
 test('No-match e-commerce request does not invent prior work',()=>assert.equal(searchProjects('I need an e-commerce website',ps).projects.length,0));
