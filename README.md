@@ -36,7 +36,7 @@ Until these are configured, the endpoint returns 503 and the builder explicitly 
 
 Native dialogs provide focus containment, Escape dismissal and trigger focus return. Responsive rules cover narrow portrait and short landscape viewports; reduced motion skips boot and suppresses transitions. Visual browser QA is not available for this buildless Worker in the managed preview environment, so real-device visual and keyboard checks remain to be confirmed.
 
-No analytics tracker was added. Event hooks use an existing `dataLayer` when present and dispatch `devmania:analytics` events otherwise. No client idea text or personal contact data is included in event metadata. No live analytics backend is configured.
+Google Analytics 4 page measurement is installed on the homepage, service pages and blog pages with the public measurement ID `G-164FTT0WX0`. Interactive event hooks still use `dataLayer` and dispatch `devmania:analytics` events; those custom events are not configured as GA4 conversions. No client idea text or personal contact data is included in event metadata.
 
 Optional Phase 2 additions in the supplied specification are deferred. Latest-project ranking remains unavailable until launch dates are supplied. Project counts describe registry entries (Trackora has separate app and website entries). No fabricated progress percentages are used.
 

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {services} from './services.mjs';
+import {googleTag} from './analytics.mjs';
 export const posts=JSON.parse(fs.readFileSync('src/blog/posts.json','utf8'));
 const origin='https://www.dev-mania.com';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -16,7 +17,7 @@ const crumbs=(items)=>`<nav class="breadcrumbs" aria-label="Breadcrumb">${items.
 export function buildBlog(){
  fs.mkdirSync('dist/blog',{recursive:true});fs.copyFileSync('src/blog/blog.css','dist/blog.css');
  const files=['blog.css'];
- function write(path,html){const file=path+'index.html';fs.mkdirSync('dist/'+path,{recursive:true});fs.writeFileSync('dist/'+file,html);files.push(file);}
+ function write(path,html){const file=path+'index.html';fs.mkdirSync('dist/'+path,{recursive:true});fs.writeFileSync('dist/'+file,html.replace('</head>',googleTag+'</head>'));files.push(file);}
  for(const service of services){
   const path='/services/'+service.slug+'/';
   const items=[['Home','/'],[service.heading,path]];
