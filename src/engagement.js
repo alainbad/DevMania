@@ -1,0 +1,4 @@
+// Never send form text, names, email addresses or enquiry contents to Analytics.
+const send=(event,params)=>{if(typeof window.gtag==='function')window.gtag('event',event,params);};
+document.addEventListener('click',event=>{const a=event.target.closest('a[href]');if(!a)return;const url=new URL(a.href,location.href);if(url.hostname==='wa.me')send('contact_click',{contact_method:'whatsapp',placement:location.pathname});else if(url.origin===location.origin&&url.hash==='#contact')send('contact_click',{contact_method:'contact_section',placement:location.pathname});else if(a.dataset.share)send('share',{method:a.dataset.share,content_type:'article',item_id:location.pathname});});
+document.querySelector('#brief-form')?.addEventListener('submit',()=>send('enquiry_handoff',{contact_method:'whatsapp'}));

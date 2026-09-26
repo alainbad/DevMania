@@ -9,7 +9,8 @@ for (const file of ['index.js', 'projects.js', 'validation.js']) {
 }
 const blogFiles = fs.readdirSync('dist/blog', {recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'blog/'+name);
 const serviceFiles = fs.readdirSync('dist/services', {recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'services/'+name);
-const publicFiles = [...blogFiles,...serviceFiles,'blog.css','sitemap.xml','robots.txt','index.html', 'style.css', 'app.js', 'os.css', 'os.js',
+const toolFiles=fs.readdirSync('dist/tools',{recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'tools/'+name);
+const publicFiles = [...toolFiles,'tools.js','engagement.js','feed.xml',...blogFiles,...serviceFiles,'blog.css','sitemap.xml','robots.txt','index.html', 'style.css', 'app.js', 'os.css', 'os.js',
   'matcher.js', 'builder.js', 'terminal.js', 'projects.json',
   'experience-state.js','experiences.js','experiences.css','playground.js','universe.js',
   ...fs.readdirSync('dist/assets').map(name => 'assets/' + name)];
