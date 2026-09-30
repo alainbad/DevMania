@@ -1580,5 +1580,92 @@
         ]
       }
     }
+  },
+  {
+    "id": "saas-fixenator",
+    "slug": "saas-fixenator",
+    "name": "Fixenator",
+    "shortDescription": "Fixenator is an online platform for Excel and data tasks. Describe what you need, upload your files, and receive a scoped project estimate. Its guided request and order tracking flow makes it easier to turn messy spreadsheets and business data into useful results.",
+    "categories": [
+      "SaaS"
+    ],
+    "platforms": [
+      "web",
+      "ai"
+    ],
+    "capabilities": [
+      "ai",
+      "excel",
+      "spreadsheets",
+      "data",
+      "automation",
+      "business",
+      "saas"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://fixenator.com",
+    "image": "assets/fixenator.svg",
+    "imageClass": "project-screenshot",
+    "imageAlt": "Fixenator — Excel and data tasks",
+    "caption": "SaaS",
+    "legacyKey": "SAAS-fixenator",
+    "experience": {
+      "projectId": "saas-fixenator",
+      "publicArchitecture": {
+        "nodes": [
+          {
+            "id": "interface",
+            "label": "Describe your task",
+            "type": "interface"
+          },
+          {
+            "id": "files",
+            "label": "Upload spreadsheets and data",
+            "type": "capability"
+          },
+          {
+            "id": "scope",
+            "label": "Review the project estimate",
+            "type": "capability"
+          },
+          {
+            "id": "order",
+            "label": "Track your order",
+            "type": "capability"
+          }
+        ],
+        "edges": [
+          {
+            "from": "interface",
+            "to": "files"
+          },
+          {
+            "from": "files",
+            "to": "scope"
+          },
+          {
+            "from": "scope",
+            "to": "order"
+          }
+        ]
+      },
+      "universeTags": [
+        "SaaS",
+        "excel",
+        "spreadsheets",
+        "data",
+        "automation"
+      ],
+      "xrayEnabled": true,
+      "playground": {
+        "enabled": false,
+        "demoType": null
+      },
+      "buildStory": {
+        "enabled": false,
+        "steps": []
+      }
+    }
   }
 ]
