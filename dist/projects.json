@@ -3,7 +3,7 @@
     "id": "app-invoice-mini",
     "slug": "app-invoice-mini",
     "name": "Invoice Mini",
-    "shortDescription": "Invoice Mini is a simple and efficient invoicing app built for freelancers, small businesses, and independent professionals. It makes it easy to create professional invoices, manage client and business details, calculate totals, and generate polished invoices on the go—all through a clean, straightforward interface designed to keep invoicing fast and hassle-free.",
+    "shortDescription": "Invoice Mini is a simple and efficient invoicing app built for freelancers, small businesses, and independent professionals. It makes it easy to create professional invoices, manage client and business details, calculate totals, and generate polished invoices on the go\u2014all through a clean, straightforward interface designed to keep invoicing fast and hassle-free.",
     "categories": [
       "Apps"
     ],
@@ -144,7 +144,7 @@
     "url": null,
     "image": "assets/trackora.png",
     "imageClass": "trackora-image",
-    "imageAlt": "Trackora — Track any shipment in real time",
+    "imageAlt": "Trackora \u2014 Track any shipment in real time",
     "caption": "App",
     "legacyKey": "APP-trackora",
     "experience": {
@@ -251,7 +251,7 @@
     "id": "app-parently",
     "slug": "app-parently",
     "name": "Parently",
-    "shortDescription": "Parently is a smart parenting companion designed to help parents organize and manage their child’s everyday needs. The app brings essential parenting tools and information into one simple, user-friendly space, making it easier to track routines, stay organized, and keep up with important moments throughout a child’s growth and development.",
+    "shortDescription": "Parently is a smart parenting companion designed to help parents organize and manage their child\u2019s everyday needs. The app brings essential parenting tools and information into one simple, user-friendly space, making it easier to track routines, stay organized, and keep up with important moments throughout a child\u2019s growth and development.",
     "categories": [
       "Apps"
     ],
@@ -493,7 +493,7 @@
     "url": "https://www.track-ora.com",
     "image": "assets/trackora.png",
     "imageClass": "trackora-image",
-    "imageAlt": "Trackora — Track any shipment in real time",
+    "imageAlt": "Trackora \u2014 Track any shipment in real time",
     "caption": "track-ora.com",
     "legacyKey": "WEBSITE-trackora",
     "experience": {
@@ -600,7 +600,7 @@
     "id": "website-destinotel",
     "slug": "website-destinotel",
     "name": "Destinotel",
-    "shortDescription": "Destinotel is a modern hotel discovery and booking platform designed to make travel planning simple and enjoyable. Users can explore destinations, discover hotels, compare accommodation options, and find the right stay through a clean and intuitive experience—bringing inspiration and hotel booking together in one seamless platform.",
+    "shortDescription": "Destinotel is a modern hotel discovery and booking platform designed to make travel planning simple and enjoyable. Users can explore destinations, discover hotels, compare accommodation options, and find the right stay through a clean and intuitive experience\u2014bringing inspiration and hotel booking together in one seamless platform.",
     "categories": [
       "Websites"
     ],
@@ -725,7 +725,7 @@
     "id": "website-assia-wanderers-club",
     "slug": "website-assia-wanderers-club",
     "name": "Assia Wanderers Club",
-    "shortDescription": "Assia Wanderers Club is a dedicated digital platform created to bring the club, its players, and its community together in one place. The platform showcases the club’s identity, team information, activities, news, and updates through a modern and engaging experience, giving supporters an easy way to stay connected with everything happening at the club.",
+    "shortDescription": "Assia Wanderers Club is a dedicated digital platform created to bring the club, its players, and its community together in one place. The platform showcases the club\u2019s identity, team information, activities, news, and updates through a modern and engaging experience, giving supporters an easy way to stay connected with everything happening at the club.",
     "categories": [
       "Websites"
     ],
@@ -964,7 +964,7 @@
     "id": "website-the-betrix",
     "slug": "website-the-betrix",
     "name": "The Betrix",
-    "shortDescription": "The Betrix is an online gaming and sports entertainment platform designed to bring multiple gaming experiences together in one modern interface. The platform features casino-style games, live gaming experiences, sports betting functionality, player accounts, wallet management, promotions, and an administrative management system—all built around a fast, immersive, and user-friendly experience.",
+    "shortDescription": "The Betrix is an online gaming and sports entertainment platform designed to bring multiple gaming experiences together in one modern interface. The platform features casino-style games, live gaming experiences, sports betting functionality, player accounts, wallet management, promotions, and an administrative management system\u2014all built around a fast, immersive, and user-friendly experience.",
     "categories": [
       "Websites"
     ],
@@ -1091,7 +1091,7 @@
     "id": "website-go-betrix",
     "slug": "website-go-betrix",
     "name": "Go Betrix",
-    "shortDescription": "GoBetrix is a sports betting platform built to deliver a fast, intuitive, and engaging experience for sports fans. Users can explore upcoming and live events, browse betting markets and odds, manage their selections through a bet slip, and follow their betting activity—all within a modern, responsive interface designed for both mobile and desktop.",
+    "shortDescription": "GoBetrix is a sports betting platform built to deliver a fast, intuitive, and engaging experience for sports fans. Users can explore upcoming and live events, browse betting markets and odds, manage their selections through a bet slip, and follow their betting activity\u2014all within a modern, responsive interface designed for both mobile and desktop.",
     "categories": [
       "Websites"
     ],
@@ -1330,7 +1330,7 @@
     "id": "website-the-wedding-hub",
     "slug": "website-the-wedding-hub",
     "name": "The Wedding Hub",
-    "shortDescription": "Wedding Hub is an all-in-one wedding planning platform that connects couples with trusted wedding suppliers and services. Users can discover and compare venues, photographers, caterers, florists, entertainment, beauty services, and more—all in one place. Designed to simplify the entire planning journey, Wedding Hub helps couples find the right vendors and organize their dream wedding with ease.",
+    "shortDescription": "Wedding Hub is an all-in-one wedding planning platform that connects couples with trusted wedding suppliers and services. Users can discover and compare venues, photographers, caterers, florists, entertainment, beauty services, and more\u2014all in one place. Designed to simplify the entire planning journey, Wedding Hub helps couples find the right vendors and organize their dream wedding with ease.",
     "categories": [
       "Websites"
     ],
@@ -1607,7 +1607,7 @@
     "url": "https://fixenator.com",
     "image": "assets/fixenator.svg",
     "imageClass": "project-screenshot",
-    "imageAlt": "Fixenator — Excel and data tasks",
+    "imageAlt": "Fixenator \u2014 Excel and data tasks",
     "caption": "SaaS",
     "legacyKey": "SAAS-fixenator",
     "experience": {
@@ -1661,6 +1661,77 @@
       "playground": {
         "enabled": false,
         "demoType": null
+      },
+      "buildStory": {
+        "enabled": false,
+        "steps": []
+      }
+    }
+  },
+  {
+    "id": "website-devmania",
+    "slug": "website-devmania",
+    "name": "DevMania",
+    "shortDescription": "Our company website brings together our project portfolio, development services, practical guides and interactive project planning tools.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "portfolio",
+      "business",
+      "content"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://www.dev-mania.com/",
+    "image": "assets/hero-studio.webp",
+    "imageClass": "",
+    "imageAlt": "DevMania development studio",
+    "caption": "Company website",
+    "legacyKey": "devmania",
+    "experience": {
+      "projectId": "website-devmania",
+      "publicArchitecture": {
+        "nodes": [
+          {
+            "id": "site",
+            "label": "Company website",
+            "type": "interface"
+          },
+          {
+            "id": "portfolio",
+            "label": "Project portfolio",
+            "type": "feature"
+          },
+          {
+            "id": "guides",
+            "label": "Development guides",
+            "type": "feature"
+          }
+        ],
+        "edges": [
+          {
+            "from": "site",
+            "to": "portfolio"
+          },
+          {
+            "from": "site",
+            "to": "guides"
+          }
+        ]
+      },
+      "universeTags": [
+        "Websites",
+        "portfolio",
+        "business",
+        "content"
+      ],
+      "xrayEnabled": true,
+      "playground": {
+        "enabled": false
       },
       "buildStory": {
         "enabled": false,

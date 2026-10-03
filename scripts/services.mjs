@@ -12,7 +12,7 @@ export const services = [
       ['Prepare for launch and search', 'The launch checklist includes working links and forms, mobile checks, descriptive page titles, crawlable pages, a sitemap where useful and a consistent domain. Search performance depends on the usefulness of the content and ongoing measurement; a technical launch alone cannot guarantee rankings.'],
       ['Start with a brief', 'Tell us who the site serves, what visitors should accomplish, the content you already have and any systems it must connect to. If there is an existing site, include its address and the main problem you want to solve. This is enough to start discussing a sensible first release.']
     ],
-    examples: [['Trackora website','/#project-website-trackora'],['Destinotel','/#project-website-destinotel']],
+    examples: [['Trackora website','/projects/#project-website-trackora'],['Destinotel','/projects/#project-website-destinotel']],
     guides: [['How to write a website development brief','/blog/website-development-brief/'],['Website or web application?','/blog/website-vs-web-application/']]
   },
   {
@@ -27,7 +27,7 @@ export const services = [
       ['Test before launch', 'Check common devices, small screens, slow connections and interrupted flows. Review permissions, empty states and error messages, then prepare the listing content and support process for the chosen app stores. A launch is the beginning of learning how people actually use the product.'],
       ['Describe the idea', 'Share the intended users, the one task the app must solve, any existing systems and the platforms you want to support. A concise description of the first user journey gives us a practical place to start.']
     ],
-    examples: [['Invoice Mini app','/#project-app-invoice-mini'],['Trackora app','/#project-app-trackora']],
+    examples: [['Invoice Mini app','/projects/#project-app-invoice-mini'],['Trackora app','/projects/#project-app-trackora']],
     guides: [['Choosing a mobile app MVP','/blog/mobile-app-mvp-scope/'],['PWA or native mobile app?','/blog/pwa-vs-native-app/']]
   },
   {
@@ -42,7 +42,7 @@ export const services = [
       ['Test and monitor the connection', 'Test expected responses along with invalid data, permission failures and service interruptions. Document the provider, the fields used and who maintains the connection. Monitoring and clear ownership reduce the time needed to investigate a problem after launch.'],
       ['Bring the provider details', 'Tell us which systems need to connect, what each one should send or receive and whether you already have provider documentation. Please do not send secret keys in an enquiry. We can agree on a secure way to configure access during implementation.']
     ],
-    examples: [['Trackora','/#project-website-trackora'],['DevMania project portfolio','/#work']],
+    examples: [['Trackora','/projects/#project-website-trackora'],['DevMania project portfolio','/projects/']],
     guides: [['API integration planning guide','/blog/api-integration-business-guide/'],['Keep API keys secure','/blog/api-key-security/']]
   },
   {
@@ -57,7 +57,7 @@ export const services = [
       ['Evaluate a small pilot', 'Collect representative examples and compare the results with a manual review. Look at accuracy, time saved, error handling and the effort needed to keep the workflow current. Expand only when the pilot helps people do the underlying job more clearly or efficiently.'],
       ['Describe your workflow', 'Explain the repeated task, the documents or systems involved, the output you want and how a person currently checks it. That is enough to discuss a practical AI feature or a simpler automation if it suits the problem better.']
     ],
-    examples: [['DM-ERP concept','/#project-software-procurement-ai'],['DevMania idea planner','/#experiences']],
+    examples: [['DM-ERP concept','/projects/#project-software-procurement-ai'],['DevMania idea planner','/scope/#experiences']],
     guides: [['Choosing a first AI use case','/blog/choose-first-ai-business-use-case/'],['Plan an AI project budget','/blog/ai-project-cost-planning/']]
   }
 ];
