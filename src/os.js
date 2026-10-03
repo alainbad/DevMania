@@ -22,7 +22,7 @@ function palette(){track('command_palette_opened');const {dialog,content}=modal(
  form.onsubmit=e=>{e.preventDefault();render()};input.focus();
 }
 fetch('/projects.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(projects=>{registry=projects;filterBanner=el('div',undefined,'os-filter-banner');filterBanner.hidden=true;const reset=el('button','Reset portfolio','os-close');reset.onclick=resetFilter;filterBanner.append(el('span'),reset);document.getElementById('work')?.prepend(filterBanner);
- const dock=el('button',undefined,'os-command-dock');dock.type='button';dock.setAttribute('aria-haspopup','dialog');dock.append(el('span','◉'),el('span','MANIA · Explore. Imagine. Build.'),el('kbd','Ctrl / ⌘ K'));dock.onclick=()=>launchExperience('mania');document.body.append(dock);
+
  document.querySelectorAll('[data-open-builder]').forEach(b=>b.onclick=()=>openBuilder());document.querySelectorAll('[data-open-terminal]').forEach(b=>b.onclick=openTerminal);
  wireExperiences();
  try{const filter=sessionStorage.getItem('devmania-project-filter');if(filter&&document.getElementById('work')){sessionStorage.removeItem('devmania-project-filter');const ids=JSON.parse(filter);filterProjects(registry.filter(p=>ids.includes(p.id)))}const enquiry=sessionStorage.getItem('devmania-enquiry');if(enquiry&&document.getElementById('brief-form')){sessionStorage.removeItem('devmania-enquiry');const {brief,type}=JSON.parse(enquiry);contact(brief,type)}}catch{}

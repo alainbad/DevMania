@@ -9,3 +9,5 @@
 footer .footer-brand{margin-right:auto}
 @media(min-width:1600px){.discipline-strip{max-width:1312px;width:calc(100% - 128px)}}
 @media(max-width:600px){.site-header .brand{gap:2px}.site-header .brand-image{width:100px}.site-header .brand-image img{left:-27px}.brand-wordmark{font-size:22px}.hero-top{gap:10px}.hero-top .location{font-size:10px;letter-spacing:.4px}.discipline-strip{font-size:10px;letter-spacing:.4px;gap:4px}.discipline-strip i{font-size:10px}}
+
+footer .footer-brand{margin-right:0}footer .company-slogan{color:#d0ceca;margin-right:auto}
