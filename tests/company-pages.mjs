@@ -5,7 +5,7 @@ import cloudflare from '../.cloudflare/index.js';
 import {companyPaths} from '../scripts/navigation.mjs';
 const home=fs.readFileSync('dist/index.html','utf8');
 const projects=JSON.parse(fs.readFileSync('dist/projects.json','utf8'));
-assert.equal(projects.length,15);assert(home.includes('<strong>15</strong><span>Projects</span>'));
+assert.equal(projects.length,15);assert(home.includes('<strong>16</strong><span>Projects</span>'));
 assert(!home.includes('data-project-id='));assert(!home.includes('id="services"'));assert(!home.includes('Hi, I’m Alain'));
 for(const path of companyPaths){
  const html=fs.readFileSync('dist'+path+'index.html','utf8');
