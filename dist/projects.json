@@ -1605,9 +1605,9 @@
     "status": "live",
     "featured": true,
     "url": "https://fixenator.com",
-    "image": "assets/fixenator.svg",
-    "imageClass": "project-screenshot",
-    "imageAlt": "Fixenator \u2014 Excel and data tasks",
+    "image": "assets/fixenator-logo-v2.png",
+    "imageClass": "fixenator-logo-image",
+    "imageAlt": "Fixenator official orange logo and black wordmark",
     "caption": "SaaS",
     "legacyKey": "SAAS-fixenator",
     "experience": {
