@@ -5,7 +5,7 @@ import cloudflare from '../.cloudflare/index.js';
 import {companyPaths} from '../scripts/navigation.mjs';
 const home=fs.readFileSync('dist/index.html','utf8');
 const projects=JSON.parse(fs.readFileSync('dist/projects.json','utf8'));
-assert.equal(projects.length,15);assert(home.includes('<strong>16</strong><span>Projects</span>'));
+assert.equal(projects.length,16);assert(home.includes('<strong>17</strong><span>Projects</span>'));
 assert(!home.includes('data-project-id='));assert(!home.includes('id="services"'));assert(!home.includes('Hi, I’m Alain'));
 for(const path of companyPaths){
  const html=fs.readFileSync('dist'+path+'index.html','utf8');
@@ -20,5 +20,5 @@ for(const path of companyPaths){
 const contact=fs.readFileSync('dist/contact/index.html','utf8'),support=fs.readFileSync('dist/support/index.html','utf8');
 assert(contact.includes('mailto:alainbadran@dev-mania.com'));assert(contact.includes('https://wa.me/971566407476'));assert(contact.includes('Dubai, United Arab Emirates'));
 assert(support.includes('mailto:support@dev-mania.com'));assert(support.includes('https://wa.me/9613957585'));
-assert.equal((fs.readFileSync('dist/projects/index.html','utf8').match(/data-project-id=/g)||[]).length,15);
+assert.equal((fs.readFileSync('dist/projects/index.html','utf8').match(/data-project-id=/g)||[]).length,16);
 console.log('PASS separate company pages, short homepage, count, contact links, Home links, SEO and Worker routing');

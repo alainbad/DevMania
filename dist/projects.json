@@ -1738,5 +1738,76 @@
         "steps": []
       }
     }
+  },
+  {
+    "id": "website-inter-viewed",
+    "slug": "website-inter-viewed",
+    "name": "Inter-viewed",
+    "shortDescription": "A jobs and talent platform connecting job seekers, independent professionals and employers. Users can create profiles, discover opportunities, apply for jobs and publish vacancies.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "jobs",
+      "profiles",
+      "recruitment"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://inter-viewed.com/",
+    "image": "assets/inter-viewed-logo.png",
+    "imageClass": "inter-viewed-logo-image",
+    "imageAlt": "Inter-viewed official logo",
+    "caption": "Jobs & independent talent platform",
+    "legacyKey": "WEBSITE-inter-viewed",
+    "experience": {
+      "projectId": "website-inter-viewed",
+      "publicArchitecture": {
+        "nodes": [
+          {
+            "id": "platform",
+            "label": "Jobs & talent platform",
+            "type": "interface"
+          },
+          {
+            "id": "profiles",
+            "label": "Professional profiles",
+            "type": "feature"
+          },
+          {
+            "id": "opportunities",
+            "label": "Jobs & applications",
+            "type": "feature"
+          }
+        ],
+        "edges": [
+          {
+            "from": "platform",
+            "to": "profiles"
+          },
+          {
+            "from": "platform",
+            "to": "opportunities"
+          }
+        ]
+      },
+      "universeTags": [
+        "Websites",
+        "jobs",
+        "profiles",
+        "recruitment"
+      ],
+      "xrayEnabled": true,
+      "playground": {
+        "enabled": false
+      },
+      "buildStory": {
+        "enabled": false,
+        "steps": []
+      }
+    }
   }
 ]
