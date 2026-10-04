@@ -31,3 +31,5 @@
 .service-list h3 a:hover,.service-list h3 a:focus-visible,.service-list p a{color:#ff6508}.service-list p a{text-decoration:underline;text-underline-offset:4px}
 
 .work-thumbnail[data-project="WEBSITE-inter-viewed"],.work-thumbnail[data-project="WEBSITE-inter-viewed"]:hover{background:#f8faf7}.work-thumbnail img.inter-viewed-logo-image{inset:8%;width:84%;height:84%;object-fit:contain}
+
+.work-thumbnail[data-project="SOFTWARE-procurement-ai"]{background:#142e2c}.work-thumbnail img.dm-erp-logo-image{inset:16%;width:68%;height:68%;object-fit:contain}

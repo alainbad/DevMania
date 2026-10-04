@@ -1475,9 +1475,9 @@
     "status": "building",
     "featured": true,
     "url": null,
-    "image": null,
-    "imageClass": null,
-    "imageAlt": null,
+    "image": "assets/dm-erp-logo.svg",
+    "imageClass": "dm-erp-logo-image",
+    "imageAlt": "DM-ERP original logo",
     "caption": "SaaS",
     "legacyKey": "SOFTWARE-procurement-ai",
     "experience": {
