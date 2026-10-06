@@ -30,3 +30,12 @@ footer .footer-brand{margin-right:auto}
 
 /* Let the orange logo blend into the header without its black image rectangle. */
 .site-header .brand-image{mix-blend-mode:lighten}
+
+/* Keep the main footer evenly aligned on phones. */
+@media(max-width:600px){
+ body>footer:not(.journal-footer){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px;text-align:center;align-items:center;justify-items:center}
+ body>footer:not(.journal-footer) .footer-brand{grid-column:1/-1;margin-right:0}
+ body>footer:not(.journal-footer)>span{grid-column:1/-1}
+ body>footer:not(.journal-footer)>a:not(.footer-brand){display:flex;align-items:center;justify-content:center;min-height:44px;white-space:nowrap}
+ body>footer:not(.journal-footer) .terminal-trigger{grid-column:1/-1;justify-self:center;margin:0;max-width:100%}
+}
