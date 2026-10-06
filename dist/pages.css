@@ -39,3 +39,9 @@ footer .footer-brand{margin-right:auto}
  body>footer:not(.journal-footer)>a:not(.footer-brand){display:flex;align-items:center;justify-content:center;min-height:44px;white-space:nowrap}
  body>footer:not(.journal-footer) .terminal-trigger{grid-column:1/-1;justify-self:center;margin:0;max-width:100%}
 }
+
+footer .instagram-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;color:var(--orange);white-space:nowrap}
+footer .instagram-shortcut svg{flex-shrink:0}
+footer .instagram-shortcut:hover{color:#fff}
+footer .instagram-shortcut:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+@media(max-width:600px){body>footer:not(.journal-footer)>.instagram-shortcut{grid-column:1/-1}}
