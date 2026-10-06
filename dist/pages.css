@@ -27,3 +27,6 @@ footer .footer-brand{margin-right:auto}
 .os-status.section>div:first-child{grid-column:1;grid-row:1;min-width:0}
 @media(min-width:1600px){.os-status.section{max-width:1312px;width:calc(100% - 128px)}}
 @media(max-width:700px){.os-status.section .eyebrow{font-size:9px;letter-spacing:.3px}.os-status.section .system-online{font-size:9px}.os-counts span{font-size:10px}.os-status.section{row-gap:0}}
+
+/* Let the orange logo blend into the header without its black image rectangle. */
+.site-header .brand-image{mix-blend-mode:lighten}
