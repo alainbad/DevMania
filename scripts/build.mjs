@@ -18,7 +18,7 @@ for(const [slug,[title,description,content]] of Object.entries(companyPages)){
  const head=page.slice(0,page.indexOf('<body>')).replace(/<title>.*?<\/title>/,`<title>${title} | DevMania</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${esc(description)}">`).replace(/<meta property="og:title" content="[^"]*">/,`<meta property="og:title" content="${title} | DevMania">`).replace(/<meta property="og:description" content="[^"]*">/,`<meta property="og:description" content="${esc(description)}">`).replaceAll('href="https://www.dev-mania.com/"',`href="https://www.dev-mania.com${path}"`).replace(/<meta property="og:url" content="[^"]*">/,`<meta property="og:url" content="https://www.dev-mania.com${path}">`);
  const header=page.match(/<header class="site-header">[\s\S]*?<\/header>/)[0].replace(/<nav class="desktop-nav"[\s\S]*?<\/details>/,navigation(path));
  const footer=page.match(/<footer>[\s\S]*?<\/footer>/)[0];
- const html=head+'<body><a class="skip" href="#main">Skip to content</a>'+header+'<a class="home-return" href="/">← Home</a><main id="main">'+content.replace('<!-- PROJECT_REGISTRY -->',work).replace('<!-- IDEA_ENTRY -->',hub+entry)+'</main>'+footer+'</body></html>';
+ const html=head+'<body><a class="skip" href="#main">Skip to content</a>'+header+'<main id="main">'+content.replace('<!-- PROJECT_REGISTRY -->',work).replace('<!-- IDEA_ENTRY -->',hub+entry)+'</main>'+footer+'</body></html>';
  fs.mkdirSync('dist/'+slug,{recursive:true});fs.writeFileSync('dist/'+slug+'/index.html',html);companyFiles.push(slug+'/index.html');
 }
 fs.writeFileSync('dist/index.html',page);fs.copyFileSync('src/projects.json','dist/projects.json');
