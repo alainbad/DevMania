@@ -1,4 +1,4 @@
-const slides=[{src:'assets/hero-studio.webp',label:'01 / THE STUDIO',alt:'Orange-lit DevMania studio with laptop and Dubai skyline'},{src:'assets/hero-world.webp',label:'02 / IDEAS WITHOUT BORDERS',alt:'DevMania creative workspace with a glowing orange globe'},{src:'assets/hero-build.webp',label:'03 / ALWAYS BUILDING',alt:'DevMania app and website artwork with an illustrated loading bar'}];
+const slides=[{src:'assets/hero-studio.webp',label:'01 / THE STUDIO',alt:'Orange-lit DevMania studio with laptop and Dubai skyline'},{src:'assets/hero-world.webp',label:'02 / IDEAS WITHOUT BORDERS',alt:'DevMania global digital network with a glowing orange globe'},{src:'assets/hero-build.webp',label:'03 / ALWAYS BUILDING',alt:'DevMania app and website artwork with an illustrated loading bar'}];
 const stage=document.querySelector('.flip-stage'),hero=document.querySelector('#hero-image'),label=document.querySelector('#slide-label'),dots=[...document.querySelectorAll('[data-slide]')],pause=document.querySelector('#pause'),carousel=document.querySelector('.carousel');
 if(carousel){
 let current=0,busy=false,paused=matchMedia('(prefers-reduced-motion: reduce)').matches,timer;
