@@ -616,9 +616,9 @@
     "status": "live",
     "featured": true,
     "url": "https://www.destinotel.com",
-    "image": "assets/destinotel.jpeg",
+    "image": "assets/destinotel-logo-v2.png",
     "imageClass": "destinotel-image",
-    "imageAlt": "Destinotel featured destinations: Dubai, Paris, Bali and New York",
+    "imageAlt": "Destinotel navy and gold D logo",
     "caption": "destinotel.com",
     "legacyKey": "WEBSITE-destinotel",
     "experience": {

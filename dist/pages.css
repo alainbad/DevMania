@@ -45,3 +45,5 @@ footer .instagram-shortcut svg{flex-shrink:0}
 footer .instagram-shortcut:hover{color:#fff}
 footer .instagram-shortcut:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
 @media(max-width:600px){body>footer:not(.journal-footer)>.instagram-shortcut{grid-column:1/-1}}
+
+.work-thumbnail img.destinotel-image{object-fit:contain;padding:40px}
