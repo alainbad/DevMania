@@ -132,20 +132,22 @@
     "categories": [
       "Apps"
     ],
-    "platforms": [],
+    "platforms": [
+      "ios"
+    ],
     "capabilities": [
       "logistics",
       "shipment tracking",
       "carriers",
       "delivery"
     ],
-    "status": "building",
+    "status": "live",
     "featured": true,
-    "url": null,
+    "url": "https://apps.apple.com/app/id6785973851",
     "image": "assets/trackora.png",
     "imageClass": "trackora-image",
     "imageAlt": "Trackora \u2014 Track any shipment in real time",
-    "caption": "App",
+    "caption": "App Store",
     "legacyKey": "APP-trackora",
     "experience": {
       "projectId": "app-trackora",
