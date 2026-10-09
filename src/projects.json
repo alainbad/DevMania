@@ -3,7 +3,7 @@
     "id": "app-invoice-mini",
     "slug": "app-invoice-mini",
     "name": "Invoice Mini",
-    "shortDescription": "Invoice Mini is a simple and efficient invoicing app built for freelancers, small businesses, and independent professionals. It makes it easy to create professional invoices, manage client and business details, calculate totals, and generate polished invoices on the go\u2014all through a clean, straightforward interface designed to keep invoicing fast and hassle-free.",
+    "shortDescription": "Invoice Mini helps freelancers and small businesses create invoices on their phone. Add client and business details, calculate totals and prepare an invoice when you need it.",
     "categories": [
       "Apps"
     ],
@@ -127,7 +127,7 @@
     "id": "app-trackora",
     "slug": "app-trackora",
     "name": "Trackora",
-    "shortDescription": "Trackora is an all-in-one shipment tracking platform designed to simplify global logistics. It allows users to track shipments across multiple carriers from a single interface, providing real-time status updates, shipment history, and centralized tracking management. Built for both individuals and businesses, Trackora makes monitoring deliveries faster, clearer, and more convenient.",
+    "shortDescription": "Trackora lets you check shipments from different carriers in one app. View delivery updates, keep a shipment history and manage your saved tracking numbers from your phone.",
     "categories": [
       "Apps"
     ],
@@ -251,7 +251,7 @@
     "id": "app-parently",
     "slug": "app-parently",
     "name": "Parently",
-    "shortDescription": "Parently is a smart parenting companion designed to help parents organize and manage their child\u2019s everyday needs. The app brings essential parenting tools and information into one simple, user-friendly space, making it easier to track routines, stay organized, and keep up with important moments throughout a child\u2019s growth and development.",
+    "shortDescription": "Parently helps parents keep track of their child\u2019s daily routines and important moments. It brings everyday parenting tools and records together so they are easier to find and update.",
     "categories": [
       "Apps"
     ],
@@ -362,7 +362,7 @@
     "id": "app-beautify",
     "slug": "app-beautify",
     "name": "Beautify",
-    "shortDescription": "Beautify is a beauty and self-care platform designed to make discovering and booking beauty services simple and convenient. Users can explore salons, beauty professionals, treatments, and services in one place, helping them find the right experience and manage their beauty appointments through a modern, easy-to-use interface.",
+    "shortDescription": "Beautify brings salons, beauty professionals and treatments together in one place. Browse services, choose a provider and manage your appointments.",
     "categories": [
       "Apps"
     ],
@@ -473,7 +473,7 @@
     "id": "website-trackora",
     "slug": "website-trackora",
     "name": "Trackora",
-    "shortDescription": "Trackora is an all-in-one shipment tracking platform designed to simplify global logistics. It allows users to track shipments across multiple carriers from a single interface, providing real-time status updates, shipment history, and centralized tracking management. Built for both individuals and businesses, Trackora makes monitoring deliveries faster, clearer, and more convenient.",
+    "shortDescription": "Trackora lets you track shipments from different carriers on one website. Check delivery updates, review shipment history and keep your tracking numbers together in a personal dashboard.",
     "categories": [
       "Websites"
     ],
@@ -597,7 +597,7 @@
     "id": "website-destinotel",
     "slug": "website-destinotel",
     "name": "Destinotel",
-    "shortDescription": "Destinotel is a modern hotel discovery and booking platform designed to make travel planning simple and enjoyable. Users can explore destinations, discover hotels, compare accommodation options, and find the right stay through a clean and intuitive experience\u2014bringing inspiration and hotel booking together in one seamless platform.",
+    "shortDescription": "Destinotel helps travellers find and book a hotel. Explore destinations, compare places to stay and choose accommodation that suits your trip.",
     "categories": [
       "Websites"
     ],
@@ -721,7 +721,7 @@
     "id": "website-assia-wanderers-club",
     "slug": "website-assia-wanderers-club",
     "name": "Assia Wanderers Club",
-    "shortDescription": "Assia Wanderers Club is a dedicated digital platform created to bring the club, its players, and its community together in one place. The platform showcases the club\u2019s identity, team information, activities, news, and updates through a modern and engaging experience, giving supporters an easy way to stay connected with everything happening at the club.",
+    "shortDescription": "The Assia Wanderers Club website shares the club\u2019s activities, news and community updates. Visitors can learn about the club and stay informed about upcoming events.",
     "categories": [
       "Websites"
     ],
@@ -834,7 +834,7 @@
     "id": "website-assia-padel",
     "slug": "website-assia-padel",
     "name": "Assia Padel",
-    "shortDescription": "Assia Padel is a modern platform created for a local padel community, making it easy for players to discover the court, check availability, and manage their bookings. Designed with a simple and engaging experience, the platform brings players together and helps organize matches while promoting padel within the Assia community.",
+    "shortDescription": "Assia Padel gives players a place to check court availability and manage bookings. Visitors can learn about the court and plan their next game.",
     "categories": [
       "Websites"
     ],
@@ -958,7 +958,7 @@
     "id": "website-the-betrix",
     "slug": "website-the-betrix",
     "name": "The Betrix",
-    "shortDescription": "The Betrix is an online gaming and sports entertainment platform designed to bring multiple gaming experiences together in one modern interface. The platform features casino-style games, live gaming experiences, sports betting functionality, player accounts, wallet management, promotions, and an administrative management system\u2014all built around a fast, immersive, and user-friendly experience.",
+    "shortDescription": "The Betrix brings casino games and sports betting together with player accounts and wallet management. An admin panel handles account activity, promotions and platform operations.",
     "categories": [
       "Websites"
     ],
@@ -1084,7 +1084,7 @@
     "id": "website-go-betrix",
     "slug": "website-go-betrix",
     "name": "Go Betrix",
-    "shortDescription": "GoBetrix is a sports betting platform built to deliver a fast, intuitive, and engaging experience for sports fans. Users can explore upcoming and live events, browse betting markets and odds, manage their selections through a bet slip, and follow their betting activity\u2014all within a modern, responsive interface designed for both mobile and desktop.",
+    "shortDescription": "GoBetrix lets sports fans browse events, betting markets and odds. Players can build a bet slip and follow their betting activity on mobile or desktop.",
     "categories": [
       "Websites"
     ],
@@ -1197,7 +1197,7 @@
     "id": "website-pinevilleleb",
     "slug": "website-pinevilleleb",
     "name": "PinevilleLeb",
-    "shortDescription": "Pineville is a bungalow rental and booking platform designed to make discovering and reserving the perfect getaway simple and seamless. Visitors can explore the property, browse bungalow options, view photos and amenities, check availability, and book their stay through a modern and user-friendly experience.",
+    "shortDescription": "Pineville introduces the resort and its bungalows. Visitors can browse photos, compare accommodation, check amenities and availability, and book a stay.",
     "categories": [
       "Websites"
     ],
@@ -1321,7 +1321,7 @@
     "id": "website-the-wedding-hub",
     "slug": "website-the-wedding-hub",
     "name": "The Wedding Hub",
-    "shortDescription": "Wedding Hub is an all-in-one wedding planning platform that connects couples with trusted wedding suppliers and services. Users can discover and compare venues, photographers, caterers, florists, entertainment, beauty services, and more\u2014all in one place. Designed to simplify the entire planning journey, Wedding Hub helps couples find the right vendors and organize their dream wedding with ease.",
+    "shortDescription": "Wedding Hub helps couples find suppliers for their wedding. Browse venues, photographers, caterers, florists and other services, compare options and keep the planning in one place.",
     "categories": [
       "Websites"
     ],
@@ -1447,7 +1447,7 @@
     "id": "software-procurement-ai",
     "slug": "software-procurement-ai",
     "name": "DM-ERP",
-    "shortDescription": "DM-ERP is an intelligent procurement platform in development, designed to help businesses simplify sourcing and purchasing. It aims to bring supplier discovery, quotation comparisons, purchase requests, and order tracking into one workspace. AI-assisted analysis will help teams evaluate offers, identify cost-saving opportunities, and make informed purchasing decisions while keeping people in control of approvals.",
+    "shortDescription": "DM-ERP is a business platform in development that brings purchasing tasks into one workspace. Teams can manage purchase requests, compare supplier quotations and follow orders. The optional Procurement AI tools help review offers, while the team keeps control of approvals.",
     "categories": [
       "SaaS"
     ],
@@ -1574,7 +1574,7 @@
     "id": "saas-fixenator",
     "slug": "saas-fixenator",
     "name": "Fixenator",
-    "shortDescription": "Fixenator is an online platform for Excel and data tasks. Describe what you need, upload your files, and receive a scoped project estimate. Its guided request and order tracking flow makes it easier to turn messy spreadsheets and business data into useful results.",
+    "shortDescription": "Fixenator helps with Excel files and business data. Describe the task, upload your files and get a project estimate. You can follow your request through to delivery.",
     "categories": [
       "SaaS"
     ],
@@ -1660,7 +1660,7 @@
     "id": "website-devmania",
     "slug": "website-devmania",
     "name": "DevMania",
-    "shortDescription": "Our company website brings together our project portfolio, development services, practical guides and interactive project planning tools.",
+    "shortDescription": "The DevMania website showcases our projects and development services. Visitors can read practical guides and share an idea for a website, app or business tool.",
     "categories": [
       "Websites"
     ],
@@ -1730,7 +1730,7 @@
     "id": "website-inter-viewed",
     "slug": "website-inter-viewed",
     "name": "Inter-viewed",
-    "shortDescription": "A jobs and talent platform connecting job seekers, independent professionals and employers. Users can create profiles, discover opportunities, apply for jobs and publish vacancies.",
+    "shortDescription": "Inter-viewed connects job seekers, independent professionals and employers. Members can create profiles, find opportunities and apply for jobs. Employers can publish vacancies and connect with candidates.",
     "categories": [
       "Websites"
     ],
