@@ -80,7 +80,6 @@
         "business",
         "finance"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -205,7 +204,6 @@
         "carriers",
         "delivery"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -317,7 +315,6 @@
         "routines",
         "family"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -429,7 +426,6 @@
         "services",
         "booking"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -554,7 +550,6 @@
         "carriers",
         "delivery"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": true,
         "demoType": "tracking"
@@ -679,7 +674,6 @@
         "booking",
         "discovery"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -793,7 +787,6 @@
         "club",
         "news"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -918,7 +911,6 @@
         "availability",
         "community"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": true,
         "demoType": "padel"
@@ -1045,7 +1037,6 @@
         "wallets",
         "administration"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -1159,7 +1150,6 @@
         "betting",
         "events"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -1284,7 +1274,6 @@
         "booking",
         "availability"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": true,
         "demoType": "stay"
@@ -1411,7 +1400,6 @@
         "booking",
         "discovery"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -1539,7 +1527,6 @@
         "automation",
         "suppliers"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -1659,7 +1646,6 @@
         "data",
         "automation"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false,
         "demoType": null
@@ -1731,7 +1717,6 @@
         "business",
         "content"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false
       },
@@ -1802,7 +1787,6 @@
         "profiles",
         "recruitment"
       ],
-      "xrayEnabled": true,
       "playground": {
         "enabled": false
       },
