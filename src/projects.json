@@ -1576,7 +1576,7 @@
     "name": "Fixenator",
     "shortDescription": "Fixenator helps with Excel files and business data. Describe the task, upload your files and get a project estimate. You can follow your request through to delivery.",
     "categories": [
-      "SaaS"
+      "Websites"
     ],
     "platforms": [
       "web",
@@ -1591,13 +1591,13 @@
       "business",
       "saas"
     ],
-    "status": "live",
+    "status": "building",
     "featured": true,
     "url": "https://fixenator.com",
     "image": "assets/fixenator-logo-v2.png",
     "imageClass": "fixenator-logo-image",
     "imageAlt": "Fixenator official orange logo and black wordmark",
-    "caption": "SaaS",
+    "caption": "Website",
     "legacyKey": "SAAS-fixenator",
     "experience": {
       "projectId": "saas-fixenator",
