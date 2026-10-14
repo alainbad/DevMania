@@ -27,7 +27,12 @@ console.log(`Built ${projects.length} project cards and interactive portfolio as
 // Embed an explicit public-file allowlist in the Worker; no repository source is served.
 const blogFiles=buildBlog();
 const publicNames=['index.html','style.css','app.js','os.css','os.js','matcher.js','builder.js','terminal.js','projects.json','experience-state.js','experiences.js','experiences.css','playground.js','universe.js'];
-const files=[...publicNames,...companyFiles,...blogFiles,...fs.readdirSync('dist/assets').map(n=>'assets/'+n)];const assets={};
+// Standalone business card and its post-scan destination selector.
+const businessCardFiles=['alain-badran-business-card/index.html','alain-badran-business-card/connect.html'];
+fs.mkdirSync('dist/alain-badran-business-card',{recursive:true});
+for(const name of ['index.html','connect.html'])fs.copyFileSync('src/business-card/'+name,'dist/alain-badran-business-card/'+name);
+fs.copyFileSync('src/business-card/qr.svg','dist/assets/business-card-qr.svg');
+const files=[...businessCardFiles,...publicNames,...companyFiles,...blogFiles,...fs.readdirSync('dist/assets').map(n=>'assets/'+n)];const assets={};
 const types={xml:'application/xml; charset=utf-8',txt:'text/plain; charset=utf-8',html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json',png:'image/png',jpeg:'image/jpeg',jpg:'image/jpeg',svg:'image/svg+xml',webp:'image/webp'};
 for(const name of files){const ext=name.split('.').pop();const binary=['png','jpeg','jpg','webp'].includes(ext);assets['/'+name]={type:types[ext]||'application/octet-stream',base64:binary,body:fs.readFileSync('dist/'+name,binary?'base64':'utf8')}}
 fs.mkdirSync('dist/server',{recursive:true});fs.writeFileSync('dist/server/assets.js','export default '+JSON.stringify(assets)+';');fs.writeFileSync('dist/server/projects.js','export default '+JSON.stringify(projects)+';');fs.copyFileSync('server/worker.js','dist/server/index.js');
