@@ -1795,5 +1795,107 @@
         "steps": []
       }
     }
+  },
+  {
+    "id": "website-archinova",
+    "slug": "website-archinova",
+    "name": "ArchiNova",
+    "shortDescription": "An architecture and engineering website presenting interior design, exterior and facade design, technical drawings and 3D visualization. Visitors can browse the project gallery and contact the team.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "architecture",
+      "design",
+      "portfolio"
+    ],
+    "status": "live",
+    "featured": true,
+    "url": "https://archinovaengineering.com/",
+    "image": "assets/archinova-logo.jpg",
+    "imageClass": "archinova-logo-image",
+    "imageAlt": "ArchiNova official logo",
+    "caption": "Architecture & engineering",
+    "legacyKey": "WEBSITE-archinova",
+    "experience": {
+      "projectId": "website-archinova",
+      "publicArchitecture": {
+        "nodes": [
+          {
+            "id": "website",
+            "label": "ArchiNova website",
+            "type": "interface"
+          }
+        ],
+        "edges": []
+      },
+      "universeTags": [
+        "Websites",
+        "architecture",
+        "design",
+        "portfolio"
+      ],
+      "playground": {
+        "enabled": false
+      },
+      "buildStory": {
+        "enabled": false,
+        "steps": []
+      }
+    }
+  },
+  {
+    "id": "website-jayandf",
+    "slug": "website-jayandf",
+    "name": "Jay&F",
+    "shortDescription": "A property management website in development for residential and commercial properties, bringing maintenance, inspections, repairs and cleaning services together.",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "capabilities": [
+      "property",
+      "maintenance",
+      "services"
+    ],
+    "status": "building",
+    "featured": true,
+    "url": "https://jayandf.com/",
+    "image": "assets/jayandf-logo.png",
+    "imageClass": "jayandf-logo-image",
+    "imageAlt": "Jay&F official logo",
+    "caption": "Residential & commercial property management",
+    "legacyKey": "WEBSITE-jayandf",
+    "experience": {
+      "projectId": "website-jayandf",
+      "publicArchitecture": {
+        "nodes": [
+          {
+            "id": "website",
+            "label": "Jay&F website",
+            "type": "interface"
+          }
+        ],
+        "edges": []
+      },
+      "universeTags": [
+        "Websites",
+        "property",
+        "maintenance",
+        "services"
+      ],
+      "playground": {
+        "enabled": false
+      },
+      "buildStory": {
+        "enabled": false,
+        "steps": []
+      }
+    }
   }
 ]

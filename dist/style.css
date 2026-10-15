@@ -35,3 +35,9 @@
 .work-thumbnail[data-project="SOFTWARE-procurement-ai"]{background:#142e2c}.work-thumbnail img.dm-erp-logo-image{inset:16%;width:68%;height:68%;object-fit:contain}
 
 .work-thumbnail[data-project="SAAS-fixenator"]{background:#fff}.work-thumbnail img.fixenator-logo-image{inset:8%;width:84%;height:84%;object-fit:contain}
+
+/* Portfolio logos retain their original proportions and colors. */
+.work-thumbnail[data-project="WEBSITE-archinova"]{background:#10232d}
+.work-thumbnail img.archinova-logo-image{inset:5%;width:90%;height:90%;object-fit:contain}
+.work-thumbnail[data-project="WEBSITE-jayandf"]{background:#fafbf8}
+.work-thumbnail img.jayandf-logo-image{inset:8%;width:84%;height:84%;object-fit:contain}
