@@ -49,3 +49,13 @@ footer .instagram-shortcut:focus-visible{outline:2px solid var(--orange);outline
 .work-thumbnail img.destinotel-image{object-fit:contain;padding:40px}
 
 .policy-page{max-width:1100px;margin-inline:auto}.policy-page h1{font-size:clamp(36px,6vw,64px);line-height:1.08;margin:14px 0 24px}.policy-block{max-width:800px;margin:32px 0}.policy-block h2{font-size:23px;line-height:1.3;margin-bottom:12px}.policy-block p{font-size:16px;color:#bbb;line-height:1.8;margin:12px 0}.policy-block a:not(.button){color:var(--orange,#ff6508);text-decoration:underline;text-underline-offset:4px}.policy-date{font-size:13px;color:#999;margin:32px 0}.policy-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;width:100%;flex-basis:100%;grid-column:1/-1;padding-top:16px;border-top:1px solid #292929}.policy-links a{font-size:13px;color:#aaa;min-height:36px;display:inline-flex;align-items:center}.policy-links a:hover,.policy-links a:focus-visible{color:var(--orange,#ff6508)}
+
+/* Compact homepage introduction and direct service discovery. */
+.home-summary{margin:0 0 32px;max-width:1040px}
+.home-summary h1{font-size:clamp(30px,3.8vw,52px);line-height:1.12;letter-spacing:-1.5px;max-width:920px}
+.home-summary p{max-width:780px;margin:16px 0 20px;font-size:17px}
+.home-summary-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 28px}
+.home-service-links{display:flex;flex-wrap:wrap;gap:4px 22px}
+.home-service-links a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+.home-service-links a:hover{color:var(--orange)}
+@media(max-width:600px){.home-summary{margin-bottom:24px}.home-summary h1{letter-spacing:-.8px}.home-summary p{font-size:15px}.home-summary-actions{gap:12px}.home-service-links{gap:0 18px}}
