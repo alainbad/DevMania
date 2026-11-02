@@ -248,6 +248,36 @@
     }
   },
   {
+    "name": "Lowcate",
+    "shortDescription": "Discover places and events in Lebanon. Browse local businesses, explore categories and find useful details for your next visit.",
+    "capabilities": [
+      "directory",
+      "search",
+      "events",
+      "maps"
+    ],
+    "status": "live",
+    "featured": true,
+    "image": "assets/lowcate-logo.svg",
+    "imageClass": "app-icon-image",
+    "imageAlt": "Lowcate logo",
+    "id": "app-lowcate",
+    "slug": "app-lowcate",
+    "categories": [
+      "Apps"
+    ],
+    "platforms": [
+      "ios"
+    ],
+    "url": "https://apps.apple.com/app/id6825422681",
+    "caption": "App Store \u00b7 Android in the Build",
+    "legacyKey": "APP-lowcate",
+    "platformReleases": {
+      "ios": "live",
+      "android": "building"
+    }
+  },
+  {
     "id": "app-parently",
     "slug": "app-parently",
     "name": "Parently",
@@ -1897,5 +1927,31 @@
         "steps": []
       }
     }
+  },
+  {
+    "name": "Lowcate",
+    "shortDescription": "Discover places and events in Lebanon. Browse local businesses, explore categories and find useful details for your next visit.",
+    "capabilities": [
+      "directory",
+      "search",
+      "events",
+      "maps"
+    ],
+    "status": "live",
+    "featured": true,
+    "image": "assets/lowcate-logo.svg",
+    "imageClass": "app-icon-image",
+    "imageAlt": "Lowcate logo",
+    "id": "website-lowcate",
+    "slug": "website-lowcate",
+    "categories": [
+      "Websites"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "url": "https://low-cate.com/",
+    "caption": "Live website",
+    "legacyKey": "WEB-lowcate"
   }
 ]

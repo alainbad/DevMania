@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Lowcate app icon</title>
+  <rect width="1024" height="1024" fill="#FFFFFF"/>
+  <path d="M0-220C121.5-220 220-121.5 220 0C220 121.5 121.5 220 0 220H-220V0C-220-121.5-121.5-220 0-220Z" fill="#D64836" transform="translate(512 448) scale(1.15) rotate(-45)"/>
+  <path d="M422 309H491V518H616V583H422Z" fill="#FFFFFF"/>
+</svg>
