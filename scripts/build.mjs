@@ -16,6 +16,7 @@ const hub=`<section class="section exp-hub" id="experiences"><div class="exp-hub
 const entry='<section class="section idea-entry"><div><span class="eyebrow">YOUR NEXT PRODUCT</span><h2>Have an idea?<br><em>Let’s give it shape.</em></h2><p>Explore the systems your product could need and discover related DevMania work.</p></div><button class="button" type="button" data-open-builder>Build my idea</button></section>';
 let page=fs.readFileSync('src/index.template.html','utf8').replace('<!-- PROJECT_REGISTRY -->',work).replace('<!-- OS_STATUS -->',status).replace('<!-- IDEA_ENTRY -->',hub+entry).replace('<!-- SITE_NAV -->',navigation('/')).replace('</head>',googleTag+'</head>');
 const companyPages=JSON.parse(fs.readFileSync('src/company-pages.json','utf8'));
+fs.cpSync('src/devsmart-calculator', 'dist/devsmart-calculator', {recursive: true});
 const companyFiles=['pages.css'];fs.copyFileSync('src/pages.css','dist/pages.css');
 for(const [slug,[title,description,content]] of Object.entries(companyPages)){
  const path='/'+slug+'/';

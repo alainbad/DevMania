@@ -1,0 +1,13 @@
+:root { color-scheme: light dark; font: 100%/1.6 system-ui, sans-serif; }
+body { margin: 0; background: #f6f3ff; color: #201a35; }
+main { max-width: 44rem; margin: auto; padding: 2rem 1.25rem; }
+header { border-bottom: .25rem solid #7352f6; }
+header p { font-weight: 700; margin-bottom: 0; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 1rem; }
+h2 { margin-top: 1.6rem; }
+a { color: #4931b5; }
+footer { border-top: 1px solid currentColor; margin-top: 2rem; padding-top: 1rem; }
+@media (prefers-color-scheme: dark) {
+  body { background: #171322; color: #f6f3ff; }
+  a { color: #d4c6ff; }
+}
