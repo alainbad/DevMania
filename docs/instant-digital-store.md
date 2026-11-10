@@ -1,12 +1,40 @@
 # Instant Digital Store
 
-The store is at `/store/`. It lists each design at $1 USD and delivers an attachment to the buyer's Paddle checkout email after a verified completed payment. Checkout defaults to off.
+The catalog has 18 unique source projects. Each design is **$2 USD, one-time**, before any tax Paddle displays at checkout. Four dashboard projects also appear in Sidebars; one purchase includes that full project, not two charges.
 
-1. In Paddle Billing, approve the DevMania domain, set the default payment link to `https://www.dev-mania.com/store/`, and create a product with a one-time $1 USD price for each design. Disable regional price overrides for these products; fulfillment expects USD and a base unit price of 100 cents.
-2. In Resend, verify your sender domain and create an API key with sending permission. In Cloudflare Worker settings, set `STORE_FROM_EMAIL` to the verified sender address. Replies go to support@dev-mania.com.
-3. In Cloudflare Worker settings, add `PADDLE_CLIENT_TOKEN`, `PADDLE_API_KEY` (customer read access), and `RESEND_API_KEY`. Add a Paddle notification destination at `https://www.dev-mania.com/api/store/paddle` for `transaction.completed` and save its destination secret as `PADDLE_WEBHOOK_SECRET`. Keep all credentials in Worker settings.
-4. Set the `STORE_PRODUCTS` secret to a JSON array of entries of the form `{"slug":"design-name","name":"Design Name","description":"What the buyer receives","priceId":"PADDLE_PRICE_ID","filename":"design.zip","contentKeys":["STORE_CODE_DESIGN_01"]}`. Base64-encode the source file and split it into chunks small enough for individual Worker secrets. Put the chunks in the listed secrets in order; the complete base64 string is capped at 256,000 characters per product. For small files, a `content` field with the full base64 string may be used instead. Never put paid source files in public assets.
-5. Test a purchase with matching sandbox keys and sandbox price IDs before switching to live keys. Use a test deployment or leave the public store closed while testing. Set `STORE_CHECKOUT_ENABLED=true` only when you want buttons to open checkout. Existing completed payments can still be fulfilled with checkout closed. Keep previously sold price mappings and files available for retries.
-6. Monitor failed notifications in Paddle and delivery in Resend. Resend accepts the email for delivery; it may still bounce. A repeated completed transaction will not send again after a recorded successful submission. Review ambiguous sends manually if more than 23 hours have passed since the first send attempt.
+Caption URLs:
+- https://www.dev-mania.com/store/dashboards/
+- https://www.dev-mania.com/store/sidebars/
+- https://www.dev-mania.com/store/otp/
+- https://www.dev-mania.com/store/checkout/
 
-The deployment includes a Cloudflare Durable Object migration for order deduplication. No customer email or purchased file is returned by the public catalog endpoint.
+Individual pages use `/store/design/{slug}/`. Public preview JPGs and product metadata are safe to publish. Never commit the ZIP packages, secret values, or private signed download links to this public repository.
+
+## Required account setup
+
+1. In Cloudflare, create a **private** R2 bucket `devmania-design-code` (no r2.dev URL and no public custom domain). Bind it to the existing `devmania` Worker as `STORE_FILES`. Add the binding to wrangler.toml only after the bucket exists:
+
+   ```toml
+   [[r2_buckets]]
+   binding = "STORE_FILES"
+   bucket_name = "devmania-design-code"
+   ```
+
+2. Upload each source ZIP to the object key in the private package manifest, `designs/{slug}/1.0.0.zip`. The session endpoint checks that its source file exists before opening checkout.
+3. Configure Paddle Billing with the approved `www.dev-mania.com` checkout domain and default payment link `https://www.dev-mania.com/store/`. Create one standard software product and a non-recurring USD price with `unit_price.amount = "200"` per catalog slug. Do not use regional overrides. Set quantity minimum and maximum to 1. `scripts/setup-store-paddle.mjs` can create/reuse these using a scoped key supplied locally through `PADDLE_API_KEY`; it does not enable checkout.
+4. Verify a sending domain in Resend and set a sender such as `DevMania <store@dev-mania.com>` after it is verified. Set the Worker secret `STORE_FROM_EMAIL` to that address.
+5. Set Worker secrets: `PADDLE_CLIENT_TOKEN`, `PADDLE_API_KEY` (customer read access at runtime), `PADDLE_WEBHOOK_SECRET`, `RESEND_API_KEY`, `STORE_FROM_EMAIL`, and `STORE_DOWNLOAD_SECRET` (a random value of at least 32 bytes). Set `STORE_PRICE_IDS` to a JSON object mapping each catalog slug to its real `pri_...` ID. Set `STORE_CHECKOUT_ENABLED=false` until end-to-end checks pass. Never put API keys in browser code or chat.
+6. Add a Paddle notification destination at `https://www.dev-mania.com/api/store/paddle`, subscribed to `transaction.completed`. Save that destination's secret as `PADDLE_WEBHOOK_SECRET`. Use matching sandbox keys/prices on an isolated test Worker first.
+7. Complete a Paddle sandbox purchase and verify the signed webhook, correct ZIP download, and email receipt. Only then configure the verified live prices/keys and set `STORE_CHECKOUT_ENABLED=true`.
+
+## Fulfillment and downloads
+
+Checkout obtains a signed, short-lived claim from the server and passes it through Paddle custom data. A browser checkout-completed event alone never unlocks source. The webhook validates Paddle's signature, completed status, USD currency, exact 200-cent one-time price, known price ID, and positive quantity. A Durable Object retains the paid order and its versioned file mapping.
+
+After signed payment confirmation, a matching buyer browser may retrieve private download links; Resend also sends the same purchased files as links to the Paddle customer's email. Download tokens expire after seven days and are checked against the paid order before a private R2 object is streamed. No customer email or code file is exposed by the public catalog.
+
+Email retries reuse both the Resend idempotency key and identical email body. A recorded successful submission is not sent again. Ambiguous sends older than 23 hours require manual review. Resend acceptance does not prove mailbox delivery; monitor bounces and failed Paddle notifications. Keep old versioned objects and sold price mappings available. Route expired-link support requests through receipt ownership verification.
+
+Run `node tests/store.mjs`, `npm test`, `npm run check`, and `node scripts/build-cloudflare.mjs` before deployment. Automated tests simulate Paddle and Resend; they do not prove the live account is configured.
+
+References: [Paddle overlay checkout](https://developer.paddle.com/build/checkout/build-overlay-checkout/), [signature verification](https://developer.paddle.com/webhooks/about/signature-verification/), [product creation](https://developer.paddle.com/api-reference/products/create-product/), [price creation](https://developer.paddle.com/api-reference/prices/create-price/).

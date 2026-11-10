@@ -1,39 +1,26 @@
 import assert from 'node:assert/strict';
 import {createHmac} from 'node:crypto';
-import {storeCatalog,storeWebhook,StoreOrder} from '../server/store.js';
-const priceId='pri_'+'a'.repeat(26), id='txn_'+'b'.repeat(26), customer='ctm_'+'c'.repeat(26);
-const product={priceId,slug:'demo',name:'Demo',description:'Code',filename:'demo.txt',contentKeys:['STORE_CODE_DEMO']};
-const data=new Map();
-const ctx={storage:{get:k=>data.get(k),put:(k,v)=>data.set(k,v)},blockConcurrencyWhile:f=>f()};
-const env={PADDLE_CLIENT_TOKEN:'test_demo',PADDLE_API_KEY:'test',PADDLE_WEBHOOK_SECRET:'test',RESEND_API_KEY:'test',STORE_FROM_EMAIL:'store@example.com',STORE_CHECKOUT_ENABLED:'true',STORE_PRODUCTS:JSON.stringify([product]),STORE_CODE_DEMO:'SGVsbG8='};
-const order=new StoreOrder(ctx,env);
-env.STORE_ORDERS={idFromName:n=>n,get:()=>({fetch:(url,opts)=>order.fetch(new Request(url,opts))})};
-let sent=0;
-globalThis.fetch=async(url,opts)=>{
- if(url.startsWith('https://sandbox-api.paddle.com/'))return Response.json({data:{email:'buyer@example.com'}});
- assert.equal(url,'https://api.resend.com/emails');
- assert.equal(opts.headers['Idempotency-Key'],'devmania-store/'+id);
- const payload=JSON.parse(opts.body);
- assert.deepEqual(payload.to,['buyer@example.com']);
- assert.deepEqual(payload.attachments,[{filename:'demo.txt',content:'SGVsbG8='}]);
- sent++;return Response.json({id:'test'});
-};
-const catalog=await storeCatalog(env).json();
-assert.equal(catalog.enabled,true);
-assert.equal(catalog.products[0].content,undefined);
-assert.equal(catalog.products[0].contentKeys,undefined);
-assert.equal((await storeCatalog({...env,RESEND_API_KEY:''}).json()).enabled,false);
-const event={event_type:'transaction.completed',data:{id,customer_id:customer,status:'completed',currency_code:'USD',items:[{price:{id:priceId,unit_price:{currency_code:'USD',amount:'100'},billing_cycle:null}}]}};
-function request(event,valid=true){
- const body=JSON.stringify(event),ts=Math.floor(Date.now()/1000);
- const sig=createHmac('sha256',env.PADDLE_WEBHOOK_SECRET).update(ts+':'+body).digest('hex');
- return new Request('https://example.com/api/store/paddle',{method:'POST',body,headers:{'Paddle-Signature':'ts='+ts+';h1='+(valid?sig:'0'.repeat(64))}});
-}
-assert.equal((await storeWebhook(request(event,false),env)).status,401);
-assert.equal((await storeWebhook(request({...event,event_type:'transaction.paid'}),env)).status,200);
-assert.equal((await storeWebhook(request({...event,data:{...event.data,currency_code:'EUR'}}),env)).status,422);
-assert.equal(sent,0);
-assert.equal((await storeWebhook(request(event),env)).status,200);
-assert.equal((await storeWebhook(request(event),env)).status,200);
-assert.equal(sent,1);
-console.log('Store checks passed: safe catalog, signed completed payment, currency validation, email attachment and duplicate protection.');
+import {storeCatalog,storeSession,storeReceipt,storeDownload,storeWebhook,StoreOrder} from '../server/store.js';
+const price='pri_'+'a'.repeat(26),id='txn_'+'b'.repeat(26),customer='ctm_'+'c'.repeat(26),slug='otp-v6';
+const files=new Map([['designs/otp-v6/1.0.0.zip','PRIVATE SOURCE ZIP']]),records=new Map(),objects=new Map();let sent=0,failEmail=false;const bodies=[];
+const env={PADDLE_CLIENT_TOKEN:'test_demo',PADDLE_API_KEY:'test',PADDLE_WEBHOOK_SECRET:'webhook-secret',STORE_DOWNLOAD_SECRET:'download-secret',RESEND_API_KEY:'test',STORE_FROM_EMAIL:'store@example.com',STORE_CHECKOUT_ENABLED:'true',STORE_PRICE_IDS:JSON.stringify({[slug]:price}),STORE_FILES:{head:async k=>files.has(k)?{}:null,get:async k=>files.has(k)?{body:files.get(k)}:null}};
+env.STORE_ORDERS={idFromName:n=>n,get:n=>{if(!objects.has(n)){const data=new Map();records.set(n,data);objects.set(n,new StoreOrder({storage:{get:async k=>data.get(k),put:async(k,v)=>data.set(k,v)},blockConcurrencyWhile:f=>f()},env))}return {fetch:(url,opts)=>objects.get(n).fetch(new Request(url,opts))}}};
+globalThis.fetch=async(url,opts)=>{if(url.startsWith('https://sandbox-api.paddle.com/'))return Response.json({data:{email:'buyer@example.com'}});assert.equal(url,'https://api.resend.com/emails');const body=JSON.parse(opts.body);bodies.push(opts.body);assert.equal(body.attachments,undefined);assert.deepEqual(body.to,['buyer@example.com']);assert.match(body.text,/https:\/\/www.dev-mania.com\/api\/store\/download\?token=/);assert.match(opts.headers['Idempotency-Key'],/^devmania-store\/txn_/);if(failEmail)return Response.json({}, {status:500});sent++;return Response.json({id:'test'})};
+function post(path,data){return new Request('https://www.dev-mania.com/api/store/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}
+const catalog=await storeCatalog(env).json();assert.equal(catalog.products.length,18);assert.equal(catalog.products.filter(p=>p.available).length,1);assert.equal(catalog.products.find(p=>p.slug===slug).price,200);assert.equal(catalog.products[0].key,undefined);assert.equal(catalog.products[0].content,undefined);
+assert.equal((await storeCatalog({...env,RESEND_API_KEY:''}).json()).enabled,false);assert.equal((await storeSession(post('session',{slug}),{...env,STORE_CHECKOUT_ENABLED:'false'})).status,503);
+const session=await (await storeSession(post('session',{slug}),env)).json();assert.equal(session.priceId,price);assert.ok(session.claim);
+assert.equal((await storeReceipt(post('receipt',{transactionId:id,claim:session.claim}),env)).status,202);assert.equal((await storeDownload(new Request('https://www.dev-mania.com/api/store/download?token=fake'),env)).status,403);
+const event={event_type:'transaction.completed',data:{id,customer_id:customer,status:'completed',currency_code:'USD',custom_data:{devmania_claim:session.claim},items:[{quantity:1,price:{id:price,unit_price:{currency_code:'USD',amount:'200'},billing_cycle:null}}]}};
+function signed(e,valid=true){const body=JSON.stringify(e),ts=Math.floor(Date.now()/1000),sig=createHmac('sha256',env.PADDLE_WEBHOOK_SECRET).update(ts+':'+body).digest('hex');return new Request('https://www.dev-mania.com/api/store/paddle',{method:'POST',body,headers:{'Paddle-Signature':'ts='+ts+';h1='+(valid?sig:'0'.repeat(64))}})}
+assert.equal((await storeWebhook(signed(event,false),env)).status,401);assert.equal(sent,0);assert.equal((await storeWebhook(signed({...event,event_type:'transaction.paid'}),env)).status,200);assert.equal(records.get(id).get('paid'),undefined);
+for(const bad of [{...event.data,currency_code:'EUR'},{...event.data,items:[{quantity:1,price:{id:price,unit_price:{currency_code:'USD',amount:'100'}}}]},{...event.data,items:[{quantity:0,price:event.data.items[0].price}]}])assert.equal((await storeWebhook(signed({...event,data:bad}),env)).status,422);
+assert.equal((await storeWebhook(signed(event),env)).status,200);assert.equal((await storeWebhook(signed(event),env)).status,200);assert.equal(sent,1);
+const receipt=await (await storeReceipt(post('receipt',{transactionId:id,claim:session.claim}),env)).json();assert.equal(receipt.paid,true);assert.equal(receipt.downloads.length,1);
+const download=await storeDownload(new Request(receipt.downloads[0].url),env);assert.equal(download.status,200);assert.equal(await download.text(),'PRIVATE SOURCE ZIP');assert.match(download.headers.get('Content-Disposition'),/attachment/);assert.equal(download.headers.get('Cache-Control'),'private, no-store');
+const other=await (await storeSession(post('session',{slug}),env)).json();assert.equal((await storeReceipt(post('receipt',{transactionId:id,claim:other.claim}),env)).status,403);
+const url=new URL(receipt.downloads[0].url),[payload,signature]=url.searchParams.get('token').split('.');const obj=JSON.parse(Buffer.from(payload,'base64url'));obj.slug='payment-page';url.searchParams.set('token',Buffer.from(JSON.stringify(obj)).toString('base64url')+'.'+signature);assert.equal((await storeDownload(new Request(url),env)).status,403);
+obj.slug=slug;obj.exp=Math.floor(Date.now()/1000)-1;const expired=Buffer.from(JSON.stringify(obj)).toString('base64url');url.searchParams.set('token',expired+'.'+createHmac('sha256',env.STORE_DOWNLOAD_SECRET).update('devmania-store:'+expired).digest('base64url'));assert.equal((await storeDownload(new Request(url),env)).status,403);
+const retry={...event,data:{...event.data,id:'txn_'+'d'.repeat(26)}};failEmail=true;assert.equal((await storeWebhook(signed(retry),env)).status,503);failEmail=false;assert.equal((await storeWebhook(signed(retry),env)).status,200);assert.equal(bodies.at(-1),bodies.at(-2));assert.equal(sent,2);
+files.clear();assert.equal((await storeSession(post('session',{slug}),env)).status,503);assert.equal((await storeDownload(new Request(receipt.downloads[0].url),env)).status,503);
+console.log('Store tests passed: 18 products, $2 only, signed completed payments, private download authorization, expiry, cross-order denial, duplicate protection, stable email retries and missing-file guards.');

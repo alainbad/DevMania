@@ -8,3 +8,7 @@ node_modules/
 .dev.vars
 .dev.vars.*
 dist/server/assets.js
+
+# Private paid source packages and local deployment credentials
+store-packages-private/
+*.store-secrets.json

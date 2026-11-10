@@ -1,0 +1,29 @@
+import fs from 'node:fs';
+import products from '../src/store-products.js';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const categories={dashboards:'Glassy Dashboards',sidebars:'Glassy Sidebars',otp:'OTP Login',checkout:'Checkout Designs'};
+export function buildStore(){
+ const base=fs.readFileSync('dist/store/index.html','utf8');const files=[];
+ const nav=active=>`<nav class="store-tabs" aria-label="Design categories"><a href="/store/" ${!active?'aria-current="page"':''}>All designs</a>${Object.entries(categories).map(([k,n])=>`<a href="/store/${k}/" ${active===k?'aria-current="page"':''}>${n}</a>`).join('')}</nav>`;
+ const buy=p=>`<button type="button" class="button store-buy" data-buy="${p.slug}" disabled>Checkout coming soon</button>`;
+ const card=p=>`<article class="store-card"><a class="store-image" href="/store/design/${p.slug}/"><img src="${p.preview}" alt="${esc(p.name)} preview" loading="lazy" width="1000" height="760"></a><div class="store-card-body"><p class="store-label">${p.categories.map(c=>categories[c]).join(' · ')}</p><h2><a href="/store/design/${p.slug}/">${esc(p.name)}</a></h2><p>${esc(p.description)}</p><div class="store-price"><strong>$2</strong><span>USD · one-time</span></div><a class="button" href="/store/design/${p.slug}/">View design</a>${buy(p)}</div></article>`;
+ function write(path,title,description,content){
+  let html=base.replace(/<title>.*?<\/title>/,`<title>${esc(title)} | DevMania</title>`).replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${esc(description)}">`).replace(/<meta property="og:title" content="[^"]*">/,`<meta property="og:title" content="${esc(title)} | DevMania">`).replace(/<meta property="og:description" content="[^"]*">/,`<meta property="og:description" content="${esc(description)}">`).replaceAll('https://www.dev-mania.com/store/','https://www.dev-mania.com'+path).replace('</head>','<link rel="stylesheet" href="/store.css"></head>');
+  html=html.replace(/<main id="main">[\s\S]*?<\/main>/,`<main id="main"><section class="section company-page store-page">${content}<div class="store-feedback"><p id="store-status" role="status">Checking checkout availability…</p><div id="store-downloads"></div></div><p class="store-help">A ZIP of editable source code for each design. No subscription. Any applicable tax is shown by Paddle before payment. After confirmed payment, download here or from the private link sent to your checkout email.</p><p class="store-help">Questions about a design or order? <a href="/support/">Contact DevMania</a>.</p><noscript><p>Enable JavaScript to use Paddle checkout.</p></noscript></section><script src="https://cdn.paddle.com/paddle/v2/paddle.js" defer></script><script src="/store.js" defer></script></main>`);
+  const file=path.slice(1)+'index.html';fs.mkdirSync('dist/'+path.slice(1),{recursive:true});fs.writeFileSync('dist/'+file,html);files.push(file);
+ }
+ const hero=(title,desc)=>`<span class="eyebrow">DEVMANIA / INSTANT DIGITAL STORE</span><h1>${title}</h1><p class="page-intro">${desc}</p>`;
+ write('/store/','Instant Digital Store','Editable dashboard, sidebar, OTP and checkout source code. $2 USD per individual design.',hero('Designs you can build with.','The designs from our reels, ready to make your own. <strong>$2 USD per individual design.</strong>')+nav()+`<div class="store-grid">${products.map(card).join('')}</div>`);
+ for(const [key,name] of Object.entries(categories)){
+  const list=products.filter(p=>p.categories.includes(key));
+  const note=key==='sidebars'?'<p class="store-help">Dashboard-based sidebars include their full dashboard project. The same design appears in both categories; one purchase includes both.</p>':'';
+  write('/store/'+key+'/',name,name+' source code featured in DevMania reels. $2 USD per design.',hero(name,'Original UI interactions. Editable source. <strong>$2 USD each.</strong>')+nav(key)+note+`<div class="store-grid">${list.map(card).join('')}</div>`);
+ }
+ for(const p of products){
+  write('/store/design/'+p.slug+'/',p.name,p.description+' $2 USD one-time.',`<a class="store-back" href="/store/${p.categories[0]}/">← ${categories[p.categories[0]]}</a>`+hero(esc(p.name),esc(p.description))+`<div class="store-detail"><img src="${p.preview}" alt="${esc(p.name)} preview" width="1000" height="760"><div class="store-detail-copy"><p class="store-label">EDITABLE SOURCE CODE</p><div class="store-price"><strong>$2</strong><span>USD · one-time</span></div><ul><li>Complete React project source and styles</li><li>Original demo animations and interactions</li><li>Local setup and build instructions</li><li>ZIP download after confirmed payment</li></ul>${p.categories.length>1?'<p>Includes this dashboard and its sidebar. No separate sidebar purchase needed.</p>':''}${buy(p)}<p class="store-help">${['otp','checkout'].includes(p.categories[0])?'This is a UI demo. Connect your own authentication or payment provider for live use.':'Includes the original project assets and any bundled variants.'}</p><p class="store-help">Private download links last 7 days. Save your ZIP after downloading.</p></div></div>`);
+ }
+ for(const p of products){const name=p.preview.split('/').at(-1);const source='src/store-previews/'+name;if(!fs.existsSync(source))throw Error('Missing product preview: '+p.slug);fs.copyFileSync(source,'dist/assets/'+name)}
+ fs.copyFileSync('src/store.css','dist/store.css');
+ const sitemap='dist/sitemap.xml';if(fs.existsSync(sitemap)){let xml=fs.readFileSync(sitemap,'utf8');const entries=files.filter(f=>f.endsWith('index.html')).map(f=>'https://www.dev-mania.com/'+f.replace(/index\.html$/,'')).filter(url=>!xml.includes('<loc>'+url+'</loc>'));xml=xml.replace('</urlset>',entries.map(url=>'<url><loc>'+url+'</loc></url>').join('')+'</urlset>');fs.writeFileSync(sitemap,xml)}
+ files.push('store.css');return files;
+}
