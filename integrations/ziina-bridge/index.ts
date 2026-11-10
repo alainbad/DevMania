@@ -1,0 +1,2 @@
+import {bridge} from './handler.js';
+Deno.serve(bridge({publicKey:"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAQUhMD25HYYyH+DiVwmSLvcTK2W40Bur6nOTOPQJm+I4yhE4WTNl7BSLoBxUMVTHJqmhzN2uvUORlcVXeAwhLA==",apiKey:Deno.env.get('ZIINA_API_KEY')||'',slugs:["dashbordv10","dashbord-v7","dashbords-v8","dashbordv11","dashbords","sidebar-ui","otp-v6","glassy-otp-animation","otp-v9","liquid-otp-v2","glassy-otp-v2","animated-otp-verification-2nd-link","liquidotp","payment-checkout-v3","glassy-payment-checkout","payment-page","payment-v2","mobile-payment"]}));
