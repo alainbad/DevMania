@@ -15,10 +15,10 @@ async function ziinaAPI(env,path,body,message){
   const raw=JSON.stringify({path,body,message}),ts=String(Date.now());
   const privateKey=await crypto.subtle.importKey('pkcs8',Uint8Array.from(atob(env.ZIINA_BRIDGE_PRIVATE_KEY),c=>c.charCodeAt(0)),{name:'ECDSA',namedCurve:'P-256'},false,['sign']);
   const sig=new Uint8Array(await crypto.subtle.sign({name:'ECDSA',hash:'SHA-256'},privateKey,enc.encode('devmania-ziina-v1\n'+ts+'\n'+raw)));
-  const result=await fetch(env.ZIINA_BRIDGE_URL,{method:'POST',redirect:'error',headers:{'Content-Type':'application/json','X-DevMania-Time':ts,'X-DevMania-Signature':btoa(String.fromCharCode(...sig))},body:raw,signal:AbortSignal.timeout(20000)});
+  const result=await fetch(env.ZIINA_BRIDGE_URL,{method:'POST',redirect:'manual',headers:{'Content-Type':'application/json','X-DevMania-Time':ts,'X-DevMania-Signature':btoa(String.fromCharCode(...sig))},body:raw,signal:AbortSignal.timeout(20000)});
   if(!result.ok)throw Error('Payment service unavailable');return result.json();
  }
- const response=await fetch(ziinaBase+path,{method:body?'POST':'GET',redirect:'error',headers:{Authorization:'Bearer '+env.ZIINA_ACCESS_TOKEN,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(10000)});
+ const response=await fetch(ziinaBase+path,{method:body?'POST':'GET',redirect:'manual',headers:{Authorization:'Bearer '+env.ZIINA_ACCESS_TOKEN,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(10000)});
  if(!response.ok)throw Error('Payment service unavailable');return response.json();
 }
 function storeObject(env,id){return env.STORE_ORDERS.get(env.STORE_ORDERS.idFromName(id))}
@@ -59,15 +59,18 @@ async function ziinaSession(request,env){
  if(!validEmail(email))return json({error:'Enter a valid email for your download link'},400);
  if(!await env.STORE_FILES.head(product.key))return json({error:'Design download is temporarily unavailable'},503);
  const claimData={kind:'claim',slug:product.slug,nonce:crypto.randomUUID(),exp:Math.floor(now/1000)+86400};
+ let stage='provider';
  try{
   const payment=await ziinaAPI(env,'/payment_intent',{amount:200,currency_code:'USD',message:'DevMania '+claimData.nonce+' / '+product.slug,success_url:origin+'/store/?payment={PAYMENT_INTENT_ID}',cancel_url:origin+'/store/?payment={PAYMENT_INTENT_ID}&checkout=canceled',failure_url:origin+'/store/?payment={PAYMENT_INTENT_ID}&checkout=failed',test:testing,allow_tips:false,expiry:String(now+30*60000)});
+  stage='validation';
   if(!uuid.test(payment.id||'')||!uuid.test(payment.account_id||'')||(env.ZIINA_ACCOUNT_ID&&payment.account_id!==env.ZIINA_ACCOUNT_ID)||payment.amount!==200||payment.currency_code!=='USD')throw Error('Unexpected payment');
   const redirect=new URL(payment.redirect_url);if(redirect.origin!=='https://pay.ziina.com'||redirect.username||redirect.password)throw Error('Invalid checkout URL');
   const id='ziina_'+payment.id;
+  stage='registration';
   const saved=await storeObject(env,id).fetch('https://store.internal/register',{method:'POST',body:JSON.stringify({id,paymentId:payment.id,provider:'ziina',accountId:payment.account_id,message:'DevMania '+claimData.nonce+' / '+product.slug,email,claimNonce:claimData.nonce,test:testing,createdAt:now,items:[{slug:product.slug,name:product.name,key:product.key,filename:product.filename}]})});
   if(!saved.ok)throw Error('Order registration failed');
   return json({claim:await token(claimData,env.STORE_DOWNLOAD_SECRET),transactionId:id,redirectUrl:redirect.href,provider:'ziina',test:testing});
- }catch{return json({error:'Checkout could not be opened. Please try again.'},502)}
+ }catch(error){console.warn('Ziina checkout failed',{stage,error:error.name});return json({error:'Checkout could not be opened. Please try again.',...(testing?{stage,reason:String(error.message).slice(0,160)}:{})},502)}
 }
 export async function storeZiinaWebhook(request,env){
  if(request.method!=='POST')return json({error:'Method not allowed'},405);

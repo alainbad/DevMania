@@ -7,6 +7,7 @@ const env={STORE_PAYMENT_PROVIDER:'ziina',ZIINA_ACCESS_TOKEN:'secret',ZIINA_ACCO
 env.STORE_ORDERS={idFromName:n=>n,get:n=>{if(!objects.has(n)){const data=new Map();states.set(n,data);objects.set(n,new StoreOrder({storage:{get:async k=>data.get(k),put:async(k,v)=>data.set(k,v),setAlarm:async time=>alarms.set(n,time)},blockConcurrencyWhile:f=>f()},env))}return {fetch:(url,opts)=>objects.get(n).fetch(new Request(url,opts))}}};
 globalThis.fetch=async(url,opts)=>{
  if(url==='https://api-v2.ziina.com/api/payment_intent'){
+  assert.equal(opts.redirect,'manual');
   const data=JSON.parse(opts.body);created.push(data);assert.equal(data.amount,200);assert.equal(data.currency_code,'USD');assert.equal(data.allow_tips,false);assert.ok(!('email' in data));
   const id=randomUUID(),p={...data,id,account_id:account,status:'requires_payment_instrument',redirect_url:'https://pay.ziina.com/payment/'+id,tip_amount:0};payments.set(id,p);return Response.json(p);
  }
