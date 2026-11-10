@@ -4,13 +4,14 @@ import fs from 'node:fs';
 // Reuse the existing endpoint, but serve images through Cloudflare's asset binding.
 // The embedded asset bundle is for the existing Sites build only.
 fs.mkdirSync('.cloudflare', {recursive: true});
-for (const file of ['index.js', 'projects.js', 'validation.js']) {
+for (const file of ['index.js', 'projects.js', 'validation.js', 'store.js']) {
   fs.copyFileSync('dist/server/' + file, '.cloudflare/' + file);
 }
 const blogFiles = fs.readdirSync('dist/blog', {recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'blog/'+name);
 const serviceFiles = fs.readdirSync('dist/services', {recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'services/'+name);
 const toolFiles=fs.readdirSync('dist/tools',{recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'tools/'+name);
 const publicFiles = [
+  'store/index.html','store.js',
   'devsmart-calculator/privacy/index.html',
   'devsmart-calculator/support/index.html',
   'devsmart-calculator/style.css','nicole-badran-business-card/index.html','nicole-badran-business-card/connect.html','alain-badran-business-card/index.html','alain-badran-business-card/connect.html','pages.css','projects/index.html','scope/index.html','about/index.html','contact/index.html','support/index.html','pricing/index.html','terms/index.html','privacy/index.html','refunds/index.html',...toolFiles,'tools.js','engagement.js','feed.xml',...blogFiles,...serviceFiles,'blog.css','sitemap.xml','robots.txt','index.html', 'style.css', 'app.js', 'os.css', 'os.js',

@@ -1,0 +1,12 @@
+# Instant Digital Store
+
+The store is at `/store/`. It lists each design at $1 USD and delivers an attachment to the buyer's Paddle checkout email after a verified completed payment. Checkout defaults to off.
+
+1. In Paddle Billing, approve the DevMania domain, set the default payment link to `https://www.dev-mania.com/store/`, and create a product with a one-time $1 USD price for each design. Disable regional price overrides for these products; fulfillment expects USD and a base unit price of 100 cents.
+2. In Resend, verify your sender domain and create an API key with sending permission. In Cloudflare Worker settings, set `STORE_FROM_EMAIL` to the verified sender address. Replies go to support@dev-mania.com.
+3. In Cloudflare Worker settings, add `PADDLE_CLIENT_TOKEN`, `PADDLE_API_KEY` (customer read access), and `RESEND_API_KEY`. Add a Paddle notification destination at `https://www.dev-mania.com/api/store/paddle` for `transaction.completed` and save its destination secret as `PADDLE_WEBHOOK_SECRET`. Keep all credentials in Worker settings.
+4. Set the `STORE_PRODUCTS` secret to a JSON array of entries of the form `{"slug":"design-name","name":"Design Name","description":"What the buyer receives","priceId":"PADDLE_PRICE_ID","filename":"design.zip","contentKeys":["STORE_CODE_DESIGN_01"]}`. Base64-encode the source file and split it into chunks small enough for individual Worker secrets. Put the chunks in the listed secrets in order; the complete base64 string is capped at 256,000 characters per product. For small files, a `content` field with the full base64 string may be used instead. Never put paid source files in public assets.
+5. Test a purchase with matching sandbox keys and sandbox price IDs before switching to live keys. Use a test deployment or leave the public store closed while testing. Set `STORE_CHECKOUT_ENABLED=true` only when you want buttons to open checkout. Existing completed payments can still be fulfilled with checkout closed. Keep previously sold price mappings and files available for retries.
+6. Monitor failed notifications in Paddle and delivery in Resend. Resend accepts the email for delivery; it may still bounce. A repeated completed transaction will not send again after a recorded successful submission. Review ambiguous sends manually if more than 23 hours have passed since the first send attempt.
+
+The deployment includes a Cloudflare Durable Object migration for order deduplication. No customer email or purchased file is returned by the public catalog endpoint.
