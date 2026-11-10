@@ -36,3 +36,11 @@ Run `node tests/store.mjs`, `node tests/store-ziina.mjs`, `node tests/ziina-brid
 No real-money charge or refund is needed for testing. Use Ziina's documented test mode and test cards. A successful test does not prove live card processing or settlement; record those separately if later verified.
 
 References: https://docs.ziina.com/developers/custom-integration, https://docs.ziina.com/api-reference/payment-intent, https://docs.ziina.com/supported-currencies, https://supabase.com/docs/guides/functions/auth.
+
+## Production verification — 10 November 2026
+
+Ziina is enabled for all 18 individual designs at USD 2.00. The merchant account is pinned with `ZIINA_ACCOUNT_ID`; temporary `STORE_TEST_KEY` access was removed after verification.
+
+The hosted test checkout for OTP V6 completed successfully. Before any receipt polling, the background reconciliation sent the delivery email to the store owner (received at 15:03 Dubai time). The receipt then confirmed paid; the 13,525-byte private ZIP matched the package manifest SHA-256 and passed ZIP integrity checks. A modified download token returned 403. The existing Fixenator credential and account webhook were preserved.
+
+This was a test-mode payment, not a real charge or proof of live settlement.

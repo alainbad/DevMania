@@ -1,3 +1,5 @@
+> Current payment setup: Ziina. See [Ziina checkout](ziina-store.md) for the active integration and verification. Paddle setup below is retained as historical configuration.
+
 # Instant Digital Store
 
 The catalog has 18 unique source projects. Each design is **$2 USD, one-time**, before any tax Paddle displays at checkout. Four dashboard projects also appear in Sidebars; one purchase includes that full project, not two charges.
