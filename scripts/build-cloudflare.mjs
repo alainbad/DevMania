@@ -11,7 +11,7 @@ const blogFiles = fs.readdirSync('dist/blog', {recursive:true}).filter(name=>nam
 const serviceFiles = fs.readdirSync('dist/services', {recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'services/'+name);
 const toolFiles=fs.readdirSync('dist/tools',{recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'tools/'+name);
 const publicFiles = [
-  ...fs.readdirSync('dist/store-videos').map(name=>'store-videos/'+name),
+  ...fs.readdirSync('dist/store-videos',{recursive:true}).filter(name=>name.endsWith('.mp4')).map(name=>'store-videos/'+name),
   ...fs.readdirSync('dist/store',{recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'store/'+name),'store.js','store.css',
   'devsmart-calculator/privacy/index.html',
   'devsmart-calculator/support/index.html',

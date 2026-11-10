@@ -236,5 +236,616 @@ export default [
     "preview": "/assets/store-mobile-payment.jpg",
     "filename": "devmania-mobile-payment.zip",
     "version": "1.0.0"
+  },
+  {
+    "slug": "dashboard-v5",
+    "name": "Admin Dashboard V5",
+    "categories": [
+      "admin"
+    ],
+    "description": "Two admin dashboard variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-dashboard-v5.jpg",
+    "filename": "devmania-dashboard-v5.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "dashbord-v2",
+    "name": "Admin Dashboard V2",
+    "categories": [
+      "admin"
+    ],
+    "description": "Two dashboard variants with management views. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-dashbord-v2.jpg",
+    "filename": "devmania-dashbord-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "glassy-dashbord",
+    "name": "Glassy Dashboard",
+    "categories": [
+      "dashboards"
+    ],
+    "description": "Glass workspace with widgets and team views. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-glassy-dashbord.jpg",
+    "filename": "devmania-glassy-dashbord.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "dashboard-v14",
+    "name": "Dashboard V14",
+    "categories": [
+      "dashboards"
+    ],
+    "description": "Supplied dashboard project with the original assets and motion. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-dashboard-v14.jpg",
+    "filename": "devmania-dashboard-v14.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "dashboard-v12",
+    "name": "Dashboard V12",
+    "categories": [
+      "dashboards"
+    ],
+    "description": "Dashboard project with multiple views. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-dashboard-v12.jpg",
+    "filename": "devmania-dashboard-v12.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "dashboard-v3",
+    "name": "Dashboard V3",
+    "categories": [
+      "dashboards"
+    ],
+    "description": "Dashboard variants with picture-in-picture and dock components. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-dashboard-v3.jpg",
+    "filename": "devmania-dashboard-v3.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "glassy-navbar",
+    "name": "Glassy Navbar",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Translucent navigation treatment. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-glassy-navbar.jpg",
+    "filename": "devmania-glassy-navbar.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "apple-style-navbar-v2",
+    "name": "Apple Style Navbar V2",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Apple-inspired navigation. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-apple-style-navbar-v2.jpg",
+    "filename": "devmania-apple-style-navbar-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "navigation-tabs-v3",
+    "name": "Navigation Tabs V3",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Three animated tab variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-navigation-tabs-v3.jpg",
+    "filename": "devmania-navigation-tabs-v3.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "apple-dock",
+    "name": "Apple Dock",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Dock interaction. The ZIP and RAR contain the same project. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-apple-dock.jpg",
+    "filename": "devmania-apple-dock.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "navgation-tabs",
+    "name": "Navigation Tabs",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Dark and light navigation variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-navgation-tabs.jpg",
+    "filename": "devmania-navgation-tabs.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "naviagtion-bars-v2",
+    "name": "Navigation Bars V2",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Two animated navigation bar variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-naviagtion-bars-v2.jpg",
+    "filename": "devmania-naviagtion-bars-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "navigation-tabs-v4",
+    "name": "Navigation Tabs V4",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Two navigation variants with animated transitions. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-navigation-tabs-v4.jpg",
+    "filename": "devmania-navigation-tabs-v4.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "navigation-tabs-v10",
+    "name": "Navigation Tabs V10",
+    "categories": [
+      "navigation"
+    ],
+    "description": "Three tab variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-navigation-tabs-v10.jpg",
+    "filename": "devmania-navigation-tabs-v10.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "otp-verification-v3",
+    "name": "OTP Verification V3",
+    "categories": [
+      "otp"
+    ],
+    "description": "Animated verification variant. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-otp-verification-v3.jpg",
+    "filename": "devmania-otp-verification-v3.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "mascot-otp",
+    "name": "Mascot OTP",
+    "categories": [
+      "otp"
+    ],
+    "description": "Verification with an animated mascot. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-mascot-otp.jpg",
+    "filename": "devmania-mascot-otp.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "animated-otp-verification",
+    "name": "Animated OTP Verification",
+    "categories": [
+      "otp"
+    ],
+    "description": "Standalone animated verification project. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-animated-otp-verification.jpg",
+    "filename": "devmania-animated-otp-verification.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "animated-otp-verification-v10",
+    "name": "Animated OTP Verification V10",
+    "categories": [
+      "otp"
+    ],
+    "description": "Animated one-time-code flow. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-animated-otp-verification-v10.jpg",
+    "filename": "devmania-animated-otp-verification-v10.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "otp-v4",
+    "name": "OTP V4",
+    "categories": [
+      "otp"
+    ],
+    "description": "One-time-code interface. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-otp-v4.jpg",
+    "filename": "devmania-otp-v4.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "animated-otp-verification-pacman",
+    "name": "Animated OTP Verification \u2014 Pac-Man",
+    "categories": [
+      "otp"
+    ],
+    "description": "Pac-Man-themed OTP variant. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-animated-otp-verification-pacman.jpg",
+    "filename": "devmania-animated-otp-verification-pacman.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "animated-otp-verification-v7",
+    "name": "Animated OTP Verification V7",
+    "categories": [
+      "otp"
+    ],
+    "description": "Animated verification variant. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-animated-otp-verification-v7.jpg",
+    "filename": "devmania-animated-otp-verification-v7.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "man-login",
+    "name": "Man Login",
+    "categories": [
+      "login"
+    ],
+    "description": "Login interface with a bundled character. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-man-login.jpg",
+    "filename": "devmania-man-login.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "login-forms",
+    "name": "Login Forms",
+    "categories": [
+      "login"
+    ],
+    "description": "A collection of animated sign-in forms. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-login-forms.jpg",
+    "filename": "devmania-login-forms.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "login-page",
+    "name": "Login Page",
+    "categories": [
+      "login"
+    ],
+    "description": "Standalone sign-in design. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-login-page.jpg",
+    "filename": "devmania-login-page.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "login-v3",
+    "name": "Login V3",
+    "categories": [
+      "login"
+    ],
+    "description": "Animated login variant. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-login-v3.jpg",
+    "filename": "devmania-login-v3.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "lamp-login",
+    "name": "Lamp Login",
+    "categories": [
+      "login"
+    ],
+    "description": "Interactive lamp sign-in demo. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-lamp-login.jpg",
+    "filename": "devmania-lamp-login.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "login-v5",
+    "name": "Login V5",
+    "categories": [
+      "login"
+    ],
+    "description": "Login project labeled V4 in the supplied source. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-login-v5.jpg",
+    "filename": "devmania-login-v5.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "galssy-login-page-v2",
+    "name": "Glassy Login Page V2",
+    "categories": [
+      "login"
+    ],
+    "description": "Glassy sign-in design. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-galssy-login-page-v2.jpg",
+    "filename": "devmania-galssy-login-page-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "login-page-v2",
+    "name": "Login Page V2",
+    "categories": [
+      "login"
+    ],
+    "description": "Standalone sign-in variant. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-login-page-v2.jpg",
+    "filename": "devmania-login-page-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "glassy-login-forms",
+    "name": "Glassy Login Forms",
+    "categories": [
+      "login"
+    ],
+    "description": "Two glass sign-in forms. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-glassy-login-forms.jpg",
+    "filename": "devmania-glassy-login-forms.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cart-feature-v2",
+    "name": "Cart Feature V2",
+    "categories": [
+      "checkout"
+    ],
+    "description": "Shopping cart interaction. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-cart-feature-v2.jpg",
+    "filename": "devmania-cart-feature-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "new-cart-feature",
+    "name": "New Cart Feature",
+    "categories": [
+      "checkout"
+    ],
+    "description": "Animated shopping cart interaction. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-new-cart-feature.jpg",
+    "filename": "devmania-new-cart-feature.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "fly-to-cart-animation",
+    "name": "Fly to Cart Animation",
+    "categories": [
+      "checkout"
+    ],
+    "description": "Standalone fly-to-cart interaction. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-fly-to-cart-animation.jpg",
+    "filename": "devmania-fly-to-cart-animation.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cart-animation",
+    "name": "Cart Animation",
+    "categories": [
+      "checkout"
+    ],
+    "description": "Separate cart animation project. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-cart-animation.jpg",
+    "filename": "devmania-cart-animation.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "animated-search-bar",
+    "name": "Animated Search Bar",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Animated product search. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-animated-search-bar.jpg",
+    "filename": "devmania-animated-search-bar.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "upload-animation-v2",
+    "name": "Upload Animation V2",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Animated file upload interface. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-upload-animation-v2.jpg",
+    "filename": "devmania-upload-animation-v2.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "macbook-scrool",
+    "name": "MacBook Scroll",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Scroll-driven laptop presentation. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-macbook-scrool.jpg",
+    "filename": "devmania-macbook-scrool.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "upload-button",
+    "name": "Upload Button",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Animated upload control. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-upload-button.jpg",
+    "filename": "devmania-upload-button.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "particleanimation",
+    "name": "Particle Animation",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Particle sphere effect. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-particleanimation.jpg",
+    "filename": "devmania-particleanimation.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "basketball-upload-animation",
+    "name": "Basketball Upload Animation",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Basketball-themed upload interaction. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-basketball-upload-animation.jpg",
+    "filename": "devmania-basketball-upload-animation.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "svg-animations",
+    "name": "SVG Animations",
+    "categories": [
+      "interactions"
+    ],
+    "description": "Animated interface icons and folder widget. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-svg-animations.jpg",
+    "filename": "devmania-svg-animations.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "carousel-ui",
+    "name": "Carousel UI",
+    "categories": [
+      "carousels"
+    ],
+    "description": "Carousel with title details and trailer content. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-carousel-ui.jpg",
+    "filename": "devmania-carousel-ui.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "hanging-cards-ui",
+    "name": "Hanging Cards UI",
+    "categories": [
+      "cards"
+    ],
+    "description": "Interactive hanging card design. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-hanging-cards-ui.jpg",
+    "filename": "devmania-hanging-cards-ui.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "cards-design",
+    "name": "Cards Design",
+    "categories": [
+      "cards"
+    ],
+    "description": "Two card design variants. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-cards-design.jpg",
+    "filename": "devmania-cards-design.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "price-cards",
+    "name": "Price Cards",
+    "categories": [
+      "cards"
+    ],
+    "description": "Pricing card layouts. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-price-cards.jpg",
+    "filename": "devmania-price-cards.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "car-rentel-website",
+    "name": "Car Rental Website",
+    "categories": [
+      "websites"
+    ],
+    "description": "Complete rental demo with bundled 3D models. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-car-rentel-website.jpg",
+    "filename": "devmania-car-rentel-website.zip",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "contact-us",
+    "name": "Contact Us",
+    "categories": [
+      "websites"
+    ],
+    "description": "Standalone contact page. Includes editable React source, styles, assets, and original demo interactions.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-contact-us.jpg",
+    "filename": "devmania-contact-us.zip",
+    "version": "1.0.0"
   }
 ];

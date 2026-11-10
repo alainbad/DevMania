@@ -17,7 +17,7 @@ globalThis.fetch=async(url,opts)=>{
 let requestNumber=0;
 const post=(path,data,extra={})=>new Request('https://www.dev-mania.com/api/store/'+path,{method:'POST',headers:{'Content-Type':'application/json','CF-Connecting-IP':'test-'+(++requestNumber),...extra},body:JSON.stringify(data)});
 const session=async(extra={},requestExtra={})=>storeSession(post('session',{slug,email:'buyer@example.com',...extra},requestExtra),env);
-const cat=await storeCatalog(env).json();assert.equal(cat.provider,'ziina');assert.equal(cat.token,null);assert.equal(cat.products.filter(p=>p.available).length,18);
+const cat=await storeCatalog(env).json();assert.equal(cat.provider,'ziina');assert.equal(cat.token,null);assert.equal(cat.products.filter(p=>p.available).length,65);
 assert.equal((await session({email:'invalid'})).status,400);
 const s=await(await session({amount:1,currency:'AED',test:true})).json();assert.equal(created.at(-1).test,false);const id=s.transactionId.slice(6);
 assert.equal((await storeReceipt(post('receipt',{transactionId:s.transactionId,claim:s.claim}),env)).status,202);
