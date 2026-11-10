@@ -1,4 +1,5 @@
 export default {
+  "websites": "Full Websites",
   "admin": "Admin Dashboards",
   "dashboards": "Dashboards",
   "navigation": "Navigation, Tabs & Docks",
@@ -8,6 +9,5 @@ export default {
   "checkout": "Checkout, Payments & Cart",
   "interactions": "Search, Upload & Scroll",
   "carousels": "Carousels",
-  "cards": "Cards & Effects",
-  "websites": "Full Websites"
+  "cards": "Cards & Effects"
 };
