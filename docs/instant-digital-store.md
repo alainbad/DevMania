@@ -21,7 +21,7 @@ Individual pages use `/store/design/{slug}/`. Public preview JPGs and product me
    ```
 
 2. Upload each source ZIP to the object key in the private package manifest, `designs/{slug}/1.0.0.zip`. The session endpoint checks that its source file exists before opening checkout.
-3. Configure Paddle Billing with the approved `www.dev-mania.com` checkout domain and default payment link `https://www.dev-mania.com/store/`. Create one standard software product and a non-recurring USD price with `unit_price.amount = "200"` per catalog slug. Do not use regional overrides. Set quantity minimum and maximum to 1. `scripts/setup-store-paddle.mjs` can create/reuse these using a scoped key supplied locally through `PADDLE_API_KEY`; it does not enable checkout.
+3. Configure Paddle Billing with the approved `www.dev-mania.com` checkout domain while preserving the existing Trackora default payment link; DevMania uses its own Paddle.js overlay on `https://www.dev-mania.com/store/`. Create one standard software product and a non-recurring USD price with `unit_price.amount = "200"` per catalog slug. Do not use regional overrides. Set quantity minimum and maximum to 1. `scripts/setup-store-paddle.mjs` can create/reuse these using a scoped key supplied locally through `PADDLE_API_KEY`; it does not enable checkout.
 4. Verify a sending domain in Resend and set a sender such as `DevMania <store@dev-mania.com>` after it is verified. Set the Worker secret `STORE_FROM_EMAIL` to that address.
 5. Set Worker secrets: `PADDLE_CLIENT_TOKEN`, `PADDLE_API_KEY` (customer read access at runtime), `PADDLE_WEBHOOK_SECRET`, `RESEND_API_KEY`, `STORE_FROM_EMAIL`, and `STORE_DOWNLOAD_SECRET` (a random value of at least 32 bytes). Set `STORE_PRICE_IDS` to a JSON object mapping each catalog slug to its real `pri_...` ID. Set `STORE_CHECKOUT_ENABLED=false` until end-to-end checks pass. Never put API keys in browser code or chat.
 6. Add a Paddle notification destination at `https://www.dev-mania.com/api/store/paddle`, subscribed to `transaction.completed`. Save that destination's secret as `PADDLE_WEBHOOK_SECRET`. Use matching sandbox keys/prices on an isolated test Worker first.
@@ -38,3 +38,14 @@ Email retries reuse both the Resend idempotency key and identical email body. A 
 Run `node tests/store.mjs`, `npm test`, `npm run check`, and `node scripts/build-cloudflare.mjs` before deployment. Automated tests simulate Paddle and Resend; they do not prove the live account is configured.
 
 References: [Paddle overlay checkout](https://developer.paddle.com/build/checkout/build-overlay-checkout/), [signature verification](https://developer.paddle.com/webhooks/about/signature-verification/), [product creation](https://developer.paddle.com/api-reference/products/create-product/), [price creation](https://developer.paddle.com/api-reference/prices/create-price/).
+
+## Provisioning status — November 10, 2026
+
+- Live Paddle account is shared with Trackora. Preserve all Trackora products, default link, checkout styling and notification destination.
+- Created 18 DevMania products with active one-time USD 2.00 prices; public price IDs are recorded in `store-price-ids-live.json`.
+- DevMania domain submitted for checkout approval; latest status **Not approved** (`rejected` in the API). Paddle provides no reason in the domain table and only a Remove action; do not remove/re-add it to bypass review. Contact Paddle support for the reason and re-review.
+- Separate DevMania client token and transaction-completed notification destination created. The notification destination remains inactive pending deployment verification.
+- Dedicated runtime Paddle key has only `customer.read`; rotate before **February 8, 2027**. Setup key is separate and expires on the same date. Never commit either value.
+- Private R2 bucket `devmania-design-code` exists with public access disabled; all 18 source ZIPs uploaded.
+- Resend sending domain `mail.dev-mania.com` has dedicated DKIM TXT and two DNS-only CNAME records; verification is complete. Existing Purelymail root-domain records were preserved.
+- Purchases remain disabled pending domain approval, an end-to-end sandbox checkout/download test.

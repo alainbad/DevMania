@@ -20,3 +20,7 @@ class_name = "StoreOrder"
 [[migrations]]
 tag = "store-orders-v1"
 new_sqlite_classes = ["StoreOrder"]
+
+[[r2_buckets]]
+binding = "STORE_FILES"
+bucket_name = "devmania-design-code"

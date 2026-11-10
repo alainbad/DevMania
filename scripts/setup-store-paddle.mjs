@@ -8,7 +8,7 @@ async function all(path){const result=[];let next=path;while(next){const r=await
 const existing=await all('/products?per_page=200&status=active');const mapping={};
 for(const p of products){
  const matches=existing.filter(x=>x.custom_data?.devmania_slug===p.slug);if(matches.length>1)throw Error('Ambiguous existing product: '+p.slug);
- let product=matches[0];if(!product){product=(await call('/products',{name:p.name,description:p.description,tax_category:'standard',custom_data:{devmania_slug:p.slug,store:'devmania'}})).data;existing.push(product)}
+ let product=matches[0];if(!product){product=(await call('/products',{name:'DevMania — '+p.name,description:p.description,tax_category:'standard',custom_data:{devmania_slug:p.slug,store:'devmania'}})).data;existing.push(product)}
  const prices=await all('/prices?per_page=200&status=active&product_id='+product.id);
  let price=prices.find(x=>x.unit_price?.currency_code==='USD'&&x.unit_price.amount==='200'&&!x.billing_cycle&&!(x.unit_price_overrides?.length)&&x.quantity?.minimum===1&&x.quantity?.maximum===1);
  if(!price)price=(await call('/prices',{product_id:product.id,description:'DevMania individual source code — one-time $2 USD',name:'Design source code',billing_cycle:null,tax_mode:'external',unit_price:{amount:'200',currency_code:'USD'},quantity:{minimum:1,maximum:1}})).data;
