@@ -23,5 +23,8 @@ assert.equal(response.status, 503);
 assert.match(response.headers.get('Content-Type'), /application\/json/);
 assert.equal(assetCalls, before);
 assert.equal((await worker.fetch(new Request('https://www.dev-mania.com/api/idea'), env)).status, 405);
-assert(fs.statSync('.cloudflare/assets.js').size < 10000);
+// The public route list grows with the catalog; assets must remain references, not embedded bytes.
+const publicAssets=(await import('../.cloudflare/assets.js')).default;
+assert(Object.values(publicAssets).every(value=>value===true));
+assert(fs.statSync('.cloudflare/assets.js').size < 20000);
 console.log('Cloudflare checks passed: asset delegation, HEAD, private paths, API routing, missing-key fallback, compact bundle.');

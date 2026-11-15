@@ -1,0 +1,2 @@
+export const instagramUrl='https://www.instagram.com/thedevmania/';
+export const socialCta=placement=>`<aside class="social-follow" aria-label="DevMania on Instagram"><div><span class="eyebrow">SEE THE BUILD</span><h2>From first idea to final screen</h2><p>Explore DevMania’s design reels, app ideas and practical development tips on Instagram.</p></div><a href="${instagramUrl}" target="_blank" rel="noopener noreferrer" data-social-placement="${placement}">Follow @thedevmania <span aria-hidden="true">↗</span></a></aside>`;
