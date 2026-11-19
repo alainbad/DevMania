@@ -525,9 +525,9 @@
     "status": "live",
     "featured": true,
     "url": "https://www.track-ora.com",
-    "image": "assets/trackora.png",
-    "imageClass": "trackora-image",
-    "imageAlt": "Trackora — Track any shipment in real time",
+    "image": "assets/trackora-sharing-v3.jpg",
+    "imageClass": "trackora-sharing-image",
+    "imageAlt": "Trackora: Every shipment, every step, in sight. Packages, containers and air cargo.",
     "caption": "track-ora.com",
     "legacyKey": "WEBSITE-trackora",
     "experience": {
