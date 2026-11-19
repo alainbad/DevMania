@@ -132,7 +132,8 @@
       "Apps"
     ],
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ],
     "capabilities": [
       "logistics",
@@ -145,8 +146,8 @@
     "url": "https://apps.apple.com/app/id6785973851",
     "image": "assets/trackora.png",
     "imageClass": "trackora-image",
-    "imageAlt": "Trackora \u2014 Track any shipment in real time",
-    "caption": "App Store",
+    "imageAlt": "Trackora — Track any shipment in real time",
+    "caption": "App Store · Google Play",
     "legacyKey": "APP-trackora",
     "experience": {
       "projectId": "app-trackora",
@@ -245,6 +246,10 @@
           }
         ]
       }
+    },
+    "platformReleases": {
+      "ios": "live",
+      "android": "live"
     }
   },
   {
@@ -267,21 +272,22 @@
       "Apps"
     ],
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ],
     "url": "https://apps.apple.com/app/id6825422681",
-    "caption": "App Store \u00b7 Android in the Build",
+    "caption": "App Store · Google Play",
     "legacyKey": "APP-lowcate",
     "platformReleases": {
       "ios": "live",
-      "android": "building"
+      "android": "live"
     }
   },
   {
     "id": "app-parently",
     "slug": "app-parently",
     "name": "Parently",
-    "shortDescription": "Parently helps parents keep track of their child\u2019s daily routines and important moments. It brings everyday parenting tools and records together so they are easier to find and update.",
+    "shortDescription": "Parently helps parents keep track of their child’s daily routines and important moments. It brings everyday parenting tools and records together so they are easier to find and update.",
     "categories": [
       "Apps"
     ],
@@ -521,7 +527,7 @@
     "url": "https://www.track-ora.com",
     "image": "assets/trackora.png",
     "imageClass": "trackora-image",
-    "imageAlt": "Trackora \u2014 Track any shipment in real time",
+    "imageAlt": "Trackora — Track any shipment in real time",
     "caption": "track-ora.com",
     "legacyKey": "WEBSITE-trackora",
     "experience": {
@@ -751,7 +757,7 @@
     "id": "website-assia-wanderers-club",
     "slug": "website-assia-wanderers-club",
     "name": "Assia Wanderers Club",
-    "shortDescription": "The Assia Wanderers Club website shares the club\u2019s activities, news and community updates. Visitors can learn about the club and stay informed about upcoming events.",
+    "shortDescription": "The Assia Wanderers Club website shares the club’s activities, news and community updates. Visitors can learn about the club and stay informed about upcoming events.",
     "categories": [
       "Websites"
     ],
