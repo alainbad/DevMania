@@ -7,3 +7,5 @@
 @media(min-width:651px){.store-detail{align-items:stretch}.store-design-video{height:100%;min-height:420px;max-height:none;aspect-ratio:auto;contain:size;box-sizing:border-box}.store-detail-copy{box-sizing:border-box}}
 
 .store-category-count{display:inline-block;margin-left:6px;color:#ffae7e;font-size:12px}.store-tabs{align-items:center}
+
+.store-card-video{display:block;width:100%;height:100%;object-fit:contain;background:#050505}.store-prompt-video{aspect-ratio:9/16;height:auto;min-height:0;max-height:900px;contain:none;align-self:start}
