@@ -1,5 +1,19 @@
 export default [
   {
+    "slug": "three-agent-ai-assistant-setup",
+    "name": "Three-Agent AI Assistant \u2014 Full Setup Prompt",
+    "categories": [
+      "ai-prompts"
+    ],
+    "description": "Build an OpenAI, Claude and Gemini review team in n8n. Full setup prompt, role instructions and testing guide. Your own accounts and usage credits are required.",
+    "price": 200,
+    "currency": "USD",
+    "preview": "/assets/store-ai-team.svg",
+    "filename": "devmania-three-agent-ai-setup-v1.zip",
+    "version": "1.0.0",
+    "kind": "prompt-pack"
+  },
+  {
     "slug": "dashbordv10",
     "name": "Liquid Glass Analytics",
     "categories": [

@@ -18,7 +18,7 @@ async function receipt(transactionId){
  if(!active?.claim)return tell('If you completed payment, your download link will arrive at the email entered before checkout.');
  active.transactionId=transactionId;remember();tell('Checking secure payment confirmation…');
  for(let i=0;i<30;i++){
-  try{const result=await post('/api/store/receipt',{transactionId,claim:active.claim});if(result.paid){downloads.replaceChildren();for(const file of result.downloads){const a=document.createElement('a');a.href=file.url;a.textContent='Download '+file.name+' (.zip)';a.rel='noreferrer';downloads.append(a)}tell('Payment confirmed. Your source code is ready below; we’re also sending your download link by email.');downloads.scrollIntoView({behavior:'smooth',block:'center'});return}if(['failed','canceled'].includes(result.status)){tell('Payment was not completed. You can choose the design and try again.');return}}catch{}
+  try{const result=await post('/api/store/receipt',{transactionId,claim:active.claim});if(result.paid){downloads.replaceChildren();for(const file of result.downloads){const a=document.createElement('a');a.href=file.url;a.textContent='Download '+file.name+' (.zip)';a.rel='noreferrer';downloads.append(a)}tell('Payment confirmed. Your download is ready below; we’re also sending your download link by email.');downloads.scrollIntoView({behavior:'smooth',block:'center'});return}if(['failed','canceled'].includes(result.status)){tell('Payment was not completed. You can choose the design and try again.');return}}catch{}
   await new Promise(resolve=>setTimeout(resolve,3000));
  }
  tell('We’re still checking your payment. Your download link will arrive by email once confirmed, even if you close this page. You can also refresh this page.');
@@ -30,7 +30,7 @@ async function load(){
   if(token.startsWith('test_'))window.Paddle.Environment.set('sandbox');
   window.Paddle.Initialize({token,eventCallback:event=>{if(event.name==='checkout.completed')receipt(event.data?.transaction_id);if(event.name==='checkout.error')tell('Checkout could not be completed. Please try again.')}});ready=true;
  }
- tell(ready?'Choose a design. Pay $2 once, then download your code.':'Browse the designs below. Checkout is being prepared and is not open yet.');
+ tell(ready?'Choose a product. Pay $2 once, then download your files.':'Browse the designs below. Checkout is being prepared and is not open yet.');
  const bySlug=new Map(products.map(p=>[p.slug,p]));
  for(const button of document.querySelectorAll('[data-buy]')){
   const p=bySlug.get(button.dataset.buy);button.disabled=!(ready&&p?.available);button.textContent=button.disabled?'Checkout coming soon':'Buy for $2';

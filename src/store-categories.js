@@ -1,4 +1,5 @@
 export default {
+  "ai-prompts": "AI Prompts & Automation",
   "websites": "Full Websites",
   "admin": "Admin Dashboards",
   "dashboards": "Dashboards",
