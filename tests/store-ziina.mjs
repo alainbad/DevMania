@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {randomUUID,createHmac} from 'node:crypto';
 import {storeCatalog,storeSession,storeReceipt,storeDownload,storeZiinaWebhook,StoreOrder} from '../server/store.js';
-const slug='otp-v6',account=randomUUID(),payments=new Map(),states=new Map(),objects=new Map(),alarms=new Map(),files=new Map([['designs/otp-v6/1.0.0.zip','PRIVATE ZIP']]);
+const slug=process.env.STORE_TEST_SLUG||'otp-v6',account=randomUUID(),payments=new Map(),states=new Map(),objects=new Map(),alarms=new Map(),files=new Map([['designs/'+slug+'/1.0.0.zip','PRIVATE ZIP']]);
 let emails=0,failEmail=false,created=[];
 const env={STORE_PAYMENT_PROVIDER:'ziina',ZIINA_ACCESS_TOKEN:'secret',ZIINA_ACCOUNT_ID:account,ZIINA_WEBHOOK_SECRET:'hook',STORE_DOWNLOAD_SECRET:'private',RESEND_API_KEY:'resend',STORE_FROM_EMAIL:'store@example.com',STORE_CHECKOUT_ENABLED:'true',STORE_TEST_KEY:'test-access',STORE_FILES:{head:async k=>files.has(k)?{}:null,get:async k=>files.has(k)?{body:files.get(k)}:null}};
 env.STORE_ORDERS={idFromName:n=>n,get:n=>{if(!objects.has(n)){const data=new Map();states.set(n,data);objects.set(n,new StoreOrder({storage:{get:async k=>data.get(k),put:async(k,v)=>data.set(k,v),setAlarm:async time=>alarms.set(n,time)},blockConcurrencyWhile:f=>f()},env))}return {fetch:(url,opts)=>objects.get(n).fetch(new Request(url,opts))}}};
@@ -17,7 +17,7 @@ globalThis.fetch=async(url,opts)=>{
 let requestNumber=0;
 const post=(path,data,extra={})=>new Request('https://www.dev-mania.com/api/store/'+path,{method:'POST',headers:{'Content-Type':'application/json','CF-Connecting-IP':'test-'+(++requestNumber),...extra},body:JSON.stringify(data)});
 const session=async(extra={},requestExtra={})=>storeSession(post('session',{slug,email:'buyer@example.com',...extra},requestExtra),env);
-const cat=await storeCatalog(env).json();assert.equal(cat.provider,'ziina');assert.equal(cat.token,null);assert.equal(cat.products.filter(p=>p.available).length,65);
+const cat=await storeCatalog(env).json();assert.equal(cat.provider,'ziina');assert.equal(cat.token,null);assert.equal(cat.products.filter(p=>p.available).length,66);
 assert.equal((await session({email:'invalid'})).status,400);
 const s=await(await session({amount:1,currency:'AED',test:true})).json();assert.equal(created.at(-1).test,false);const id=s.transactionId.slice(6);
 assert.equal((await storeReceipt(post('receipt',{transactionId:s.transactionId,claim:s.claim}),env)).status,202);

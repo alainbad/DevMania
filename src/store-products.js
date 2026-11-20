@@ -1,6 +1,6 @@
 export default [
   {
-    "slug": "three-agent-ai-assistant-setup",
+    "slug": "ai-team-setup",
     "name": "Three-Agent AI Assistant \u2014 Full Setup Prompt",
     "categories": [
       "ai-prompts"
