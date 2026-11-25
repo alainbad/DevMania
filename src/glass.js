@@ -3,7 +3,7 @@ const coarse=matchMedia('(pointer: coarse)'),reduced=matchMedia('(prefers-reduce
 let pending;
 document.addEventListener('pointermove',event=>{
  if(coarse.matches||reduced.matches)return;
- const surface=event.target.closest('[data-glass],.site-header,.mobile-menu nav,.os-dialog');if(!surface)return;
+ const surface=event.target.closest('[data-glass],.os-dialog');if(!surface)return;
  cancelAnimationFrame(pending);pending=requestAnimationFrame(()=>{const rect=surface.getBoundingClientRect();surface.style.setProperty('--glass-x',`${event.clientX-rect.left}px`);surface.style.setProperty('--glass-y',`${event.clientY-rect.top}px`)});
 },{passive:true});
 const menu=document.querySelector('.mobile-menu');
@@ -14,3 +14,6 @@ if(menu){
  document.addEventListener('click',event=>{if(menu.open&&!menu.contains(event.target))menu.open=false});
  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.open=false));
 }
+
+// The original uploaded React + Framer Motion navbar; native links are the fallback.
+if(document.querySelector('[data-original-nav]'))import('./original-nav.js').then(m=>m.mountOriginalNavigation()).catch(()=>{});

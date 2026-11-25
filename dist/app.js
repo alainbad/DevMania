@@ -4,7 +4,7 @@ if(carousel){
  const stage=carousel.querySelector('.flip-stage'),hero=carousel.querySelector('#hero-image'),label=carousel.querySelector('#slide-label'),dots=[...carousel.querySelectorAll('[data-slide]')],pause=carousel.querySelector('#pause');
  const motion=matchMedia('(prefers-reduced-motion: reduce)');
  let current=0,paused=motion.matches,busy=false,timer,hover=false,focused=false;
- const buffer=new Image();buffer.className='carousel-buffer';buffer.alt='';buffer.setAttribute('aria-hidden','true');stage.append(buffer);
+ const buffer=new Image();
  // Preload the other two full-size artworks, keeping the first as the LCP image.
  slides.slice(1).forEach(s=>{const image=new Image();image.src=s.src});
  function schedule(){clearTimeout(timer);if(!paused&&!document.hidden&&!hover&&!focused)timer=setTimeout(()=>show(current+1),6500)}
@@ -13,8 +13,10 @@ if(carousel){
   const target=(index+slides.length)%slides.length;if(busy||target===current){schedule();return}
   busy=true;clearTimeout(timer);buffer.src=slides[target].src;
   try{await buffer.decode()}catch{busy=false;schedule();return}
-  if(!motion.matches){stage.classList.add('is-changing');await new Promise(resolve=>setTimeout(resolve,650))}
-  current=target;hero.src=slides[current].src;hero.alt=slides[current].alt;stage.classList.remove('is-changing');
+  stage.classList.toggle('flip-backward',index<current);
+  if(!motion.matches){stage.classList.add('is-flipping');await new Promise(resolve=>setTimeout(resolve,400))}
+  current=target;hero.src=slides[current].src;hero.alt=slides[current].alt;stage.classList.remove('is-flipping');
+  if(!motion.matches){stage.classList.add('is-returning');await new Promise(resolve=>setTimeout(resolve,500));stage.classList.remove('is-returning')}
   label.setAttribute('aria-live',manual?'polite':'off');label.textContent=slides[current].label;
   dots.forEach((d,i)=>{d.classList.toggle('active',i===current);if(i===current)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current')});
   busy=false;schedule();

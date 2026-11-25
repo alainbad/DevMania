@@ -11,7 +11,7 @@ function boot(reduced=false){
  const document={hidden:false,querySelector:s=>s==='.carousel'?carousel:null,addEventListener(k,fn){events[k]=fn}};
  const context={document,matchMedia:()=>motion,Image:class{setAttribute(){}decode(){return Promise.resolve()}},setTimeout(fn,ms){const n=++id;timers.set(n,{fn,ms});return n},clearTimeout(n){timers.delete(n)},FormData:class{},window:{}};
  vm.runInNewContext(fs.readFileSync('src/app.js','utf8'),context);
- const flush=async()=>{await new Promise(setImmediate);const fade=[...timers].find(([,t])=>t.ms===650);if(fade){timers.delete(fade[0]);fade[1].fn();await new Promise(setImmediate)}};
+ const flush=async()=>{for(let phase=0;phase<3;phase++){await new Promise(setImmediate);const flip=[...timers].find(([,t])=>[400,500].includes(t.ms));if(flip){timers.delete(flip[0]);flip[1].fn()}}await new Promise(setImmediate)};
  const auto=()=>[...timers.values()].find(t=>t.ms===6500);
  return {nodes,dots,carousel,events,motion,document,flush,auto};
 }

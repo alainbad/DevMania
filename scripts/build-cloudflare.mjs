@@ -15,7 +15,7 @@ const publicFiles = [
   ...fs.readdirSync('dist/store',{recursive:true}).filter(name=>name.endsWith('.html')).map(name=>'store/'+name),'store.js','store.css',
   'devsmart-calculator/privacy/index.html',
   'devsmart-calculator/support/index.html',
-  'devsmart-calculator/style.css','nicole-badran-business-card/index.html','nicole-badran-business-card/connect.html','alain-badran-business-card/index.html','alain-badran-business-card/connect.html','pages.css','glass.css','glass.js','projects/index.html','scope/index.html','about/index.html','contact/index.html','support/index.html','pricing/index.html','terms/index.html','privacy/index.html','refunds/index.html',...toolFiles,'tools.js','engagement.js','feed.xml',...blogFiles,...serviceFiles,'blog.css','sitemap.xml','robots.txt','index.html', 'style.css', 'app.js', 'os.css', 'os.js',
+  'devsmart-calculator/style.css','nicole-badran-business-card/index.html','nicole-badran-business-card/connect.html','alain-badran-business-card/index.html','alain-badran-business-card/connect.html','pages.css','glass.css','glass.js','original-nav.js','projects/index.html','scope/index.html','about/index.html','contact/index.html','support/index.html','pricing/index.html','terms/index.html','privacy/index.html','refunds/index.html',...toolFiles,'tools.js','engagement.js','feed.xml',...blogFiles,...serviceFiles,'blog.css','sitemap.xml','robots.txt','index.html', 'style.css', 'app.js', 'os.css', 'os.js',
   'matcher.js', 'builder.js', 'terminal.js', 'projects.json',
   'experience-state.js','experiences.js','experiences.css','playground.js','universe.js',
   ...fs.readdirSync('dist/assets').map(name => 'assets/' + name)];
