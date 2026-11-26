@@ -2,33 +2,35 @@
 export const services = [
   {
     slug: 'website-development', title: 'Website & Web App Development in Dubai',
-    description: 'Plan and build responsive websites and custom web apps with DevMania in Dubai. Explore the process, project examples and what to prepare for a useful brief.',
+    description: 'Explore website and web app development in Dubai. See booking and shipment-tracking projects, compare scope, and prepare a brief for a DevMania quote.',
     heading: 'Website and web app development in Dubai',
-    intro: 'DevMania builds websites and web applications around the tasks visitors need to complete. Whether you need a clear business presence or an interactive platform, the first step is to define the audience, the key actions and the information your team must manage.',
+    intro: 'DevMania builds business websites, booking sites and customer dashboards. A useful first question is what a visitor should be able to finish online. Sending an enquiry, reserving a court and checking a shipment each call for a different build.',
     sections: [
       ['Choose the right kind of build', 'A business website explains what you offer and makes it easy to enquire. A web application adds workflows such as user accounts, booking, dashboards or saved information. These have different development and maintenance needs. We map the essential visitor journeys first, then decide which pages and features support them.'],
+      ['A booking site and a customer dashboard in practice', 'On Assia Padel, a player checks court availability and manages a booking. That makes the time slot central to the design. On the Trackora website, a customer follows shipments from several carriers and revisits saved tracking numbers. Here the key screen is a dashboard. When briefing a similar project, identify who can change a reservation or a saved record and what the visitor sees after the change.'],
       ['Design for real use', 'A useful build works on small screens, has readable content and makes the next step clear. Navigation, forms and content structure should support the goal of the site. Images should be sized appropriately, and the interface should remain usable when a visitor is on a slower connection.'],
       ['Connect the necessary systems', 'Some projects need a booking system, account service, database or external API. We define where data comes from, how it is updated and what should happen if a connection fails. This makes the scope clearer before implementation and avoids treating integrations as a last-minute add-on.'],
       ['Prepare for launch and search', 'The launch checklist includes working links and forms, mobile checks, descriptive page titles, crawlable pages, a sitemap where useful and a consistent domain. Search performance depends on the usefulness of the content and ongoing measurement; a technical launch alone cannot guarantee rankings.'],
       ['Start with a brief', 'Tell us who the site serves, what visitors should accomplish, the content you already have and any systems it must connect to. If there is an existing site, include its address and the main problem you want to solve. This is enough to start discussing a sensible first release.']
     ],
-    examples: [['Trackora website','/projects/#project-website-trackora'],['Destinotel','/projects/#project-website-destinotel']],
-    guides: [['How to write a website development brief','/blog/website-development-brief/'],['Website or web application?','/blog/website-vs-web-application/']]
+    examples: [['Assia Padel court booking website','/projects/#project-website-assia-padel'],['Trackora shipment tracking dashboard','/projects/#project-website-trackora'],['Destinotel hotel booking website','/projects/#project-website-destinotel']],
+    guides: [['What affects the cost of a website in Dubai?','/pricing/#website-cost'],['How to write a website development brief','/blog/website-development-brief/'],['Website or web application?','/blog/website-vs-web-application/']]
   },
   {
     slug: 'mobile-app-development', title: 'Mobile App Development in Dubai',
-    description: 'Explore mobile app development with DevMania in Dubai: define an MVP, choose the right platform and plan the release, integrations and ongoing support.',
+    description: 'Plan iOS and Android app development in Dubai. Explore Invoice Mini and Trackora, choose a first release, and see what shapes your app development quote.',
     heading: 'Mobile app development in Dubai',
-    intro: 'A mobile app should make a frequent task easier or give people a useful experience on their phone. DevMania helps shape the first release around a specific user journey and the systems the app needs to work with.',
+    intro: 'DevMania builds mobile apps for tasks people need to finish on their phones. Our work ranges from creating an invoice for a client to checking a delivery across carriers. For a first release, choose the task your customer comes back for and the devices they use to do it.',
     sections: [
       ['Define a focused first release', 'Begin with one audience and a small set of essential actions. A booking app might first need discovery, availability and confirmation; a tracking app needs clear status and updates. Features that do not support the first complete journey can follow later. This makes development and user feedback easier to manage.'],
+      ['Two examples from our mobile app portfolio', 'With Invoice Mini, a freelancer adds client details, calculates the total and prepares an invoice on a phone. That flow can be tested with one sample job from start to finish. Trackora brings tracking numbers, carrier updates and shipment history together on iOS and Android. For a similar tracking app, a useful first test is whether someone can find their last update when a carrier has no new information.'],
       ['Decide how the app will run', 'An iOS or Android app, a cross-platform app and a progressive web app can all be appropriate in different situations. Consider the need for device features, store distribution, offline behaviour and updates. The decision should follow the user experience and operational requirements rather than a trend.'],
       ['Plan data and accounts', 'Most useful apps have supporting services: accounts, saved items, notifications, payments or external data. Before development, identify who owns each piece of information, what should be stored and how the app behaves when a service is unavailable. Privacy and account recovery also belong in the first-release plan.'],
       ['Test before launch', 'Check common devices, small screens, slow connections and interrupted flows. Review permissions, empty states and error messages, then prepare the listing content and support process for the chosen app stores. A launch is the beginning of learning how people actually use the product.'],
       ['Describe the idea', 'Share the intended users, the one task the app must solve, any existing systems and the platforms you want to support. A concise description of the first user journey gives us a practical place to start.']
     ],
-    examples: [['Invoice Mini app','/projects/#project-app-invoice-mini'],['Trackora app','/projects/#project-app-trackora']],
-    guides: [['Choosing a mobile app MVP','/blog/mobile-app-mvp-scope/'],['PWA or native mobile app?','/blog/pwa-vs-native-app/']]
+    examples: [['Invoice Mini mobile invoicing app','/projects/#project-app-invoice-mini'],['Trackora for iOS and Android','/projects/#project-app-trackora']],
+    guides: [['What affects the cost of an iOS or Android app?','/pricing/#app-cost'],['Choosing a mobile app MVP','/blog/mobile-app-mvp-scope/'],['PWA or native mobile app?','/blog/pwa-vs-native-app/']]
   },
   {
     slug: 'api-integration', title: 'API Integration for Websites and Apps',
