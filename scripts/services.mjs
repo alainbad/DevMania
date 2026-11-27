@@ -14,7 +14,7 @@ export const services = [
       ['Start with a brief', 'Tell us who the site serves, what visitors should accomplish, the content you already have and any systems it must connect to. If there is an existing site, include its address and the main problem you want to solve. This is enough to start discussing a sensible first release.']
     ],
     examples: [['Assia Padel court booking website','/projects/#project-website-assia-padel'],['Trackora shipment tracking dashboard','/projects/#project-website-trackora'],['Destinotel hotel booking website','/projects/#project-website-destinotel']],
-    guides: [['What affects the cost of a website in Dubai?','/pricing/#website-cost'],['How to write a website development brief','/blog/website-development-brief/'],['Website or web application?','/blog/website-vs-web-application/']]
+    guides: [['What affects the cost of a website in Dubai?','/pricing/#website-cost'],['Court booking website launch checklist','/blog/court-booking-website-checklist/'],['How to write a website development brief','/blog/website-development-brief/'],['Website or web application?','/blog/website-vs-web-application/']]
   },
   {
     slug: 'mobile-app-development', title: 'Mobile App Development in Dubai',
@@ -27,6 +27,7 @@ export const services = [
       ['Decide how the app will run', 'An iOS or Android app, a cross-platform app and a progressive web app can all be appropriate in different situations. Consider the need for device features, store distribution, offline behaviour and updates. The decision should follow the user experience and operational requirements rather than a trend.'],
       ['Plan data and accounts', 'Most useful apps have supporting services: accounts, saved items, notifications, payments or external data. Before development, identify who owns each piece of information, what should be stored and how the app behaves when a service is unavailable. Privacy and account recovery also belong in the first-release plan.'],
       ['Test before launch', 'Check common devices, small screens, slow connections and interrupted flows. Review permissions, empty states and error messages, then prepare the listing content and support process for the chosen app stores. A launch is the beginning of learning how people actually use the product.'],
+      ['Do I need both iOS and Android for the first release?', 'Start with the devices your first users actually carry. A staff pilot on company-issued Android phones can be tested on one platform. A customer pilot split between iPhone and Android needs a way for both groups to take part. List the must-have device features and ask for separate one-platform and two-platform estimates before choosing.'],
       ['Describe the idea', 'Share the intended users, the one task the app must solve, any existing systems and the platforms you want to support. A concise description of the first user journey gives us a practical place to start.']
     ],
     examples: [['Invoice Mini mobile invoicing app','/projects/#project-app-invoice-mini'],['Trackora for iOS and Android','/projects/#project-app-trackora']],

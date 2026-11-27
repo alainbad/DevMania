@@ -1,6 +1,111 @@
 [
   {
     "category": "Web Development",
+    "slug": "admin-dashboard-v2-vs-dashboard-v12",
+    "nextStep": {"heading":"Watch the two dashboard demos","text":"Watch the transaction workflow in V2, then switch to the admin view in V12 to see which fits your project.","links":[["Preview Admin Dashboard V2","/store/design/dashbord-v2/#preview"],["Preview Dashboard V12","/store/design/dashboard-v12/#preview"]]},
+    "title": "Admin Dashboard V2 vs Dashboard V12 for React Projects",
+    "description": "Compare two DevMania React dashboard templates side by side. See the portfolio, transaction and admin screens, watch both demos and choose a layout for your project.",
+    "date": "2026-11-27",
+    "sections": [
+      {
+        "heading": "Compare the two dashboard previews",
+        "text": "Choose Admin Dashboard V2 if the first job is investigating a transaction or following portfolio activity. Choose Dashboard V12 if you want a customer-facing overview and a visibly different workspace for an administrator. The screenshots below show the second dashboard view from each project. Open either preview to see the other screens in motion.",
+        "figures": [
+          {
+            "image": "/assets/store-dashbord-v2.jpg",
+            "alt": "Admin Dashboard V2 with a recent transaction table, an activity chart and a balance panel",
+            "caption": "Admin Dashboard V2 · Portfolio and transaction details",
+            "link": "/store/design/dashbord-v2/#preview"
+          },
+          {
+            "image": "/assets/store-dashboard-v12.jpg",
+            "alt": "Dashboard V12 with a green payment card, an engagement bar chart and a switch to the admin view",
+            "caption": "Dashboard V12 · Payment goals and engagement",
+            "link": "/store/design/dashboard-v12/#preview"
+          }
+        ]
+      },
+      {
+        "heading": "V2 puts the transaction in context",
+        "text": "Look at the Recent Transaction table in the V2 preview. A row shows the activity, amount, date and status. The same screen keeps the balance and trend visible. Follow the preview into the financial calendar and portfolio analytics to see how a user can move from a summary to a more detailed question. This layout suits a prototype where someone needs to investigate a change in an account."
+      },
+      {
+        "heading": "V12 separates the overview from the admin desk",
+        "text": "In V12, the green dashboard leads with a payment goal and an engagement chart. The switch at the bottom also exposes an Admin view with a blue sidebar, summary metrics and a table of recent transactions and clients. Pick this layout if your demonstration needs to show what two audiences see. Real access permissions are a separate part of your application."
+      },
+      {
+        "heading": "Try one task before you choose",
+        "text": "Imagine a support request about a pending transaction. Pause each video at the overview and point to the place you would start looking. Then imagine that you are presenting a monthly summary to an account holder. Which screen would you open first? If the two tasks lead to different choices, give priority to the one your users do more often."
+      },
+      {
+        "heading": "What you receive and what to customize first",
+        "text": "Both products are editable React projects sold separately. Each includes styles, demo interactions and local setup instructions. Start by changing one label and one sample record, then check the result in the dashboard and any detail view that displays it. If your product will show live balances or customer records, plan how your own service will supply that data."
+      }
+    ],
+    "sources": [
+      [
+        "Watch Admin Dashboard V2",
+        "/store/design/dashbord-v2/#preview"
+      ],
+      [
+        "Watch Dashboard V12",
+        "/store/design/dashboard-v12/#preview"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
+    "slug": "court-booking-website-checklist",
+    "nextStep": {"heading":"Scope your own booking website","text":"Gather your courts, slot lengths, booking rules and staff roles. Use them to prepare a brief or compare what two quotes cover.","links":[["Create a website brief","/tools/website-brief-builder/"],["Compare booking website costs","/pricing/#pricing-faq"]]},
+    "title": "What a Court Booking Website Needs Before Launch",
+    "description": "Use the Assia Padel booking page to plan court availability, slot pricing, confirmation, cancellations and staff access. Includes a practical launch checklist.",
+    "date": "2026-11-27",
+    "sections": [
+      {
+        "heading": "Start with the booking decision",
+        "text": "Assia Padel is a single outdoor court in Assia, Lebanon. Its public booking page starts with a date selector. Available sessions are grouped into morning, afternoon and evening, with a price beside each start time. For a player on a phone, two details matter first. Can my group play when we are free, and what will it cost?"
+      },
+      {
+        "heading": "Make availability specific to the court",
+        "text": "For one court, a date and time can identify a session. A club with several courts also needs a court identifier, especially if indoor and outdoor slots have different prices. Write down the slot length, changeover time and local time zone. Decide what happens if two players try to confirm the same slot. A useful acceptance test is that only one receives a confirmed reservation."
+      },
+      {
+        "heading": "Show the price before asking for player details",
+        "text": "On Assia Padel, a visitor can compare the displayed prices while choosing a time. For your own site, decide whether the price covers the court or each player. Make any deposit and optional equipment rental clear before confirmation. A player should be able to tell their group what they owe without calling the club."
+      },
+      {
+        "heading": "Define confirmation and cancellation together",
+        "text": "A selected slot and a confirmed booking are different states. Decide what confirms the booking, what details the player receives and how they can change it. Walk through a cancellation with staff. When does the slot reopen, who gets notified, and who handles a deposit if there was one? Write those decisions into the brief before building reminders."
+      },
+      {
+        "heading": "Run a launch rehearsal with the front desk",
+        "text": "Use test bookings to walk through these checks with the person who will manage the calendar. They are acceptance criteria for a new booking website. The public Assia page illustrates the date, price and slot-selection steps.",
+        "checklist": [
+          "Check the last evening slot and the first available slot on the next date on a phone.",
+          "Request the same test slot from two devices and check that the club ends up with one reservation.",
+          "Confirm a test booking and read back the court, date, local time, price and contact details.",
+          "Cancel the test booking and verify that the slot becomes available under the club’s cancellation rules.",
+          "Have an authorized staff member block a maintenance slot, then check the public calendar from a player’s view."
+        ]
+      }
+    ],
+    "sources": [
+      [
+        "See the public booking calendar at Assia Padel",
+        "https://assiapadel.com/"
+      ],
+      [
+        "Find Assia Padel in the DevMania portfolio",
+        "/projects/#project-website-assia-padel"
+      ],
+      [
+        "Plan a booking website with DevMania",
+        "/services/website-development/"
+      ]
+    ]
+  },
+  {
+    "category": "Web Development",
     "slug": "website-development-brief",
     "title": "How to Write a Website Development Brief",
     "description": "Define your audience, pages, content, integrations and launch criteria before asking a developer for a website quotation.",

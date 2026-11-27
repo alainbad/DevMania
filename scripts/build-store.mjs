@@ -2,6 +2,31 @@ import fs from 'node:fs';
 import products from '../src/store-products.js';
 import categories from '../src/store-categories.js';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const comparisonPath = '/blog/admin-dashboard-v2-vs-dashboard-v12/';
+
+const dashboardFaqs = {
+ 'dashbord-v2': {
+  contents: 'You receive both V2 dashboard variants in one ZIP. It contains the React source, styles, assets and demo interactions. The video shows the portfolio overview, transaction list and management screens.',
+  customize: 'Start with the Recent Transaction table. Change one example row and its status, then adjust the labels and accent color in the project styles. To display real transactions, supply the records from your own service.'
+ },
+ 'dashboard-v12': {
+  contents: 'You receive the editable React project, styles, assets and demo interactions in one ZIP. The preview shows the Dashboard 1, Dashboard 2 and Admin view selector. Each bundled view comes with the same purchase.',
+  customize: 'Choose the view your users will open first. Try changing a payment-goal label and the chart values in the dashboard, or the table columns in the admin view. Use your own data and access controls when connecting the interface to a live application.'
+ }
+};
+
+function dashboardQuestions(product) {
+ const answers = dashboardFaqs[product.slug];
+ if (!answers) return '';
+ return `<section class="policy-block dashboard-faq" aria-label="Buyer questions">
+  <h2>Questions about ${esc(product.name)}</h2>
+  <h3>What files and views do I receive?</h3><p>${esc(answers.contents)}</p>
+  <h3>What do I need to run it locally?</h3><p>Unzip the download on a computer with Node.js and open the included setup instructions. Use the package manager and start command listed for that project. After installing its dependencies, open the local address printed by the development server.</p>
+  <h3>How can I customize the dashboard?</h3><p>${esc(answers.customize)}</p>
+  <p><a href="${comparisonPath}">Compare Admin Dashboard V2 and Dashboard V12 side by side</a>.</p>
+ </section>`;
+}
+
 export function buildStore(){
  const base=fs.readFileSync('dist/store/index.html','utf8').replaceAll('<link rel="stylesheet" href="/store.css">','');const files=[];
  const nav=active=>`<nav class="store-tabs" aria-label="Design categories"><a href="/store/" ${!active?'aria-current="page"':''}>All designs</a>${Object.entries(categories).map(([k,n])=>`<a href="/store/${k}/" ${active===k?'aria-current="page"':''}>${n} <span class="store-category-count">${products.filter(p=>p.categories.includes(k)).length}</span></a>`).join('')}</nav>`;
@@ -26,7 +51,7 @@ export function buildStore(){
    continue;
   }
   const previewVersion=p.categories.some(category=>category==='dashboards'||category==='admin')?4:3;
-  write('/store/design/'+p.slug+'/',p.name,p.description+' $2 USD one-time.',`<a class="store-back" href="/store/${p.categories[0]}/">← ${categories[p.categories[0]]}</a>`+hero(esc(p.name),esc(p.description))+`<div class="store-detail"><video class="store-design-video" controls playsinline preload="none" poster="${p.preview}" aria-label="${esc(p.name)} video preview"><source src="/store-videos/designs/${p.slug}.mp4?v=${previewVersion}" type="video/mp4">Your browser does not support video. <a href="/store-videos/designs/${p.slug}.mp4?v=${previewVersion}">Watch the preview</a>.</video><div class="store-detail-copy"><p class="store-label">EDITABLE SOURCE CODE</p><div class="store-price"><strong>$2</strong><span>USD · one-time</span></div><ul><li>Complete React project source and styles</li><li>Original demo animations and interactions</li><li>Local setup and build instructions</li><li>ZIP download after confirmed payment</li></ul>${p.categories.length>1?'<p>Includes this dashboard and its sidebar. No separate sidebar purchase needed.</p>':''}${buy(p)}<p class="store-help">${['otp','login'].includes(p.categories[0])?'Authentication UI demo. Connect your own authentication service for live use.':p.categories[0]==='checkout'?'Commerce UI demo. Connect your own checkout and payment services for live use.':p.categories[0]==='interactions'?'Interaction UI demo. Connect your own storage or data service where needed.':p.categories[0]==='websites'?'Frontend website demo. Connect your own backend and booking or contact services for live use.':'Includes the original project assets and any bundled variants.'}</p><p class="store-help">Private download links last 7 days. Save your ZIP after downloading. Demo images and fonts may use external sources.</p></div></div>`);
+  write('/store/design/'+p.slug+'/',p.name,p.description+' $2 USD one-time.',`<a class="store-back" href="/store/${p.categories[0]}/">← ${categories[p.categories[0]]}</a>`+hero(esc(p.name),esc(p.description))+`<div class="store-detail"><video${dashboardFaqs[p.slug] ? ' id="preview"' : ''} class="store-design-video" controls playsinline preload="none" poster="${p.preview}" aria-label="${esc(p.name)} video preview"><source src="/store-videos/designs/${p.slug}.mp4?v=${previewVersion}" type="video/mp4">Your browser does not support video. <a href="/store-videos/designs/${p.slug}.mp4?v=${previewVersion}">Watch the preview</a>.</video><div class="store-detail-copy"><p class="store-label">EDITABLE SOURCE CODE</p><div class="store-price"><strong>$2</strong><span>USD · one-time</span></div><ul><li>Complete React project source and styles</li><li>Original demo animations and interactions</li><li>Local setup and build instructions</li><li>ZIP download after confirmed payment</li></ul>${p.categories.length>1?'<p>Includes this dashboard and its sidebar. No separate sidebar purchase needed.</p>':''}${buy(p)}<p class="store-help">${['otp','login'].includes(p.categories[0])?'Authentication UI demo. Connect your own authentication service for live use.':p.categories[0]==='checkout'?'Commerce UI demo. Connect your own checkout and payment services for live use.':p.categories[0]==='interactions'?'Interaction UI demo. Connect your own storage or data service where needed.':p.categories[0]==='websites'?'Frontend website demo. Connect your own backend and booking or contact services for live use.':'Includes the original project assets and any bundled variants.'}</p><p class="store-help">Private download links last 7 days. Save your ZIP after downloading. Demo images and fonts may use external sources.</p></div></div>${dashboardQuestions(p)}`);
  }
  for(const p of products){const name=p.preview.split('/').at(-1);const source='src/store-previews/'+name;if(!fs.existsSync(source))throw Error('Missing product preview: '+p.slug);fs.writeFileSync('dist/assets/'+name,fs.readFileSync(source))}
  fs.mkdirSync('dist/store-videos',{recursive:true});

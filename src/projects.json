@@ -868,6 +868,10 @@
   },
   {
     "id": "website-assia-padel",
+    "guide": {
+      "title": "Read the court booking website checklist",
+      "path": "/blog/court-booking-website-checklist/"
+    },
     "slug": "website-assia-padel",
     "name": "Assia Padel",
     "shortDescription": "Assia Padel gives players a place to check court availability and manage bookings. Visitors can learn about the court and plan their next game.",

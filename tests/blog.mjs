@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import worker from '../.cloudflare/index.js';
 import {services} from '../scripts/services.mjs';
 const posts=JSON.parse(fs.readFileSync('src/blog/posts.json','utf8'));
-assert.equal(posts.length,25);assert.equal(new Set(posts.map(p=>p.slug)).size,25);assert.equal(new Set(posts.map(p=>p.category)).size,6);
+assert(posts.length>=25);assert.equal(new Set(posts.map(p=>p.slug)).size,posts.length);assert.equal(new Set(posts.map(p=>p.category)).size,6);
 const origin='https://www.dev-mania.com';
 const sitemap=fs.readFileSync('dist/sitemap.xml','utf8');
 for(const s of services){const path='/services/'+s.slug+'/';const html=fs.readFileSync('dist'+path+'index.html','utf8');assert(html.includes('href="'+origin+path+'"'));assert.equal((html.match(/<h1>/g)||[]).length,1);assert(sitemap.includes('<loc>'+origin+path+'</loc>'));for(const [,href] of html.matchAll(/href="(\/[^"#]*)(?:#[^"]*)?"/g)){if(href==='/')continue;assert(fs.existsSync('dist'+href+(href.endsWith('/')?'index.html':'')),'Missing service link '+href)}for(const m of html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs))JSON.parse(m[1]);}
@@ -17,4 +17,4 @@ assert.equal((await worker.fetch(new Request(origin+'/services/not-a-real-servic
 assert.equal((await worker.fetch(new Request(origin+'/blog'),{})).status,308);
 assert.equal((await worker.fetch(new Request(origin+'/blog/not-a-real-article/'),{})).status,404);
 assert.equal((await worker.fetch(new Request(origin+'/server/index.js'),{})).status,404);
-console.log('Blog: 25 articles, 6 topic pages, canonical metadata, schema, sitemap, internal links and Worker routes pass.');
+console.log(`Blog: ${posts.length} articles, 6 topic pages, canonical metadata, schema, sitemap, internal links and Worker routes pass.`);
